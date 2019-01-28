@@ -35,6 +35,7 @@ body > main > article {
 	width: 40em;
 	padding: 1em;
 }
+body > main:not(.list) > article > aside,
 body > main > article > header > p {
 	display: none;
 }

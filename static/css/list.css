@@ -1,0 +1,40 @@
+body > main.list > article {
+	max-width: 10em;
+	display: flex;
+	flex: grow;
+	flex-direction: column-reverse;
+	margin: 1em;
+}
+body > main.list > article > aside {
+	width: 100%;
+}
+body > main.list > article > aside > img {
+	width: 100%;
+}
+body > main.list > article > header {
+	font-size: 80%;
+	width: 100%;
+}
+body > main.list > article > header > h1 {
+	text-align: center;
+}
+
+
+/* link & self-link */
+body > main.list > article {
+	position: relative;
+}
+body > main.list > article > .link,
+body > main.list > article > .self-link {
+	padding: 0;
+}
+body > main.list > article > .link > a > span,
+body > main.list > article > .self-link > a > span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-image: url('transparent.gif');
+}

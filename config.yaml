@@ -13,6 +13,7 @@ params:
     - "css/color.css"
     - "css/content.css"
     - "css/layout.css"
+    - "css/list.css"
     - "css/menu.css"
     - "css/text.css"
   ListMode: "header"

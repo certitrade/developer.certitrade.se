@@ -15,7 +15,11 @@ body > footer {
 body > main > article > nav {
 	background: #c6e2f9;
 }
-// menu
+/* list pages */
+body > main.list > article:hover {
+	background: linear-gradient(white, #e8f2fbb7)
+}
+/* menu */
 nav a {
 	color: #0db6ff;
 }
