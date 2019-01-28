@@ -28,3 +28,7 @@ nav a:hover {
 	background: #e8f2fbb7;
 	color: #0db6ff;
 }
+/* tables */
+table > tbody > tr:nth-child(odd) {
+	background: #6886a01e;
+}
