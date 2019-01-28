@@ -1,11 +1,13 @@
 ---
 title: "Certitrade Basic API Reference"
 date: "2019-01-24"
+weight: 10
 menu: 
     main:
-        parent: reference
-        name: Basic API
+        parent: basic
+        name: Reference
 ---
+
 # Introduktion
 
 Basic Payment API ger all funktionalitet som behövs för en enkel integration i en webshop.

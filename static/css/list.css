@@ -1,3 +1,8 @@
+html:not(.home) > body > main.list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
 html:not(.home) > body > main.list > article {
 	max-width: 10em;
 	display: flex;

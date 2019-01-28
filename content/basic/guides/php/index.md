@@ -4,8 +4,8 @@ date: "2019-01-24"
 image: "https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg"
 menu: 
     main:
-        parent: guides
-        name: Basic API (PHP)
+        parent: basic-guides
+        name: PHP
 ---
 
 Här finns ett integrationspaket med dokumentation och exempelkod. Så här kommer du igång:
