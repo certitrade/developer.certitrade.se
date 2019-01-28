@@ -1,2 +1,2 @@
-# doc.certitrade.se
-Documentation website for the Certitrade API:s
+# support.certitrade.se
+Support documentation website for the Certitrade API:s.

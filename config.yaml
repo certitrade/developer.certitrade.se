@@ -1,0 +1,39 @@
+baseURL: //support.certitrade.se/
+languageCode: en-us
+DefaultContentLanguage: "en"
+title: Certitrade API Documentation
+tagline: "Everything you need to integrate payments."
+theme: hugo-theme-html5
+MetaDataFormat: yaml
+params:
+  onlyLogotype: true
+  logotype: "logo-certitrade-filled-1.png"
+  footer: "copyright &copy; 2019 Certitrade AB"
+  CSS:
+    - "css/color.css"
+    - "css/content.css"
+    - "css/layout.css"
+    - "css/menu.css"
+    - "css/text.css"
+  ListMode: "header"
+  FrontPageMode: "full"
+  FrontPageSection: "start"
+  NavigationInHeader: false
+  Prefix:
+    - "og: http://opy.me/ns#"
+googleAnalytics: "UA-72875022-1"
+PluralizeListTitles: false
+pygmentsCodeFences: true
+blackfriday:
+  extensions:
+    - hardLineBreak
+menu:
+  main:
+  - identifier: guides
+    name: Guides
+    url: /guides/
+    weight: 10
+  - identifier: reference
+    name: Reference
+    url: /reference/
+    weight: 20

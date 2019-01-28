@@ -1,0 +1,26 @@
+body {
+	background: #b7dcf8;
+}
+body > header {
+	background: white;
+	border-bottom: 1mm solid #0db6ff;
+}
+body > main {
+	background: linear-gradient(#e8f2fbb7, white)
+}
+body > footer {
+	background: #0db6ff;
+	color: #f2f2f2
+}
+body > main > article > nav {
+	background: #c6e2f9;
+}
+// menu
+nav a {
+	color: #0db6ff;
+}
+nav li.current > a,
+nav a:hover {
+	background: #e8f2fbb7;
+	color: #0db6ff;
+}

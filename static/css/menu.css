@@ -1,0 +1,23 @@
+nav a {
+	display: block;
+	text-decoration: none;
+	padding: .5em;
+	width: calc(100% - 1em);
+}
+nav > ul ul a {
+	padding-left: 1.5em;
+	width: calc(100% - 2em);
+}
+nav > ul ul ul a {
+	padding-left: 2.5em;
+	width: calc(100% - 3em);
+}
+nav li.current > a,
+nav a:hover {
+	text-decoration: none;
+}
+nav ul {
+	width: 100%;
+	padding-left: 0;
+	margin: 0;
+}
