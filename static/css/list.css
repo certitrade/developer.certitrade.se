@@ -1,21 +1,21 @@
-body > main.list > article {
+html:not(.home) > body > main.list > article {
 	max-width: 10em;
 	display: flex;
 	flex: grow;
 	flex-direction: column-reverse;
 	margin: 1em;
 }
-body > main.list > article > aside {
+html:not(.home) > body > main.list > article > aside {
 	width: 100%;
 }
-body > main.list > article > aside > img {
+html:not(.home) > body > main.list > article > aside > img {
 	width: 100%;
 }
-body > main.list > article > header {
+html:not(.home) > body > main.list > article > header {
 	font-size: 80%;
 	width: 100%;
 }
-body > main.list > article > header > h1 {
+html:not(.home) > body > main.list > article > header > h1 {
 	text-align: center;
 }
 

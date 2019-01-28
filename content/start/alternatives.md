@@ -6,8 +6,8 @@ weight: 20
 
 CertiTrade har två olika API:er för webshops, anpassade för olika system och krav:
 
- * [Basic API](basic)
- * [Merchant API](merchant)
+ * [Basic API](reference/basic)
+ * [Merchant API](reference/merchant)
 
 I tabellen framgår vilken funktionalitet som de erbjuder. Mer information om respektive API finns nedan.
 
