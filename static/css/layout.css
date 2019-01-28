@@ -29,9 +29,9 @@ body > nav > ul {
 	top: 1mm;
 }
 body > main {
-	width: calc(100% - 20em);
+	width: calc(100% - 30em);
 	max-width: 40em;
-	min-width: 10em;
+	min-width: 20em;
 }
 body > main > article {
 	padding: 1em;

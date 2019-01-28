@@ -21,12 +21,12 @@ body > main.list > article:hover {
 }
 /* menu */
 nav a {
-	color: #0db6ff;
+	color: #0b79a8;
 }
 nav li.current > a,
 nav a:hover {
 	background: #e8f2fbb7;
-	color: #0db6ff;
+	color: #0b79a8;
 }
 /* tables */
 table > tbody > tr:nth-child(odd) {
