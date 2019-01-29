@@ -12,7 +12,7 @@ body > footer {
 	background: #0db6ff;
 	color: #f2f2f2
 }
-body > main > article > nav {
+body > main > article > nav > ul {
 	background: #c6e2f9;
 }
 /* list pages */

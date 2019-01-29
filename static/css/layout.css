@@ -1,6 +1,6 @@
 body {
 	display: flex;
-	flex-flow: row wrap
+	flex-flow: row wrap;
 }
 body > header,
 body > footer {
@@ -34,6 +34,7 @@ body > main {
 	min-width: 20em;
 }
 body > main > article {
+	position: relative;
 	padding: 1em;
 }
 body > main:not(.list) > article > aside,
@@ -41,9 +42,13 @@ body > main > article > header > p {
 	display: none;
 }
 body > main > article > nav {
+	position: absolute;
+	top: 0;
+	right: -20em;
+	height: 100%;
+}
+body > main > article > nav  > ul {
 	position: sticky;
 	top: 1mm;
-	float: right;
-	margin-right: -21em;
 	width: 20em;
 }
