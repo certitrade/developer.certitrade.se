@@ -28,21 +28,3 @@ pygmentsCodeFences: true
 blackfriday:
   extensions:
     - hardLineBreak
-menu:
-  main:
-  - identifier: common
-    name: Common
-    url: /common/
-    weight: 10
-  - identifier: basic
-    name: Basic API
-    url: /basic/
-    weight: 20
-  - identifier: merchant
-    name: Merchant API
-    url: /merchant/
-    weight: 30
-  - identifier: v3
-    name: v3 API
-    url: /v3/
-    weight: 40

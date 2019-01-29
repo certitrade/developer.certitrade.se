@@ -16,7 +16,13 @@ body > main > article > nav {
 	background: #c6e2f9;
 }
 /* list pages */
-body > main.list > article:hover {
+html:not(.home) > body > main.list.intro > article:not(:first-of-type),
+html:not(.home) > body > main.list:not(.intro) > article {
+	border: 1mm solid #0db6ff55;
+	background: linear-gradient(#e8f2fbb7, white)
+}
+html:not(.home) > body > main.list.intro > article:not(:first-of-type):hover,
+html:not(.home) > body > main.list:not(.intro) > article:hover {
 	background: linear-gradient(white, #e8f2fbb7)
 }
 /* menu */

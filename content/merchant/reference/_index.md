@@ -7,3 +7,4 @@ menu:
         identifier: merchant-reference
         name: Reference
 ---
+This is the reference documentation of the Certitrade Merchant API.
