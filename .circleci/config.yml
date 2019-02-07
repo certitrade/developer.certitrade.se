@@ -1,33 +1,24 @@
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
 version: 2
 jobs:
   build:
-    filters:
-      branches:
-        not: gh-pages
     docker:
-      # specify the version you desire here
-      - image: circleci/node:10.15-browsers
-    working_directory: ~/repo
+      - image: cibuilds/hugo:latest
+    working_directory: ~/hugo
+    environment:
+      HUGO_BUILD_DIR: ~/hugo/public
     steps:
+      # install git
+      - run: apk update && apk add git
+      # checkout the repository
       - checkout
-      # Download and cache dependencies
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "package.json" }}
-          # fallback to using the latest cache if no exact match is found
-          - v1-dependencies-
-
-      - run: npm install
-
-      - save_cache:
-          paths:
-            - node_modules
-          key: v1-dependencies-{{ checksum "package.json" }}
-
-      - run: npm run build
-      - run: npm run test
-
+      # install git submodules for managing third-party dependencies
+      - run: git submodule sync && git submodule update --init
+      # build with Hugo
+      - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
+      - run:
+          name: test our generated HTML files
+          command: |
+            htmlproofer $HUGO_BUILD_DIR --allow-hash-href --check-html --empty-alt-ignore --disable-external
       - deploy:
           name: deploy to GitHub Pages
           filters:
