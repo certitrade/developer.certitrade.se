@@ -1,32 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Certitrade API Documentation</title>
-    <link>//support.certitrade.se/</link>
-    <description>Recent content on Certitrade API Documentation</description>
+    <title>Certitrade Developer</title>
+    <link>//developer.certitrade.se/</link>
+    <description>Recent content on Certitrade Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 28 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//support.certitrade.se/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//developer.certitrade.se/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Concepts and Definitions</title>
-      <link>//support.certitrade.se/merchant/reference/concepts/</link>
+      <link>//developer.certitrade.se/merchant/reference/concepts/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/merchant/reference/concepts/</guid>
+      <guid>//developer.certitrade.se/merchant/reference/concepts/</guid>
       <description>Actors Definitions of the actors that occur in the document:
    Actor Description     Merchant The company that is a customer of CertiTrade   Client The merchant’s software that accesses the server via the API   Shop The merchant’s web shop where the client is installed   Server CertiTrade’s system that processes the client’s requests   Customer The person shopping in the merchant’s shop (the buyer)    REST CertiTrade API applies the principles of REST (REpresentational State Transfer) and has been built using what is known as resource-oriented architecture.</description>
     </item>
     
     <item>
       <title>Web Services</title>
-      <link>//support.certitrade.se/common/webservices/</link>
+      <link>//developer.certitrade.se/common/webservices/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/common/webservices/</guid>
+      <guid>//developer.certitrade.se/common/webservices/</guid>
       <description>This document concerns the web services that exist for CertiTrade Merchant API. Note that the authentication information may differ between the various web services.
 Test API URL The test system is used for integration testing and is accessed via the following URL:
 https://apitest.certitrade.net/ctpsp/ws/2.0  Callback IP The following outgoing IP is used to send callbacks to merchants: 195.178.165.212
@@ -35,30 +35,30 @@ Production API URL The production system is accessed via the following URL:</des
     
     <item>
       <title>Certitrade Basic API Reference</title>
-      <link>//support.certitrade.se/basic/reference/</link>
+      <link>//developer.certitrade.se/basic/reference/</link>
       <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/basic/reference/</guid>
+      <guid>//developer.certitrade.se/basic/reference/</guid>
       <description>Sammanfattning CtBasic är ett POST-baserat API för att göra betalningar i CtPsp.
 Parametrar Obligatoriska    Namn Typ Beskrivning     merchantid int Säljföretagets id i CertiTrades system   amount decimal Belopp med . som decimaltecken. 5 kr och 70 öre anges alltså 5.70   currency string Valuta i ISO4219 bokstavskoder, t ex SEK, EUR, USD   orderid num Numeriskt, max 15 siffror.   return_url url URL dit köparen vidarebefordras efter köp   hash string Integritetsskydd och autentisering.</description>
     </item>
     
     <item>
       <title>Resources</title>
-      <link>//support.certitrade.se/merchant/reference/resources/</link>
+      <link>//developer.certitrade.se/merchant/reference/resources/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/merchant/reference/resources/</guid>
+      <guid>//developer.certitrade.se/merchant/reference/resources/</guid>
       <description>The resource representations described in this section have data fields that are handled in different ways. Each field has one or more attributes that describe how you can interact with it.
    Attribute Description     A Auto – CertiTrade sets this field.   C Create – The field can be set when you create a resource.   U Update – The field can be set when you update a resource.</description>
     </item>
     
     <item>
       <title>Test Information</title>
-      <link>//support.certitrade.se/common/test/</link>
+      <link>//developer.certitrade.se/common/test/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/common/test/</guid>
+      <guid>//developer.certitrade.se/common/test/</guid>
       <description>This document contains test information for the various payment methods in the CertiTrade Merchant API. These can only be used in the test system and not in a production environment.
 Card (CARD / RECURRING / ONE_CLICK) The following card numbers can be used:
  To make a successful authorization without 3-D Secure, use 1234 5678 9000
@@ -67,10 +67,10 @@ Card (CARD / RECURRING / ONE_CLICK) The following card numbers can be used:
     
     <item>
       <title>Alternatives</title>
-      <link>//support.certitrade.se/start/alternatives/</link>
+      <link>//developer.certitrade.se/start/alternatives/</link>
       <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/start/alternatives/</guid>
+      <guid>//developer.certitrade.se/start/alternatives/</guid>
       <description>CertiTrade har två olika API:er för webshops, anpassade för olika system och krav:
  Basic API
  Merchant API
@@ -80,10 +80,10 @@ Funktioner och API    Funktion Basic API Merchant API     Kortbetalning ja ja   
     
     <item>
       <title>Process</title>
-      <link>//support.certitrade.se/merchant/reference/process/</link>
+      <link>//developer.certitrade.se/merchant/reference/process/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/merchant/reference/process/</guid>
+      <guid>//developer.certitrade.se/merchant/reference/process/</guid>
       <description>A payment is usually made via these steps:
  The shop creates a payment resource via the API.
  From the payment representation that is received, the paywin link is retrieved.
@@ -94,10 +94,10 @@ Funktioner och API    Funktion Basic API Merchant API     Kortbetalning ja ja   
     
     <item>
       <title>Examples</title>
-      <link>//support.certitrade.se/merchant/reference/examples/</link>
+      <link>//developer.certitrade.se/merchant/reference/examples/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/merchant/reference/examples/</guid>
+      <guid>//developer.certitrade.se/merchant/reference/examples/</guid>
       <description>Here are some concrete examples of common operations in the API. Certain details, e.g. header fields, may have been omitted, in which case this is shown by “”.
 Create card payment To create a payment resource a POST is made to the collection payment.
 Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;CARD&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34; } Response HTTP/1.</description>
@@ -105,19 +105,19 @@ Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date
     
     <item>
       <title>Tables</title>
-      <link>//support.certitrade.se/merchant/reference/tables/</link>
+      <link>//developer.certitrade.se/merchant/reference/tables/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/merchant/reference/tables/</guid>
+      <guid>//developer.certitrade.se/merchant/reference/tables/</guid>
       <description> Languages    Languages Language code     Swedish sv   English en   Norwegian no   Danish da   Finnish fi   German de   French fr   Italian it   Spanish es    Currencies    Code Num Currency     SEK 752 Swedish krona   EUR 978 Euro   USD 840 US dollar   DKK 208 Danish krone   GBP 826 British pound   NOK 578 Norwegian krone   AUD 036 Australian dollar   CAD 124 Canadian dollar   NZD 554 New Zealand dollar   CHF 756 Swiss franc   TRY 949 Turkish lira   JPY 392 Japanese yen    HTTP status codes    Status code Description     200 Successful GET or PUT request   201 A new resource has been created   204 A resource has been deleted   400 Input data error   401 Not authenticated   403 Not allowed   404 The resource requested cannot be found   500 Internal error    </description>
     </item>
     
     <item>
       <title>References</title>
-      <link>//support.certitrade.se/merchant/reference/references/</link>
+      <link>//developer.certitrade.se/merchant/reference/references/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/merchant/reference/references/</guid>
+      <guid>//developer.certitrade.se/merchant/reference/references/</guid>
       <description>REST
 http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
 JSON
@@ -135,10 +135,10 @@ http://www.ietf.org/rfc/rfc2104.txt</description>
     
     <item>
       <title>PHP Basic API Guide</title>
-      <link>//support.certitrade.se/basic/guides/php/</link>
+      <link>//developer.certitrade.se/basic/guides/php/</link>
       <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/basic/guides/php/</guid>
+      <guid>//developer.certitrade.se/basic/guides/php/</guid>
       <description>Här finns ett integrationspaket med dokumentation och exempelkod. Så här kommer du igång:
  Ladda ner zip-filen och packa upp den
  Kopiera katalogen certitrade till webroot eller annan publik katalog på er server

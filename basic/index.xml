@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Certitrade Basic API on Certitrade API Documentation</title>
-    <link>//support.certitrade.se/basic/</link>
-    <description>Recent content in Certitrade Basic API on Certitrade API Documentation</description>
+    <title>Certitrade Basic API on Certitrade Developer</title>
+    <link>//developer.certitrade.se/basic/</link>
+    <description>Recent content in Certitrade Basic API on Certitrade Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//support.certitrade.se/basic/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//developer.certitrade.se/basic/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Certitrade Basic API Reference</title>
-      <link>//support.certitrade.se/basic/reference/</link>
+      <link>//developer.certitrade.se/basic/reference/</link>
       <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/basic/reference/</guid>
+      <guid>//developer.certitrade.se/basic/reference/</guid>
       <description>Sammanfattning CtBasic är ett POST-baserat API för att göra betalningar i CtPsp.
 Parametrar Obligatoriska    Namn Typ Beskrivning     merchantid int Säljföretagets id i CertiTrades system   amount decimal Belopp med . som decimaltecken. 5 kr och 70 öre anges alltså 5.70   currency string Valuta i ISO4219 bokstavskoder, t ex SEK, EUR, USD   orderid num Numeriskt, max 15 siffror.   return_url url URL dit köparen vidarebefordras efter köp   hash string Integritetsskydd och autentisering.</description>
     </item>

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Basic API Guides on Certitrade API Documentation</title>
-    <link>//support.certitrade.se/basic/guides/</link>
-    <description>Recent content in Basic API Guides on Certitrade API Documentation</description>
+    <title>Basic API Guides on Certitrade Developer</title>
+    <link>//developer.certitrade.se/basic/guides/</link>
+    <description>Recent content in Basic API Guides on Certitrade Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 28 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//support.certitrade.se/basic/guides/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//developer.certitrade.se/basic/guides/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>PHP Basic API Guide</title>
-      <link>//support.certitrade.se/basic/guides/php/</link>
+      <link>//developer.certitrade.se/basic/guides/php/</link>
       <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/basic/guides/php/</guid>
+      <guid>//developer.certitrade.se/basic/guides/php/</guid>
       <description>Här finns ett integrationspaket med dokumentation och exempelkod. Så här kommer du igång:
  Ladda ner zip-filen och packa upp den
  Kopiera katalogen certitrade till webroot eller annan publik katalog på er server

@@ -1,42 +1,42 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Certitrade Merchant API Reference on Certitrade API Documentation</title>
-    <link>//support.certitrade.se/merchant/reference/</link>
-    <description>Recent content in Certitrade Merchant API Reference on Certitrade API Documentation</description>
+    <title>Certitrade Merchant API Reference on Certitrade Developer</title>
+    <link>//developer.certitrade.se/merchant/reference/</link>
+    <description>Recent content in Certitrade Merchant API Reference on Certitrade Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 28 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//support.certitrade.se/merchant/reference/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//developer.certitrade.se/merchant/reference/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Concepts and Definitions</title>
-      <link>//support.certitrade.se/merchant/reference/concepts/</link>
+      <link>//developer.certitrade.se/merchant/reference/concepts/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/merchant/reference/concepts/</guid>
+      <guid>//developer.certitrade.se/merchant/reference/concepts/</guid>
       <description>Actors Definitions of the actors that occur in the document:
    Actor Description     Merchant The company that is a customer of CertiTrade   Client The merchant’s software that accesses the server via the API   Shop The merchant’s web shop where the client is installed   Server CertiTrade’s system that processes the client’s requests   Customer The person shopping in the merchant’s shop (the buyer)    REST CertiTrade API applies the principles of REST (REpresentational State Transfer) and has been built using what is known as resource-oriented architecture.</description>
     </item>
     
     <item>
       <title>Resources</title>
-      <link>//support.certitrade.se/merchant/reference/resources/</link>
+      <link>//developer.certitrade.se/merchant/reference/resources/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/merchant/reference/resources/</guid>
+      <guid>//developer.certitrade.se/merchant/reference/resources/</guid>
       <description>The resource representations described in this section have data fields that are handled in different ways. Each field has one or more attributes that describe how you can interact with it.
    Attribute Description     A Auto – CertiTrade sets this field.   C Create – The field can be set when you create a resource.   U Update – The field can be set when you update a resource.</description>
     </item>
     
     <item>
       <title>Process</title>
-      <link>//support.certitrade.se/merchant/reference/process/</link>
+      <link>//developer.certitrade.se/merchant/reference/process/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/merchant/reference/process/</guid>
+      <guid>//developer.certitrade.se/merchant/reference/process/</guid>
       <description>A payment is usually made via these steps:
  The shop creates a payment resource via the API.
  From the payment representation that is received, the paywin link is retrieved.
@@ -47,10 +47,10 @@
     
     <item>
       <title>Examples</title>
-      <link>//support.certitrade.se/merchant/reference/examples/</link>
+      <link>//developer.certitrade.se/merchant/reference/examples/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/merchant/reference/examples/</guid>
+      <guid>//developer.certitrade.se/merchant/reference/examples/</guid>
       <description>Here are some concrete examples of common operations in the API. Certain details, e.g. header fields, may have been omitted, in which case this is shown by “”.
 Create card payment To create a payment resource a POST is made to the collection payment.
 Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;CARD&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34; } Response HTTP/1.</description>
@@ -58,19 +58,19 @@ Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date
     
     <item>
       <title>Tables</title>
-      <link>//support.certitrade.se/merchant/reference/tables/</link>
+      <link>//developer.certitrade.se/merchant/reference/tables/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/merchant/reference/tables/</guid>
+      <guid>//developer.certitrade.se/merchant/reference/tables/</guid>
       <description> Languages    Languages Language code     Swedish sv   English en   Norwegian no   Danish da   Finnish fi   German de   French fr   Italian it   Spanish es    Currencies    Code Num Currency     SEK 752 Swedish krona   EUR 978 Euro   USD 840 US dollar   DKK 208 Danish krone   GBP 826 British pound   NOK 578 Norwegian krone   AUD 036 Australian dollar   CAD 124 Canadian dollar   NZD 554 New Zealand dollar   CHF 756 Swiss franc   TRY 949 Turkish lira   JPY 392 Japanese yen    HTTP status codes    Status code Description     200 Successful GET or PUT request   201 A new resource has been created   204 A resource has been deleted   400 Input data error   401 Not authenticated   403 Not allowed   404 The resource requested cannot be found   500 Internal error    </description>
     </item>
     
     <item>
       <title>References</title>
-      <link>//support.certitrade.se/merchant/reference/references/</link>
+      <link>//developer.certitrade.se/merchant/reference/references/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/merchant/reference/references/</guid>
+      <guid>//developer.certitrade.se/merchant/reference/references/</guid>
       <description>REST
 http://www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm
 JSON

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Start on Certitrade API Documentation</title>
-    <link>//support.certitrade.se/start/</link>
-    <description>Recent content in Start on Certitrade API Documentation</description>
+    <title>Start on Certitrade Developer</title>
+    <link>//developer.certitrade.se/start/</link>
+    <description>Recent content in Start on Certitrade Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 24 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//support.certitrade.se/start/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//developer.certitrade.se/start/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Alternatives</title>
-      <link>//support.certitrade.se/start/alternatives/</link>
+      <link>//developer.certitrade.se/start/alternatives/</link>
       <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/start/alternatives/</guid>
+      <guid>//developer.certitrade.se/start/alternatives/</guid>
       <description>CertiTrade har två olika API:er för webshops, anpassade för olika system och krav:
  Basic API
  Merchant API

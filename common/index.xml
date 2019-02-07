@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Common on Certitrade API Documentation</title>
-    <link>//support.certitrade.se/common/</link>
-    <description>Recent content in Common on Certitrade API Documentation</description>
+    <title>Common on Certitrade Developer</title>
+    <link>//developer.certitrade.se/common/</link>
+    <description>Recent content in Common on Certitrade Developer</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 29 Jan 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="//support.certitrade.se/common/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="//developer.certitrade.se/common/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Web Services</title>
-      <link>//support.certitrade.se/common/webservices/</link>
+      <link>//developer.certitrade.se/common/webservices/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/common/webservices/</guid>
+      <guid>//developer.certitrade.se/common/webservices/</guid>
       <description>This document concerns the web services that exist for CertiTrade Merchant API. Note that the authentication information may differ between the various web services.
 Test API URL The test system is used for integration testing and is accessed via the following URL:
 https://apitest.certitrade.net/ctpsp/ws/2.0  Callback IP The following outgoing IP is used to send callbacks to merchants: 195.178.165.212
@@ -25,10 +25,10 @@ Production API URL The production system is accessed via the following URL:</des
     
     <item>
       <title>Test Information</title>
-      <link>//support.certitrade.se/common/test/</link>
+      <link>//developer.certitrade.se/common/test/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//support.certitrade.se/common/test/</guid>
+      <guid>//developer.certitrade.se/common/test/</guid>
       <description>This document contains test information for the various payment methods in the CertiTrade Merchant API. These can only be used in the test system and not in a production environment.
 Card (CARD / RECURRING / ONE_CLICK) The following card numbers can be used:
  To make a successful authorization without 3-D Secure, use 1234 5678 9000
