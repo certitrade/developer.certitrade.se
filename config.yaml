@@ -1,7 +1,7 @@
-baseURL: //support.certitrade.se/
+baseURL: //developer.certitrade.se/
 languageCode: en-us
 DefaultContentLanguage: "en"
-title: Certitrade API Documentation
+title: Certitrade Developer
 tagline: "Everything you need to integrate payments."
 theme: hugo-theme-html5
 MetaDataFormat: yaml
