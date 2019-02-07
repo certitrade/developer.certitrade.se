@@ -2,9 +2,9 @@
 version: 2
 jobs:
   build:
-    filters:
-      branches:
-        not: gh-pages
+    branches:
+      ignore:
+        - gh-pages
     docker:
       # specify the version you desire here
       - image: circleci/node:10.15-browsers
