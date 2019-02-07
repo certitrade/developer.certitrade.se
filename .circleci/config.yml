@@ -12,7 +12,7 @@ jobs:
       # checkout the repository
       - checkout
       # install git submodules for managing third-party dependencies
-      - run: git -v submodule update --init
+      - run: git submodule update --init
       # build with Hugo
       - run: HUGO_ENV=production hugo -v -d $HUGO_BUILD_DIR
       - run:
