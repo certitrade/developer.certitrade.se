@@ -4,6 +4,9 @@ nav a {
 	padding: .5em;
 	width: calc(100% - 1em);
 }
+article > nav a {
+	padding: .2em;
+}
 nav > ul ul a {
 	padding-left: 1.5em;
 	width: calc(100% - 2em);

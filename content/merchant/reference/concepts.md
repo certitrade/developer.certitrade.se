@@ -34,7 +34,7 @@ A URL can either address a specific resource or a collection of resources.
 
 All specific resources have a unique URL that has the format
 ```
-resource/\[id\]
+resource/[id]
 ```
 The URL `resource` addresses the collection of resources that is available to the user concerned. To restrict the collection or to carry out a search, you can use query parameters.
 
@@ -111,26 +111,32 @@ All calls to the API are authenticated via the Authorization header. This includ
 | `hashCode` | The request’s signature. hmac hash using sha256. For more info see section 1.6.4 hmac below. |
 
 The header is then to be constructed as follows:
+
 ```
-Authorization: CertiTrade \[userType\]\[userId\]:\[hashCode\]
+Authorization: CertiTrade [userType][userId]:[hashCode]
 ```
-Example:
+
+#### Example:
+
 ```
 Authorization: CertiTrade m12345:8667325291105f69b32ad4ae8\[...\]
 ```
+
 ### HMAC
 `hashCode` is computed using hmac with sha256 as the underlying hash function, and with the API key.
 
 The following algorithm is used to produce the string that is to be used in the hash computation (+ here means concatenation).
+
 ```
-\[HTTP-metod\] +
-\[Bas-URL\] +
-\[Resurs-URL\] +
-\[Datum (från date-header)\] +
-\[HTTP-Content\]
+[HTTP-metod] +
+[Bas-URL] +
+[Resurs-URL] +
+[Datum (från date-header)] +
+[HTTP-Content]
 ```
 
 Example 1: Create a resource
+
 ```
 'POST' +
 'https://test/ctpsp/ws/2.0' +
@@ -140,6 +146,7 @@ Example 1: Create a resource
 ```
 
 Example 2: Retrieve a specific resource, 12345
+
 ```
 'GET' +
 'https://test/ctpsp/ws/2.0' +
@@ -149,6 +156,7 @@ Example 2: Retrieve a specific resource, 12345
 ```
 
 Example 3: Retrieve resources where "testparam" is "testval"
+
 ```
 'GET' +
 'https://test/ctpsp/ws/2.0' +
@@ -165,22 +173,29 @@ The data formats used to represent resources, collections and errors are present
 In the HTTP messages, JSON is consistently used as the underlying data format in content, both in requests and responses.  
 The API requires input data to have the character encoding UTF-8. This applies to both content and GET parameters. GET data may in turn also be url-encoded.  
 In those calls that contain content (POST and PUT), the Content-Type header must be set as follows
-```
+
+```http
 Content-Type: application/json
 ```
+
 The character encoding is then assumed to be utf-8. A charset can be explicitly stated, but the only permitted value is then utf-8
-```
+
+```http
 Content-Type: application/json; charset=utf-8
 ```
+
 ### HAL
 
 Representations of resources and collections are described using HAL (Hypertext Application Language). HAL provides a structure that can clearly define linkability and recursive structures.
 
 Responses from the API that have status codes 2xx and 3xx have content in HAL format. The character encoding is utf-8. The Content-Type header is then
-```
+
+```http
 Content-Type: application/hal+json
 ```
+
 The basic structure for HAL is as follows:  
+
 ```json
 {
     "var1": "value1",
@@ -189,28 +204,30 @@ The basic structure for HAL is as follows:
     .
     .
     "varn": "valuen",
-    "\_links": {
+    "_links": {
         "link1": "url1",
         "link2": "url2",
         .
         .
         .
-        "linkn": "urln" 
+        "linkn": "urln"
     },
-    "\_embedded": \[
+    "_embedded": [
         Embedded resources
-    \]
+    ]
 }
 ```
-Where \_embedded can contain an array of subresources. Each such representation is also described using HAL.
+
+Where `_embedded` can contain an array of subresources. Each such representation is also described using HAL.
 
 A specific resource typically has the following representation:
+
 ```json
 {
     "id": "ResourceId",
     "created": "<Date when the resource was created>",
     "state": "Resource state",
-    "\_links": {
+    "_links": {
         "self": "Resource url",
         "link2": "url2",
         .
@@ -218,26 +235,29 @@ A specific resource typically has the following representation:
         .
         "linkn": "urln"
     },
-    "\_embedded": \[
-    \]
+    "_embedded": [
+    ]
 }
 ```
+
 A collection of resources typically has the following representation:
+
 ```json
 {
-     "max\_page\_size": "",
-     "\_links": {
+     "max_page_size": "",
+     "_links": {
          "self": "Collection url",
          "next": "url2",
          "previous": "urln"
      },
-     "\_embedded": \[ {
-        "resources" : 
-         	... 
+     "_embedded": [ {
+        "resources" :
+            ...
          },
-     \]
+     ]
 }
 ```
+
 | Link | Description |
 |------|-------------|
 | self | The resource’s URL |
@@ -249,9 +269,11 @@ A collection of resources typically has the following representation:
 If an error occurs and the request cannot be executed, a data structure of the type API Problem is returned that describes what the error is. This applies to responses with a status code of 4xx or 5xx.
 
 `Content-Type` is then set as follows:
+
 ```http
 Content-Type: application/api-problem+json
 ```
+
 The character encoding in the response is utf-8.
 
 | Parameter | Mandatory | Description |
@@ -260,6 +282,8 @@ The character encoding in the response is utf-8.
 | `title` | Yes | Short title of the error. |
 | `detail` | No | Detailed information about the error. |
 | `httpStatus` | No | HTTP status code. |
+
+#### Example
 
 ```json
 {  
@@ -308,6 +332,7 @@ Each element corresponds to the name of a parameter and maps with the following 
 Parameters can also occur nested in other parameters.
 
 Example: Response to OPTIONS call
+
 ```json
 {
     "url": "/ctpsp/ws/test",
@@ -332,7 +357,7 @@ Example: Response to OPTIONS call
                 },
                 "testparam2": {
                     "description": "A testparameter with subparameters",
-                    "type": "array\_associative",
+                    "type": "array_associative",
                     "required": "false",
                     "source": "content",
                     "parameters": {
@@ -356,27 +381,27 @@ Some of the collections that are represented can be restricted via query paramet
 
 For large collections a number of resource representations are retrieved at a time. The number is determined by the parameter size.
 
-
 | Parameter | Type | Description |
 |---|---|---|
-| size | Int | Page size (cannot exceed the 'max\_page\_size' field). |
-| offset | Int | Index for the first entry in the view. |
-| order | string | Sorting order ('ASC' or 'DESC'). |
-| order\_by | string | Name of the field by which the collection is to be sorted. |
+| `size` | Int | Page size (cannot exceed the `max_page_size` field). |
+| `offset` | Int | Index for the first entry in the view. |
+| `order` | string | Sorting order (`ASC` or `DESC`). |
+| `order_by` | string | Name of the field by which the collection is to be sorted. |
 
 ## Resending a request
 
 If a problem arises in the communication between client and server which results in that the client cannot decide whether a call has been processed or not, then it is important that the same call can be resent without any risk of side-effects (e.g. that multiple resources are created instead of one).
 
-To do this, all POST calls can be sent with the optional parameter `message\_id`. The value is generated in the client and must be an integer.
+To do this, all POST calls can be sent with the optional parameter `message_id`. The value is generated in the client and must be an integer.
 
-Together with the timestamp it forms a unique identifier for the call. If multiple calls come in with the same `timestamp` and `message\_id`, they will therefore be regarded as resendings of the same message. In this event, only one resource will be created and the same response will be given.
+Together with the timestamp it forms a unique identifier for the call. If multiple calls come in with the same `timestamp` and `message_id`, they will therefore be regarded as resendings of the same message. In this event, only one resource will be created and the same response will be given.
 
 Operations such as PUT and DELETE can always be repeated without side-effects.
 
 ## Version management and changes in API
 
 The API version is designated by three digits
+
 ```
 1 . 2 . 3  
 Major Minor Build
@@ -385,23 +410,22 @@ Major Minor Build
 The first two digits, i.e. major and minor, are included in the URL when the API is called. Changes in these mean that the API has been changed in a way that is not backward-compatible. The client may then need to be updated before the new version can be used. Changes in the major digit represent major restructuring.
 
 The URL has the form
+
 ```
-ctpsp/ws/\[Major\].\[Minor\]/\[Resource\]
+ctpsp/ws/[Major].[Minor]/[Resource]
 ```
+
 Certain changes can be made within a minor version and then the third digit, build, is incremented. These changes do not change the transaction logic and are expected to be able to be handled by the client without updating. This places certain demands on implementation. For example, data structures can be built more or less dynamically.
 
 Some examples of what a client is expected to be able to handle are given below.
 
-*   **Addition of variables in representations**  
+* **Addition of variables in representations**  
     If a representation that is returned from the system contains a variable that is not recognized by the client, this must be able to be ignored.
-    
-*   **Change in the definition collection of variables and parameters**  
+* **Change in the definition collection of variables and parameters**  
     This may apply, for example, if more languages become available in the language parameter when a payment is created
-    
-*   **Addition of non-mandatory parameters in call**  
+* **Addition of non-mandatory parameters in call**  
     The call will then be able to be made in the same way as previously and the new parameters are given the default values that reflect previous functionality
-    
-*   **Introduction of new resources and collections**  
+* **Introduction of new resources and collections**  
     Will not be displayed unless the client itself creates or retrieves these
 
 When the API version is incremented in a non-backward-compatible way, the old version will be available in parallel. The client can then be updated irrespective of the server.
@@ -433,4 +457,3 @@ Two examples of this are shown below, one in which the VAT is not included in th
 | **Total** | 140 | 18.71 |    | **Amount in payment** | 140 |
 
 We recommend that you send products without VAT included in the price in order to avoid potential problems with rounding off of fractions by subcontractors.
-
