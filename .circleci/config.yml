@@ -13,8 +13,11 @@ jobs:
     steps:
       # checkout the repository
       - checkout
-      - wget https://github.com/gohugoio/hugo/releases/download/v0.53/hugo_0.53_Linux-64bit.deb
-      - sudo dpkg -i hugo_0.53_Linux-64bit.deb
+      - run: 
+        name: install hugo
+        command: | 
+          wget https://github.com/gohugoio/hugo/releases/download/v0.53/hugo_0.53_Linux-64bit.deb
+          sudo dpkg -i hugo_0.53_Linux-64bit.deb
       # install git submodules for managing third-party dependencies
       - run: git submodule update --init
       # build with Hugo
