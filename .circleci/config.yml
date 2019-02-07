@@ -1,16 +1,20 @@
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
 version: 2
 jobs:
   build:
+    filters:
+      branches:
+        not: gh-pages
     docker:
-      - image: cibuilds/hugo:latest
-    working_directory: ~/hugo
+      # specify the version you desire here
+      - image: circleci/node:10.15-browsers
     environment:
       HUGO_BUILD_DIR: ~/hugo/public
     steps:
-      # install git
-      - run: apk update && apk add git
       # checkout the repository
       - checkout
+      - wget https://github.com/gohugoio/hugo/releases/download/v0.53/hugo_0.53_Linux-64bit.deb
+      - sudo dpkg -i hugo_0.53_Linux-64bit.deb
       # install git submodules for managing third-party dependencies
       - run: git submodule update --init
       # build with Hugo
