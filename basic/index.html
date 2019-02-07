@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html prefix="og: http://opy.me/ns# ">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="generator" content="Hugo 0.53" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>Certitrade Basic API &middot; Certitrade API Documentation</title>
+
+		<link rel="stylesheet" href="//support.certitrade.se/css/reset.css">
+		<link rel="stylesheet" href="//support.certitrade.se/css/text.css">
+		<link rel="shortcut icon" href="//support.certitrade.se/favicon.ico">
+		<link rel="icon" type="image/png" href="//support.certitrade.se/favicon-192.png" sizes="192x192">
+		<link rel="apple-touch-icon" sizes="180x180" href="//support.certitrade.se/favicon-180.png">
+		<link href="//support.certitrade.se/basic/index.xml" rel="alternate" type="application/rss+xml" title="Certitrade API Documentation" />
+		
+		<link rel="stylesheet" href="//support.certitrade.se/css/color.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/content.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/layout.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/list.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/menu.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/text.css"/>
+
+
+	<body>
+		<header>
+	<h1>
+		<a href="//support.certitrade.se/./">
+			
+			<img src="//support.certitrade.se/logo-certitrade-filled-1.png" />
+			
+		</a>
+	</h1>
+	
+
+
+		</header>
+
+		<nav>
+<ul>
+	
+	<li>
+		<a href="/common/">Common</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/common/webservices/">Web Services</a>
+		
+	</li>
+	
+	<li>
+		<a href="/common/test/">Test Information</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li class="current">
+		<a href="/basic/">Basic API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/reference/">Reference</a>
+		
+	</li>
+	
+	<li>
+		<a href="/basic/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/guides/php/">PHP</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/">Merchant API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/">Reference</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/concepts/">Concepts</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/">Resources</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/process/">Process</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/examples/">Examples</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/tables/">Tables</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/references/">References</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+
+		</nav>
+
+
+
+		<main class="list intro">
+
+	
+
+
+			<article id="certitrade-basic-api" class="mode-full">
+				<header>
+					<h1>Certitrade Basic API</h1>
+			<p>
+				<time>2019-01-29</time>
+
+				<span class='article-length'>200 words</span>
+				<span class='article-reading-time'>1 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+				
+				<nav id="TableOfContents">
+<ul>
+<li><a href="#exempel">Exempel</a></li>
+</ul>
+</nav>
+				
+
+						
+
+				<main>
+					
+						
+
+<p>Basic Payment API ger all funktionalitet som behövs för en enkel integration i en webshop.</p>
+
+<p>Här är urvalet av betalmetoder begränsat till kort och Swish. Butiken startar en betalning genom att vidarebefordra köparen till betalsystemet via en formulärpostning. Resultatet av en betalning kan hanteras antingen vid en callback eller i samband med att köparen skickas tillbaka till butik.</p>
+
+<p>API:et inkluderar inte heller administrativa funktioner som t ex återbetalning och att godkänna/avslå en transaktion. Dessa är istället tillgängliga via inloggning i Certitrades administrativa tjänst, MCA (Merchant Client Application). Där går det även att kontrollera statusen på transaktioner och ta ut rapporter av olika slag.</p>
+
+<h1 id="exempel">Exempel</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;basicform&#34;</span> <span style="color:#a6e22e">action</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://ct/basic&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;post&#34;</span>&gt;
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;merchantid&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;12345&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;amount&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5.00&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;currency&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;SEK&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;orderid&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;54321&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;return_url&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://returnurl&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;callback_url&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;http://callbackurl&#34;</span> /&gt;
+  &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;security_code&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;e3aa4590b24f5a...&#34;</span> /&gt;
+&lt;/<span style="color:#f92672">form</span>&gt;</code></pre></div>
+					
+				</main>
+
+				<footer>
+					<p>
+						
+						
+					</p>
+				</footer>
+
+
+
+
+			</article>
+
+
+
+
+
+
+			<article id="certitrade-basic-api-reference" class="mode-header">
+				<header>
+					<h1>Certitrade Basic API Reference</h1>
+			<p>
+				<time>2019-01-24</time>
+
+				<span class='article-length'>500 words</span>
+				<span class='article-reading-time'>3 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+						
+
+
+				<div class="self-link truncated"><a href="//support.certitrade.se/basic/reference/"><span></span></a></div>
+
+
+
+
+			</article>
+
+
+			<footer>
+				<nav>
+
+
+				</nav>
+			</footer>
+
+		</main>
+
+		<footer>
+	<p>copyright &copy; 2019 Certitrade AB</p>
+
+		</footer>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72875022-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+	</body>
+</html>

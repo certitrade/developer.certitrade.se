@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>//support.certitrade.se/common/</loc>
+    <lastmod>2019-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/merchant/reference/concepts/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/common/webservices/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/basic/reference/</loc>
+    <lastmod>2019-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/basic/</loc>
+    <lastmod>2019-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/basic/guides/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/merchant/reference/resources/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/common/test/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/start/alternatives/</loc>
+    <lastmod>2019-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/merchant/</loc>
+    <lastmod>2019-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/merchant/reference/process/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/merchant/reference/examples/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/merchant/reference/tables/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/merchant/reference/references/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/merchant/reference/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/basic/guides/php/</loc>
+    <lastmod>2019-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/start/</loc>
+    <lastmod>2019-01-24T00:00:00+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>//support.certitrade.se/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

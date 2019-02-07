@@ -1,0 +1,59 @@
+html:not(.home) > body > main.list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+
+html:not(.home) > body > main.list.intro > article:not(:first-of-type),
+html:not(.home) > body > main.list:not(.intro) > article {
+	width: 100%;
+	max-width: calc(20em - 4em - 2mm);
+	display: flex;
+	flex: grow;
+	flex-direction: column-reverse;
+	margin: 1em;
+}
+html:not(.home) > body > main.list.intro > article:not(:first-of-type) > aside,
+html:not(.home) > body > main.list:not(.intro) > article > aside {
+	width: 100%;
+}
+html:not(.home) > body > main.list.intro > article:not(:first-of-type) > aside > img,
+html:not(.home) > body > main.list:not(.intro) > article > aside > img {
+	width: 100%;
+}
+html:not(.home) > body > main.list.intro > article:not(:first-of-type) > header,
+html:not(.home) > body > main.list:not(.intro) > article > header {
+	font-size: 80%;
+	width: 100%;
+	height: 100%;
+}
+html:not(.home) > body > main.list.intro > article:not(:first-of-type) > header > h1,
+html:not(.home) > body > main.list:not(.intro) > article > header > h1 {
+	text-align: center;
+	margin: 0;
+}
+
+
+/* link & self-link */
+html:not(.home) > body > main.list.intro > article:not(:first-of-type),
+html:not(.home) > body > main.list:not(.intro) > article {
+	position: relative;
+}
+html:not(.home) > body > main.list.intro > article:not(:first-of-type) > .link,
+html:not(.home) > body > main.list:not(.intro) > article > .link,
+html:not(.home) > body > main.list.intro > article:not(:first-of-type) > .self-link,
+html:not(.home) > body > main.list:not(.intro) > article > .self-link {
+	padding: 0;
+}
+html:not(.home) > body > main.list.intro > article:not(:first-of-type) > .link > a > span,
+html:not(.home) > body > main.list:not(.intro) > article > .link > a > span,
+html:not(.home) > body > main.list.intro > article:not(:first-of-type) > .self-link > a > span,
+html:not(.home) > body > main.list:not(.intro) > article > .self-link > a > span {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	background-image: url('transparent.gif');
+}

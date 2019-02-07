@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html prefix="og: http://opy.me/ns# ">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="generator" content="Hugo 0.53" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>Concepts and Definitions &middot; Certitrade API Documentation</title>
+
+		<link rel="stylesheet" href="//support.certitrade.se/css/reset.css">
+		<link rel="stylesheet" href="//support.certitrade.se/css/text.css">
+		<link rel="shortcut icon" href="//support.certitrade.se/favicon.ico">
+		<link rel="icon" type="image/png" href="//support.certitrade.se/favicon-192.png" sizes="192x192">
+		<link rel="apple-touch-icon" sizes="180x180" href="//support.certitrade.se/favicon-180.png">
+		<link href="" rel="alternate" type="application/rss+xml" title="Certitrade API Documentation" />
+		
+		<link rel="stylesheet" href="//support.certitrade.se/css/color.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/content.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/layout.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/list.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/menu.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/text.css"/>
+
+
+	<body>
+		<header>
+	<h1>
+		<a href="//support.certitrade.se/./">
+			
+			<img src="//support.certitrade.se/logo-certitrade-filled-1.png" />
+			
+		</a>
+	</h1>
+	
+
+
+		</header>
+
+		<nav>
+<ul>
+	
+	<li>
+		<a href="/common/">Common</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/common/webservices/">Web Services</a>
+		
+	</li>
+	
+	<li>
+		<a href="/common/test/">Test Information</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/basic/">Basic API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/reference/">Reference</a>
+		
+	</li>
+	
+	<li>
+		<a href="/basic/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/guides/php/">PHP</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/">Merchant API</a>
+		
+		<ul>
+	
+	<li class="current-parent">
+		<a href="/merchant/reference/">Reference</a>
+		
+		<ul>
+	
+	<li class="current">
+		<a href="/merchant/reference/concepts/">Concepts</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/">Resources</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/process/">Process</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/examples/">Examples</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/tables/">Tables</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/references/">References</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+
+		</nav>
+
+
+		<main class="single">
+
+
+
+			<article id="concepts-and-definitions" class="mode-full">
+				<header>
+					<h1>Concepts and Definitions</h1>
+			<p>
+				<time>2019-01-28</time>
+
+				<span class='article-length'>2400 words</span>
+				<span class='article-reading-time'>12 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+				
+				<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#actors">Actors</a></li>
+<li><a href="#rest">REST</a></li>
+<li><a href="#resources-and-collections">Resources and collections</a></li>
+<li><a href="#urls">URLs</a></li>
+<li><a href="#http-methods">HTTP methods</a></li>
+<li><a href="#security">Security</a>
+<ul>
+<li><a href="#api-key">API key</a></li>
+<li><a href="#date-header">Date header</a></li>
+<li><a href="#authorization-header">Authorization header</a>
+<ul>
+<li><a href="#example">Example:</a></li>
+</ul></li>
+<li><a href="#hmac">HMAC</a></li>
+</ul></li>
+<li><a href="#data-format">Data format</a>
+<ul>
+<li><a href="#json-and-utf-8">JSON and UTF-8</a></li>
+<li><a href="#hal">HAL</a></li>
+<li><a href="#api-problem">API Problem</a>
+<ul>
+<li><a href="#example-1">Example</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#options">OPTIONS</a>
+<ul>
+<li><a href="#methods">Methods</a></li>
+<li><a href="#parameters">Parameters</a></li>
+<li><a href="#common-query-parameters-for-all-searchable-collections">Common query parameters for all searchable collections</a></li>
+</ul></li>
+<li><a href="#resending-a-request">Resending a request</a></li>
+<li><a href="#version-management-and-changes-in-api">Version management and changes in API</a></li>
+<li><a href="#products-in-the-payment-representation">Products in the Payment representation</a>
+<ul>
+<li><a href="#example-1-vat-not-included-in-price">Example 1: VAT not included in price</a></li>
+<li><a href="#example-2-price-including-vat">Example 2: Price including VAT</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+				
+
+						
+
+				<main>
+					
+						
+
+<h2 id="actors">Actors</h2>
+
+<p>Definitions of the actors that occur in the document:</p>
+
+<table>
+<thead>
+<tr>
+<th>Actor</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Merchant</td>
+<td>The company that is a customer of CertiTrade</td>
+</tr>
+
+<tr>
+<td>Client</td>
+<td>The merchant’s software that accesses the server via the API</td>
+</tr>
+
+<tr>
+<td>Shop</td>
+<td>The merchant’s web shop where the client is installed</td>
+</tr>
+
+<tr>
+<td>Server</td>
+<td>CertiTrade’s system that processes the client’s requests</td>
+</tr>
+
+<tr>
+<td>Customer</td>
+<td>The person shopping in the merchant’s shop (the buyer)</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="rest">REST</h2>
+
+<p>CertiTrade API applies the principles of REST (REpresentational State Transfer) and has been built using what is known as resource-oriented architecture.</p>
+
+<h2 id="resources-and-collections">Resources and collections</h2>
+
+<p>Resources are the fundamental concept in the API. A resource represents an object in the system. It could be a user or a payment, for example. All resources have a unique ID that is used to address a specific resource.</p>
+
+<p>You can also address multiple resources simultaneously; for example, all resources that share a certain attribute. Such a group of resources is called a collection.</p>
+
+<h2 id="urls">URLs</h2>
+
+<p>A URL can either address a specific resource or a collection of resources.</p>
+
+<p>All specific resources have a unique URL that has the format</p>
+
+<pre><code>resource/[id]
+</code></pre>
+
+<p>The URL <code>resource</code> addresses the collection of resources that is available to the user concerned. To restrict the collection or to carry out a search, you can use query parameters.</p>
+
+<p>E.g. the URL</p>
+
+<pre><code>resource?state=1
+</code></pre>
+
+<p>addresses all resources of the type in question with the state 1</p>
+
+<p>The URL can also reflect a resource hierarchy in which a subresource is only accessible under the resource to which it belongs, e.g.</p>
+
+<pre><code>resource/\[resourceId\]/subresource/\[subresourceId\]
+</code></pre>
+
+<h2 id="http-methods">HTTP methods</h2>
+
+<p>Predefined HTTP methods are used to perform operations on resources and collections. No other function calls are made via the API.</p>
+
+<p>The methods that can be applied to the API’s resources and collections are:</p>
+
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>GET</code></td>
+<td>Retrieves a representation of a resource or performs a query against a collection.</td>
+</tr>
+
+<tr>
+<td><code>POST</code></td>
+<td>Creates a new resource.</td>
+</tr>
+
+<tr>
+<td><code>PUT</code></td>
+<td>Changes data or the state of a resource.</td>
+</tr>
+
+<tr>
+<td><code>DELETE</code></td>
+<td>Deletes a resource.</td>
+</tr>
+
+<tr>
+<td><code>OPTIONS</code></td>
+<td>Provides information about a resource, e.g. about its representation and how the client can interact with it.</td>
+</tr>
+</tbody>
+</table>
+
+<p>For certain methods parameters also have to be included in the request, either in the query string or as data in the Content part of the call. This is specified further below.</p>
+
+<h2 id="security">Security</h2>
+
+<p>Security is an important element of the API’s design. The main aspects are as follows:</p>
+
+<ul>
+<li><strong>Calls must be transferred securely</strong><br />
+All communication therefore takes place via https.<br /></li>
+<li><strong>The server must verify the client’s authorization</strong><br />
+All calls must contain a signature in the Authorization header that the server uses to verify the authorization.<br /></li>
+<li><strong>The client must verify the server’s identity</strong><br />
+It is also important that the client verifies the server’s certificate. The example implementations show how this can be done.<br /></li>
+<li><strong>Calls must be change-protected</strong><br />
+The signature in the Authorization header is computed using the important parts of the message and a secret key that is known only by the client and server. A call therefore cannot be changed without making the signature invalid.<br />
+<br /></li>
+</ul>
+
+<h3 id="api-key">API key</h3>
+
+<p>For authentication you need a secret key that is shared between client and server. This is called an API key and is used when computing the signature that is sent in the Authorization header.</p>
+
+<p>Since the key is to be known only to the client and server, it is very important to protect it from unauthorized access in the client. Our example implementations show how this can be done in the source code.</p>
+
+<h3 id="date-header">Date header</h3>
+
+<p>All requests are to have a Date header with a timestamp that states when the request was sent in the client . The timestamp is not only used in the request signature, but is also compared with the current time on the server. If the difference between the client and server timestamps is too great, the request will not be processed.</p>
+
+<p>The Date header must have the following standardized format:</p>
+
+<pre><code>D, d M Y H:i:s GMT
+</code></pre>
+
+<p>Example:</p>
+
+<pre><code>Fri, 23 Nov 2002 09:50:36 GMT
+</code></pre>
+
+<h3 id="authorization-header">Authorization header</h3>
+
+<p>All calls to the API are authenticated via the Authorization header. This includes the following parameters:</p>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>userType</code></td>
+<td>&rsquo;m&rsquo; for merchant, &lsquo;a&rsquo; for agent</td>
+</tr>
+
+<tr>
+<td><code>userId</code></td>
+<td>merchant ID for merchant, agent ID for agent</td>
+</tr>
+
+<tr>
+<td><code>hashCode</code></td>
+<td>The request’s signature. hmac hash using sha256. For more info see section 1.6.4 hmac below.</td>
+</tr>
+</tbody>
+</table>
+
+<p>The header is then to be constructed as follows:</p>
+
+<pre><code>Authorization: CertiTrade [userType][userId]:[hashCode]
+</code></pre>
+
+<h4 id="example">Example:</h4>
+
+<pre><code>Authorization: CertiTrade m12345:8667325291105f69b32ad4ae8\[...\]
+</code></pre>
+
+<h3 id="hmac">HMAC</h3>
+
+<p><code>hashCode</code> is computed using hmac with sha256 as the underlying hash function, and with the API key.</p>
+
+<p>The following algorithm is used to produce the string that is to be used in the hash computation (+ here means concatenation).</p>
+
+<pre><code>[HTTP-metod] +
+[Bas-URL] +
+[Resurs-URL] +
+[Datum (från date-header)] +
+[HTTP-Content]
+</code></pre>
+
+<p>Example 1: Create a resource</p>
+
+<pre><code>'POST' +
+'https://test/ctpsp/ws/2.0' +
+'/testresurs' +
+'_Fri, 23 Nov 2002 09:50:36 GMT' +
+'{ &quot;testparam&quot; : &quot;test&quot; }'
+</code></pre>
+
+<p>Example 2: Retrieve a specific resource, 12345</p>
+
+<pre><code>'GET' +
+'https://test/ctpsp/ws/2.0' +
+'/testresurs/12345' +
+'Fri, 23 Nov 2002 09:50:36 GMT' +
+''
+</code></pre>
+
+<p>Example 3: Retrieve resources where &ldquo;testparam&rdquo; is &ldquo;testval&rdquo;</p>
+
+<pre><code>'GET' +
+'https://test/ctpsp/ws/2.0' +
+'/testresurs?testparam=testval' +
+'Fri, 23 Nov 2002 09:50:36 GMT' +
+</code></pre>
+
+<h2 id="data-format">Data format</h2>
+
+<p>The data formats used to represent resources, collections and errors are presented here. The focus is on the aspects that are necessary for this API. For complete definitions see the references at the end of the document.</p>
+
+<h3 id="json-and-utf-8">JSON and UTF-8</h3>
+
+<p>In the HTTP messages, JSON is consistently used as the underlying data format in content, both in requests and responses.<br />
+The API requires input data to have the character encoding UTF-8. This applies to both content and GET parameters. GET data may in turn also be url-encoded.<br />
+In those calls that contain content (POST and PUT), the Content-Type header must be set as follows</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#960050;background-color:#1e0010">Content-Type: application/json</span></code></pre></div>
+<p>The character encoding is then assumed to be utf-8. A charset can be explicitly stated, but the only permitted value is then utf-8</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#960050;background-color:#1e0010">Content-Type: application/json; charset=utf-8</span></code></pre></div>
+<h3 id="hal">HAL</h3>
+
+<p>Representations of resources and collections are described using HAL (Hypertext Application Language). HAL provides a structure that can clearly define linkability and recursive structures.</p>
+
+<p>Responses from the API that have status codes 2xx and 3xx have content in HAL format. The character encoding is utf-8. The Content-Type header is then</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#960050;background-color:#1e0010">Content-Type: application/hal+json</span></code></pre></div>
+<p>The basic structure for HAL is as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;var1&#34;</span>: <span style="color:#e6db74">&#34;value1&#34;</span>,
+    <span style="color:#f92672">&#34;var2&#34;</span>: <span style="color:#e6db74">&#34;value2&#34;</span>,
+    <span style="color:#960050;background-color:#1e0010">.</span>
+    <span style="color:#960050;background-color:#1e0010">.</span>
+    <span style="color:#960050;background-color:#1e0010">.</span>
+    <span style="color:#f92672">&#34;varn&#34;</span>: <span style="color:#e6db74">&#34;valuen&#34;</span>,
+    <span style="color:#f92672">&#34;_links&#34;</span>: {
+        <span style="color:#f92672">&#34;link1&#34;</span>: <span style="color:#e6db74">&#34;url1&#34;</span>,
+        <span style="color:#f92672">&#34;link2&#34;</span>: <span style="color:#e6db74">&#34;url2&#34;</span>,
+        <span style="color:#960050;background-color:#1e0010">.</span>
+        <span style="color:#960050;background-color:#1e0010">.</span>
+        <span style="color:#960050;background-color:#1e0010">.</span>
+        <span style="color:#f92672">&#34;linkn&#34;</span>: <span style="color:#e6db74">&#34;urln&#34;</span>
+    },
+    <span style="color:#f92672">&#34;_embedded&#34;</span>: [
+        <span style="color:#960050;background-color:#1e0010">Embedded</span> <span style="color:#960050;background-color:#1e0010">resources</span>
+    ]
+}</code></pre></div>
+<p>Where <code>_embedded</code> can contain an array of subresources. Each such representation is also described using HAL.</p>
+
+<p>A specific resource typically has the following representation:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;ResourceId&#34;</span>,
+    <span style="color:#f92672">&#34;created&#34;</span>: <span style="color:#e6db74">&#34;&lt;Date when the resource was created&gt;&#34;</span>,
+    <span style="color:#f92672">&#34;state&#34;</span>: <span style="color:#e6db74">&#34;Resource state&#34;</span>,
+    <span style="color:#f92672">&#34;_links&#34;</span>: {
+        <span style="color:#f92672">&#34;self&#34;</span>: <span style="color:#e6db74">&#34;Resource url&#34;</span>,
+        <span style="color:#f92672">&#34;link2&#34;</span>: <span style="color:#e6db74">&#34;url2&#34;</span>,
+        <span style="color:#960050;background-color:#1e0010">.</span>
+        <span style="color:#960050;background-color:#1e0010">.</span>
+        <span style="color:#960050;background-color:#1e0010">.</span>
+        <span style="color:#f92672">&#34;linkn&#34;</span>: <span style="color:#e6db74">&#34;urln&#34;</span>
+    },
+    <span style="color:#f92672">&#34;_embedded&#34;</span>: [
+    ]
+}</code></pre></div>
+<p>A collection of resources typically has the following representation:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+     <span style="color:#f92672">&#34;max_page_size&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>,
+     <span style="color:#f92672">&#34;_links&#34;</span>: {
+         <span style="color:#f92672">&#34;self&#34;</span>: <span style="color:#e6db74">&#34;Collection url&#34;</span>,
+         <span style="color:#f92672">&#34;next&#34;</span>: <span style="color:#e6db74">&#34;url2&#34;</span>,
+         <span style="color:#f92672">&#34;previous&#34;</span>: <span style="color:#e6db74">&#34;urln&#34;</span>
+     },
+     <span style="color:#f92672">&#34;_embedded&#34;</span>: [ {
+        <span style="color:#f92672">&#34;resources&#34;</span> :
+            <span style="color:#960050;background-color:#1e0010">...</span>
+         },
+     ]
+}</code></pre></div>
+<table>
+<thead>
+<tr>
+<th>Link</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>self</td>
+<td>The resource’s URL</td>
+</tr>
+
+<tr>
+<td>next</td>
+<td>The next page in the collection</td>
+</tr>
+
+<tr>
+<td>previous</td>
+<td>The previous page in the collection</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="api-problem">API Problem</h3>
+
+<p>If an error occurs and the request cannot be executed, a data structure of the type API Problem is returned that describes what the error is. This applies to responses with a status code of 4xx or 5xx.</p>
+
+<p><code>Content-Type</code> is then set as follows:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#960050;background-color:#1e0010">Content-Type: application/api-problem+json</span></code></pre></div>
+<p>The character encoding in the response is utf-8.</p>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Mandatory</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>describedBy</code></td>
+<td>Yes</td>
+<td>URL that refers to a description of the error.</td>
+</tr>
+
+<tr>
+<td><code>title</code></td>
+<td>Yes</td>
+<td>Short title of the error.</td>
+</tr>
+
+<tr>
+<td><code>detail</code></td>
+<td>No</td>
+<td>Detailed information about the error.</td>
+</tr>
+
+<tr>
+<td><code>httpStatus</code></td>
+<td>No</td>
+<td>HTTP status code.</td>
+</tr>
+</tbody>
+</table>
+
+<h4 id="example-1">Example</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{  
+    <span style="color:#f92672">&#34;describedBy&#34;</span>: <span style="color:#e6db74">&#34;http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html&#34;</span>,  
+    <span style="color:#f92672">&#34;title&#34;</span>: <span style="color:#e6db74">&#34;Not authorized to access resource.&#34;</span>,  
+    <span style="color:#f92672">&#34;detail&#34;</span>: <span style="color:#66d9ef">null</span>,  
+    <span style="color:#f92672">&#34;httpStatus&#34;</span>: <span style="color:#ae81ff">403</span>
+}</code></pre></div>
+<h2 id="options">OPTIONS</h2>
+
+<p>When a url is called using the HTTP method OPTIONS, this returns information about the resource or collection and what the client can do with it.</p>
+
+<p>The Allow header contains a comma-separated list of the HTTP methods that are allowed.</p>
+
+<p>The Content part contains data that describes the resource or collection. The top structure is as follows:</p>
+
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Description</th>
+<th>Format</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>url</td>
+<td>Format of URL</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>description</td>
+<td>Plain text description of the resource/collection</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>methods</td>
+<td>Which HTTP methods are applicable to the resource URL</td>
+<td>Associative array – see below</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="methods">Methods</h3>
+
+<p>Each applicable HTTP method maps in turn with the following structure:</p>
+
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Description</th>
+<th>Format</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>access</td>
+<td>Which user types have access to the method (Merchant, Agent).</td>
+<td>array</td>
+</tr>
+
+<tr>
+<td>parameters</td>
+<td>A list of the parameters that are accepted.</td>
+<td>Associative array – see below</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="parameters">Parameters</h3>
+
+<p>Each element corresponds to the name of a parameter and maps with the following structure, which describes the parameter:</p>
+
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Description</th>
+<th>Format</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>description</td>
+<td>Descriptive text about the parameter.</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>type</td>
+<td>The data type (int, string, array).</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>required</td>
+<td>Whether or not the parameter is mandatory.</td>
+<td>bool</td>
+</tr>
+
+<tr>
+<td>source</td>
+<td>&ldquo;content&rdquo; if the parameter is to be sent as part of content, &ldquo;query&rdquo; if it is to be sent as a query parameter.</td>
+<td>string</td>
+</tr>
+
+<tr>
+<td>parameters</td>
+<td>If &ldquo;type&rdquo; is array, nested parameters occur here in the same structure format.</td>
+<td>Associative/sequential array</td>
+</tr>
+</tbody>
+</table>
+
+<p>Parameters can also occur nested in other parameters.</p>
+
+<p>Example: Response to OPTIONS call</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-json" data-lang="json">{
+    <span style="color:#f92672">&#34;url&#34;</span>: <span style="color:#e6db74">&#34;/ctpsp/ws/test&#34;</span>,
+    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;testresource&#34;</span>,
+    <span style="color:#f92672">&#34;methods&#34;</span>: {
+        <span style="color:#f92672">&#34;GET&#34;</span>: {
+            <span style="color:#f92672">&#34;access&#34;</span>: [
+                <span style="color:#e6db74">&#34;Agent&#34;</span>,
+                <span style="color:#e6db74">&#34;Merchant&#34;</span>
+            ]
+        },
+        <span style="color:#f92672">&#34;POST&#34;</span>: {
+            <span style="color:#f92672">&#34;access&#34;</span>: [
+                <span style="color:#e6db74">&#34;Merchant&#34;</span>
+            ],
+            <span style="color:#f92672">&#34;parameters&#34;</span>: {
+                <span style="color:#f92672">&#34;testparam1&#34;</span>: {
+                    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;A testparameter&#34;</span>,
+                    <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+                    <span style="color:#f92672">&#34;required&#34;</span>: <span style="color:#e6db74">&#34;true&#34;</span>,
+                    <span style="color:#f92672">&#34;source&#34;</span>: <span style="color:#e6db74">&#34;content&#34;</span>
+                },
+                <span style="color:#f92672">&#34;testparam2&#34;</span>: {
+                    <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;A testparameter with subparameters&#34;</span>,
+                    <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;array_associative&#34;</span>,
+                    <span style="color:#f92672">&#34;required&#34;</span>: <span style="color:#e6db74">&#34;false&#34;</span>,
+                    <span style="color:#f92672">&#34;source&#34;</span>: <span style="color:#e6db74">&#34;content&#34;</span>,
+                    <span style="color:#f92672">&#34;parameters&#34;</span>: {
+                        <span style="color:#f92672">&#34;testparam3&#34;</span>: {
+                            <span style="color:#f92672">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;A nestled parameter&#34;</span>,
+                            <span style="color:#f92672">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>,
+                            <span style="color:#f92672">&#34;required&#34;</span>: <span style="color:#e6db74">&#34;false&#34;</span>,
+                            <span style="color:#f92672">&#34;source&#34;</span>: <span style="color:#e6db74">&#34;content&#34;</span>
+                        }
+                    }
+                }
+            }
+        }
+    }
+}</code></pre></div>
+<h3 id="common-query-parameters-for-all-searchable-collections">Common query parameters for all searchable collections</h3>
+
+<p>Some of the collections that are represented can be restricted via query parameters. This is specified for the resource in question using searchable parameters.</p>
+
+<p>For large collections a number of resource representations are retrieved at a time. The number is determined by the parameter size.</p>
+
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>size</code></td>
+<td>Int</td>
+<td>Page size (cannot exceed the <code>max_page_size</code> field).</td>
+</tr>
+
+<tr>
+<td><code>offset</code></td>
+<td>Int</td>
+<td>Index for the first entry in the view.</td>
+</tr>
+
+<tr>
+<td><code>order</code></td>
+<td>string</td>
+<td>Sorting order (<code>ASC</code> or <code>DESC</code>).</td>
+</tr>
+
+<tr>
+<td><code>order_by</code></td>
+<td>string</td>
+<td>Name of the field by which the collection is to be sorted.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="resending-a-request">Resending a request</h2>
+
+<p>If a problem arises in the communication between client and server which results in that the client cannot decide whether a call has been processed or not, then it is important that the same call can be resent without any risk of side-effects (e.g. that multiple resources are created instead of one).</p>
+
+<p>To do this, all POST calls can be sent with the optional parameter <code>message_id</code>. The value is generated in the client and must be an integer.</p>
+
+<p>Together with the timestamp it forms a unique identifier for the call. If multiple calls come in with the same <code>timestamp</code> and <code>message_id</code>, they will therefore be regarded as resendings of the same message. In this event, only one resource will be created and the same response will be given.</p>
+
+<p>Operations such as PUT and DELETE can always be repeated without side-effects.</p>
+
+<h2 id="version-management-and-changes-in-api">Version management and changes in API</h2>
+
+<p>The API version is designated by three digits</p>
+
+<pre><code>1 . 2 . 3  
+Major Minor Build
+</code></pre>
+
+<p>The first two digits, i.e. major and minor, are included in the URL when the API is called. Changes in these mean that the API has been changed in a way that is not backward-compatible. The client may then need to be updated before the new version can be used. Changes in the major digit represent major restructuring.</p>
+
+<p>The URL has the form</p>
+
+<pre><code>ctpsp/ws/[Major].[Minor]/[Resource]
+</code></pre>
+
+<p>Certain changes can be made within a minor version and then the third digit, build, is incremented. These changes do not change the transaction logic and are expected to be able to be handled by the client without updating. This places certain demands on implementation. For example, data structures can be built more or less dynamically.</p>
+
+<p>Some examples of what a client is expected to be able to handle are given below.</p>
+
+<ul>
+<li><strong>Addition of variables in representations</strong><br />
+If a representation that is returned from the system contains a variable that is not recognized by the client, this must be able to be ignored.<br /></li>
+<li><strong>Change in the definition collection of variables and parameters</strong><br />
+This may apply, for example, if more languages become available in the language parameter when a payment is created<br /></li>
+<li><strong>Addition of non-mandatory parameters in call</strong><br />
+The call will then be able to be made in the same way as previously and the new parameters are given the default values that reflect previous functionality<br /></li>
+<li><strong>Introduction of new resources and collections</strong><br />
+Will not be displayed unless the client itself creates or retrieves these<br />
+<br /></li>
+</ul>
+
+<p>When the API version is incremented in a non-backward-compatible way, the old version will be available in parallel. The client can then be updated irrespective of the server.</p>
+
+<h2 id="products-in-the-payment-representation">Products in the Payment representation</h2>
+
+<p>When using certain payment methods information about the customer may be required and the products may need to be specified. For this reason, the Customer and Products can also be included.</p>
+
+<p>There are a number of things to bear in mind when you include these structures. The first is that if products are specified then you cannot at the same time specify an <em>amount</em> in the root of the Payment structure. The amount is instead calculated from the product specification and is set automatically.</p>
+
+<p>The second thing you need to know is how CertiTrade totals the VAT. The VAT is first calculated for each individual line and is then added together to get the total VAT.</p>
+
+<p>Two examples of this are shown below, one in which the VAT is not included in the specified product price and one where VAT is included.</p>
+
+<h3 id="example-1-vat-not-included-in-price">Example 1: VAT not included in price</h3>
+
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>VAT rate</th>
+<th>Line total (price)</th>
+<th>Line total (VAT)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Food</td>
+<td>10</td>
+<td>10</td>
+<td>12%</td>
+<td>100</td>
+<td>12</td>
+</tr>
+
+<tr>
+<td>Clothing</td>
+<td>20</td>
+<td>2</td>
+<td>25%</td>
+<td>40</td>
+<td>10</td>
+</tr>
+
+<tr>
+<td><strong>Total</strong></td>
+<td>140</td>
+<td>22</td>
+<td></td>
+<td><strong>Amount in payment</strong></td>
+<td>162</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="example-2-price-including-vat">Example 2: Price including VAT</h3>
+
+<table>
+<thead>
+<tr>
+<th>Product</th>
+<th>Price</th>
+<th>Quantity</th>
+<th>VAT rate</th>
+<th>Line total (price)</th>
+<th>Line total (VAT)</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Food</td>
+<td>10</td>
+<td>10</td>
+<td>12%</td>
+<td>100</td>
+<td>10.71</td>
+</tr>
+
+<tr>
+<td>Clothing</td>
+<td>20</td>
+<td>2</td>
+<td>25%</td>
+<td>40</td>
+<td>8</td>
+</tr>
+
+<tr>
+<td><strong>Total</strong></td>
+<td>140</td>
+<td>18.71</td>
+<td></td>
+<td><strong>Amount in payment</strong></td>
+<td>140</td>
+</tr>
+</tbody>
+</table>
+
+<p>We recommend that you send products without VAT included in the price in order to avoid potential problems with rounding off of fractions by subcontractors.</p>
+
+					
+				</main>
+
+				<footer>
+					<p>
+						
+						
+					</p>
+				</footer>
+
+
+
+
+			</article>
+
+		</main>
+
+		<footer>
+	<p>copyright &copy; 2019 Certitrade AB</p>
+
+		</footer>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72875022-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+	</body>
+</html>

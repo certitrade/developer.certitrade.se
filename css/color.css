@@ -1,0 +1,40 @@
+body {
+	background: #b7dcf8;
+}
+body > header {
+	background: white;
+	border-bottom: 1mm solid #0db6ff;
+}
+body > main {
+	background: linear-gradient(#e8f2fbb7, white)
+}
+body > footer {
+	background: #0db6ff;
+	color: #f2f2f2
+}
+body > main > article > nav > ul {
+	background: #c6e2f9;
+}
+/* list pages */
+html:not(.home) > body > main.list.intro > article:not(:first-of-type),
+html:not(.home) > body > main.list:not(.intro) > article {
+	border: 1mm solid #0db6ff55;
+	background: linear-gradient(#e8f2fbb7, white)
+}
+html:not(.home) > body > main.list.intro > article:not(:first-of-type):hover,
+html:not(.home) > body > main.list:not(.intro) > article:hover {
+	background: linear-gradient(white, #e8f2fbb7)
+}
+/* menu */
+nav a {
+	color: #0b79a8;
+}
+nav li.current > a,
+nav a:hover {
+	background: #e8f2fbb7;
+	color: #0b79a8;
+}
+/* tables */
+table > tbody > tr:nth-child(odd) {
+	background: #6886a01e;
+}

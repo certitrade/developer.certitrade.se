@@ -1,0 +1,14 @@
+pre {
+	padding: 1em;
+	margin: 0 -1em;
+}
+
+p > img,
+table {
+	max-width: calc(100%);
+	margin: 0 auto;
+}
+table th,
+table td {
+	overflow-wrap: 
+}

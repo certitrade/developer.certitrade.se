@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html prefix="og: http://opy.me/ns# ">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="generator" content="Hugo 0.53" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>Certitrade Basic API Reference &middot; Certitrade API Documentation</title>
+
+		<link rel="stylesheet" href="//support.certitrade.se/css/reset.css">
+		<link rel="stylesheet" href="//support.certitrade.se/css/text.css">
+		<link rel="shortcut icon" href="//support.certitrade.se/favicon.ico">
+		<link rel="icon" type="image/png" href="//support.certitrade.se/favicon-192.png" sizes="192x192">
+		<link rel="apple-touch-icon" sizes="180x180" href="//support.certitrade.se/favicon-180.png">
+		<link href="" rel="alternate" type="application/rss+xml" title="Certitrade API Documentation" />
+		
+		<link rel="stylesheet" href="//support.certitrade.se/css/color.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/content.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/layout.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/list.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/menu.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/text.css"/>
+
+
+	<body>
+		<header>
+	<h1>
+		<a href="//support.certitrade.se/./">
+			
+			<img src="//support.certitrade.se/logo-certitrade-filled-1.png" />
+			
+		</a>
+	</h1>
+	
+
+
+		</header>
+
+		<nav>
+<ul>
+	
+	<li>
+		<a href="/common/">Common</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/common/webservices/">Web Services</a>
+		
+	</li>
+	
+	<li>
+		<a href="/common/test/">Test Information</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/basic/">Basic API</a>
+		
+		<ul>
+	
+	<li class="current">
+		<a href="/basic/reference/">Reference</a>
+		
+	</li>
+	
+	<li>
+		<a href="/basic/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/guides/php/">PHP</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/">Merchant API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/">Reference</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/concepts/">Concepts</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/">Resources</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/process/">Process</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/examples/">Examples</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/tables/">Tables</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/references/">References</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+
+		</nav>
+
+
+		<main class="single">
+
+
+
+			<article id="certitrade-basic-api-reference" class="mode-full">
+				<header>
+					<h1>Certitrade Basic API Reference</h1>
+			<p>
+				<time>2019-01-24</time>
+
+				<span class='article-length'>500 words</span>
+				<span class='article-reading-time'>3 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+				
+				<nav id="TableOfContents">
+<ul>
+<li><a href="#sammanfattning">Sammanfattning</a></li>
+<li><a href="#parametrar">Parametrar</a>
+<ul>
+<li><a href="#obligatoriska">Obligatoriska</a></li>
+<li><a href="#valfria">Valfria</a></li>
+<li><a href="#definitioner">Definitioner</a>
+<ul>
+<li>
+<ul>
+<li><a href="#betalmetoder">Betalmetoder</a></li>
+</ul></li>
+<li><a href="#språk">Språk</a></li>
+</ul></li>
+</ul></li>
+<li><a href="#callback-och-retur-till-butik">Callback och retur till butik</a></li>
+<li><a href="#autentisering-och-integritetsskydd">Autentisering och integritetsskydd</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#butik-certitrade">Butik -&gt; CertiTrade</a></li>
+<li><a href="#certitrade-butik-callback-och-retur">CertiTrade -&gt; Butik (callback och retur)</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+				
+
+						
+
+				<main>
+					
+						
+
+<h1 id="sammanfattning">Sammanfattning</h1>
+
+<p>CtBasic är ett POST-baserat API för att göra betalningar i CtPsp.</p>
+
+<h1 id="parametrar">Parametrar</h1>
+
+<h2 id="obligatoriska">Obligatoriska</h2>
+
+<table>
+<thead>
+<tr>
+<th>Namn</th>
+<th>Typ</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>merchantid</td>
+<td>int</td>
+<td>Säljföretagets id i CertiTrades system</td>
+</tr>
+
+<tr>
+<td>amount</td>
+<td>decimal</td>
+<td>Belopp med . som decimaltecken. 5 kr och 70 öre anges alltså 5.70</td>
+</tr>
+
+<tr>
+<td>currency</td>
+<td>string</td>
+<td>Valuta i ISO4219 bokstavskoder, t ex SEK, EUR, USD</td>
+</tr>
+
+<tr>
+<td>orderid</td>
+<td>num</td>
+<td>Numeriskt, max 15 siffror.</td>
+</tr>
+
+<tr>
+<td>return_url</td>
+<td>url</td>
+<td>URL dit köparen vidarebefordras efter köp</td>
+</tr>
+
+<tr>
+<td>hash</td>
+<td>string</td>
+<td>Integritetsskydd och autentisering. Anges på formatet [algoritm]:[hash] Läs mer nedan</td>
+</tr>
+
+<tr>
+<td>client_info</td>
+<td>string</td>
+<td>Sträng som identifierar klienten.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="valfria">Valfria</h2>
+
+<table>
+<thead>
+<tr>
+<th>Namn</th>
+<th>Typ</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>callback_url</td>
+<td>url</td>
+<td>URL för callbacksfrån CertiTrade</td>
+</tr>
+
+<tr>
+<td>cust_phone</td>
+<td>string</td>
+<td>Köparens telefonnummer</td>
+</tr>
+
+<tr>
+<td>cust_email</td>
+<td>email</td>
+<td>Köparens emailadress</td>
+</tr>
+
+<tr>
+<td>payment_method</td>
+<td>string</td>
+<td>Betalmetod. API:et stöder kort och Swish</td>
+</tr>
+
+<tr>
+<td>language</td>
+<td>string</td>
+<td>Språkkod. Ifall denna parameter utelämnas kommer systemet att försöka hitta lämpligt språk utifrån köparens inställningar i webbläsaren.</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="definitioner">Definitioner</h2>
+
+<h4 id="betalmetoder">Betalmetoder</h4>
+
+<table>
+<thead>
+<tr>
+<th>Värde</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>CARD</td>
+<td>Kortbetalning</td>
+</tr>
+
+<tr>
+<td>SWISH_E</td>
+<td>Swish för ehandel</td>
+</tr>
+</tbody>
+</table>
+
+<h3 id="språk">Språk</h3>
+
+<table>
+<thead>
+<tr>
+<th>Värde</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>sv</td>
+<td>Svenska</td>
+</tr>
+
+<tr>
+<td>en</td>
+<td>Engelska</td>
+</tr>
+
+<tr>
+<td>no</td>
+<td>Norska</td>
+</tr>
+
+<tr>
+<td>da</td>
+<td>Danska</td>
+</tr>
+
+<tr>
+<td>fi</td>
+<td>Finska</td>
+</tr>
+
+<tr>
+<td>de</td>
+<td>Tyska</td>
+</tr>
+
+<tr>
+<td>fr</td>
+<td>Franska</td>
+</tr>
+
+<tr>
+<td>it</td>
+<td>Italienska</td>
+</tr>
+
+<tr>
+<td>es</td>
+<td>Spanska</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="callback-och-retur-till-butik">Callback och retur till butik</h1>
+
+<p>När betalsessionen avslutas skickas köparen tillbaka till butikens return_url via ett formulär med resultatparametrar från betalningen.</p>
+
+<p>Om butiken anger callback_url kommer dessa parametrar även att skickas i en callback innan köparen återvänder till butik.</p>
+
+<p>Följande parametrar skickas då:</p>
+
+<table>
+<thead>
+<tr>
+<th>Namn</th>
+<th>Typ</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>hash</td>
+<td>string</td>
+<td>Integritetsskydd och autentisering. Läs mer nedan</td>
+</tr>
+
+<tr>
+<td>paymentid</td>
+<td>int</td>
+<td>Betalningens id i CertiTrades system</td>
+</tr>
+
+<tr>
+<td>merchantid</td>
+<td>int</td>
+<td>Säljföretagets id i CertiTrades system</td>
+</tr>
+
+<tr>
+<td>orderid</td>
+<td>num</td>
+<td>Butikens orderid</td>
+</tr>
+
+<tr>
+<td>function</td>
+<td>string</td>
+<td>Resultat APPROVE</td>
+</tr>
+
+<tr>
+<td>description</td>
+<td>int</td>
+<td>Kod som beskriver resultatet. Läs mer nedan</td>
+</tr>
+
+<tr>
+<td>timestamp</td>
+<td>num</td>
+<td>Tidsstämpel</td>
+</tr>
+
+<tr>
+<td>method</td>
+<td>string</td>
+<td>Betalmetod som använts</td>
+</tr>
+</tbody>
+</table>
+
+<p>Om function är <code>APPROVE</code> eller <code>DECLINE</code> kommer också vissa parametrar att skickas som är specifika för aktuell betalmetod</p>
+
+<p>Dessa parametrar namnges enligt <code>[method]-[parameter_name]</code></p>
+
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Namn</th>
+<th>Typ</th>
+<th>Beskrivning</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>APPROVE</td>
+<td>CARD-authcode</td>
+<td>Alfanumeriskt</td>
+<td>Kod som används i kommunikation med bank då en auktorisation ska identifieras. Oftast 6 siffror men kan variera i längd samt innehålla bokstäver.</td>
+</tr>
+
+<tr>
+<td>APPROVE</td>
+<td>SWISH_E-payment_reference</td>
+<td>Alfanumeriskt</td>
+<td>Referens till Swish en Swish-betalning</td>
+</tr>
+
+<tr>
+<td>DECLINE</td>
+<td>CARD-respcode</td>
+<td>2 tecken</td>
+<td>Resultatod som skickas vid misslyckad auktorisation.</td>
+</tr>
+
+<tr>
+<td>DECLINE</td>
+<td>SWISH_E-error_code</td>
+<td></td>
+<td>Felkod från Swish</td>
+</tr>
+
+<tr>
+<td>DECLINE</td>
+<td>SWISH_E-error_message</td>
+<td></td>
+<td>Felmeddelande från Swish</td>
+</tr>
+</tbody>
+</table>
+
+<h1 id="autentisering-och-integritetsskydd">Autentisering och integritetsskydd</h1>
+
+<p>Alla meddelanden mellan butik och CertiTrade skyddas med en hashkod som beräknas på en sträng sammansatt av apinyckeln och vissa av parametrarna.</p>
+
+<p>Strängen konstrueras enligt följande</p>
+
+<h4 id="butik-certitrade">Butik -&gt; CertiTrade</h4>
+
+<pre><code>apikey + merchantid + orderid + amount + currency + return_url + callback_url
+</code></pre>
+
+<h4 id="certitrade-butik-callback-och-retur">CertiTrade -&gt; Butik (callback och retur)</h4>
+
+<pre><code>apikey + paymentid + merchantid + orderid + function + description + timestamp
+</code></pre>
+
+<p>I nuläget stöds md5 och sha256 som algoitmer för hashkoden. Butik anger i det inledande anropet<br />
+vilken algoritm som ska användas. Algoritm och hash kombineras i fältet hash på följande sätt:</p>
+
+<pre><code>md5:c196a45ccc6c1e27bcd335b89cea1614
+sha256:dfde7c03a01acdcef715aea5c36b166bdec399dc5409b2bb5c89855e021fd694
+</code></pre>
+
+<p>Den algoritm som butiken anger kommer också att av CertiTrade i callbacks och retur.<br />
+Formatet på parametern hash är detsamma.</p>
+
+					
+				</main>
+
+				<footer>
+					<p>
+						
+						
+					</p>
+				</footer>
+
+
+
+
+			</article>
+
+		</main>
+
+		<footer>
+	<p>copyright &copy; 2019 Certitrade AB</p>
+
+		</footer>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72875022-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+	</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html prefix="og: http://opy.me/ns# ">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="generator" content="Hugo 0.53" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>Test Information &middot; Certitrade API Documentation</title>
+
+		<link rel="stylesheet" href="//support.certitrade.se/css/reset.css">
+		<link rel="stylesheet" href="//support.certitrade.se/css/text.css">
+		<link rel="shortcut icon" href="//support.certitrade.se/favicon.ico">
+		<link rel="icon" type="image/png" href="//support.certitrade.se/favicon-192.png" sizes="192x192">
+		<link rel="apple-touch-icon" sizes="180x180" href="//support.certitrade.se/favicon-180.png">
+		<link href="" rel="alternate" type="application/rss+xml" title="Certitrade API Documentation" />
+		
+		<link rel="stylesheet" href="//support.certitrade.se/css/color.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/content.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/layout.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/list.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/menu.css"/>
+		<link rel="stylesheet" href="//support.certitrade.se/css/text.css"/>
+
+
+	<body>
+		<header>
+	<h1>
+		<a href="//support.certitrade.se/./">
+			
+			<img src="//support.certitrade.se/logo-certitrade-filled-1.png" />
+			
+		</a>
+	</h1>
+	
+
+
+		</header>
+
+		<nav>
+<ul>
+	
+	<li class="current-parent">
+		<a href="/common/">Common</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/common/webservices/">Web Services</a>
+		
+	</li>
+	
+	<li class="current">
+		<a href="/common/test/">Test Information</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/basic/">Basic API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/reference/">Reference</a>
+		
+	</li>
+	
+	<li>
+		<a href="/basic/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/guides/php/">PHP</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/">Merchant API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/">Reference</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/concepts/">Concepts</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/">Resources</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/process/">Process</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/examples/">Examples</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/tables/">Tables</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/references/">References</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+
+		</nav>
+
+
+		<main class="single">
+
+
+
+			<article id="test-information" class="mode-full">
+				<header>
+					<h1>Test Information</h1>
+			<p>
+				<time>2019-01-28</time>
+
+				<span class='article-length'>500 words</span>
+				<span class='article-reading-time'>3 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+				
+				<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#card-card-recurring-one-click">Card (<code>CARD</code> / <code>RECURRING</code> / <code>ONE_CLICK</code>)</a></li>
+<li><a href="#invoice-invoice-svea-invoice-payex">Invoice (<code>INVOICE_SVEA</code> / <code>INVOICE_PAYEX</code>)</a></li>
+<li><a href="#direct-payments-direct-payex">Direct payments (<code>DIRECT_PAYEX</code>)</a></li>
+<li><a href="#part-payments-partpay-payex">Part payments (<code>PARTPAY_PAYEX</code>)</a></li>
+<li><a href="#swish-beta">Swish (BETA)</a></li>
+</ul></li>
+</ul>
+</nav>
+				
+
+						
+
+				<main>
+					
+						
+
+<p>This document contains test information for the various payment methods in the CertiTrade Merchant API. These can only be used in the test system and not in a production environment.</p>
+
+<h2 id="card-card-recurring-one-click">Card (<code>CARD</code> / <code>RECURRING</code> / <code>ONE_CLICK</code>)</h2>
+
+<p>The following card numbers can be used:</p>
+
+<ul>
+<li>To make a successful authorization without 3-D Secure, use <code>1234 5678 9000</code><br /></li>
+<li>To make a successful authorization with a 3-D Secure check, use <code>4444 3333 2222 0000</code><br /></li>
+<li>To make an unsuccessful authorization without 3-D Secure, use <code>1234 5678 9001</code><br /></li>
+<li>To make an unsuccessful authorization with a 3-D Secure check, use <code>4444 3333 2222 1111</code><br /></li>
+<li>(<code>RECURRING/ONE_CLICK</code>) To make a successful initializing authorization that then causes suspected fraud when subsequent <code>RECURRING</code> payments are made, use <code>1123 4500 0000 0002</code>. This simulates how a payment_account can be closed in the event of attempted fraud.<br />
+<br /></li>
+</ul>
+
+<p>The CVC code can be any three-digit combination and the Expiry date must not have passed.</p>
+
+<h2 id="invoice-invoice-svea-invoice-payex">Invoice (<code>INVOICE_SVEA</code> / <code>INVOICE_PAYEX</code>)</h2>
+
+<p>The following civil/corporate reg. numbers are used for <code>INVOICE_SVEA</code>:</p>
+
+<ul>
+<li>Civil reg. number <code>460509-2222</code> is used for a successful personal payment<br /></li>
+<li>Civil reg. number <code>461008-1111</code> is used for an unsuccessful personal payment<br /></li>
+<li>Corporate reg. number <code>460814-2222</code> is used for a successful business payment<br /></li>
+<li>Corporate reg. number <code>460830-2222</code> is used for an unsuccessful business payment<br />
+<br /></li>
+</ul>
+
+<p>The following civil reg. numbers are used for <code>INVOICE_PAYEX</code>:</p>
+
+<ul>
+<li>Civil reg. number <code>590719-5662</code> is used for a successful payment<br /></li>
+<li>Civil reg. number <code>580604-5265</code> is used for an unsuccessful payment<br />
+<br /></li>
+</ul>
+
+<p>An arbitrary email address and telephone number are stated.</p>
+
+<h2 id="direct-payments-direct-payex">Direct payments (<code>DIRECT_PAYEX</code>)</h2>
+
+<p>No test information is required for direct payments.</p>
+
+<h2 id="part-payments-partpay-payex">Part payments (<code>PARTPAY_PAYEX</code>)</h2>
+
+<p>The following address details can be entered in the payment window:</p>
+
+<p>Successful payment:</p>
+
+<ul>
+<li>Civil registration no.: <code>590719-5662</code><br /></li>
+<li>Email: mail@test.se<br /></li>
+<li>Telephone: 07010110112<br /></li>
+<li>First names: Eva Dagmar Christina<br /></li>
+<li>Last name: Tannerdal<br /></li>
+<li>Address: Gunbritt Boden p12<br /></li>
+<li>Zip code: 29620<br /></li>
+<li>City: Småbyen<br />
+<br /></li>
+</ul>
+
+<p>Unsuccessful payment:</p>
+
+<ul>
+<li>Civil registration no.: <code>580604-5265</code><br /></li>
+<li>Email: mail@test.se<br /></li>
+<li>Telephone: 07010110112<br /></li>
+<li>First names: Eva Anne-Christine<br /></li>
+<li>Last name: Mendonca<br /></li>
+<li>Address: Gunbritt Boden p12<br /></li>
+<li>Zip code: 29620<br /></li>
+<li>City: Småbyen<br />
+<br /></li>
+</ul>
+
+<h2 id="swish-beta">Swish (BETA)</h2>
+
+<p>The Swish simulator will simulate a buyer completing the Swish payment on her mobile. By default<br />
+the simulator have a delay of four seconds. Any phone number can be supplied, it will not be used.</p>
+
+<p>To customize the behavior of the Swish simulator supply the follow values for the parameter<br />
+“description” when creating a Swish payment. If not specified, the behavior of <code>DF22</code> will be used.</p>
+
+<ul>
+<li><code>PA02</code> – create payment will fail<br /></li>
+<li><code>TM01</code> – create payment OK but payment will fail<br /></li>
+<li><code>DS24</code> – create payment OK, payment OK, create refund will fail<br /></li>
+<li><code>RF02</code> – create payment OK, payment OK, create refund OK, refund will fail<br /></li>
+<li><code>DF22</code> – create payment OK, payment OK, create refund OK, refund OK<br /></li>
+<li><code>TM92</code> – as per <code>DF22</code> but payment/refund delay is set to 180 seconds rather than 4.<br /></li>
+</ul>
+
+					
+				</main>
+
+				<footer>
+					<p>
+						
+						
+					</p>
+				</footer>
+
+
+
+
+			</article>
+
+		</main>
+
+		<footer>
+	<p>copyright &copy; 2019 Certitrade AB</p>
+
+		</footer>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72875022-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+	</body>
+</html>
