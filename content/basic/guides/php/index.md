@@ -7,11 +7,12 @@ menu:
         parent: basic-guides
         name: PHP
 ---
+A complete example on how to use the Basic API in PHP is available here: [https://github.com/certitrade/ctpsp2-basic-example-php]
 
-Här finns ett integrationspaket med dokumentation och exempelkod. Så här kommer du igång:
+To get started:
 
-* Ladda ner zip-filen och packa upp den
-* Kopiera katalogen certitrade till webroot eller annan publik katalog på er server
-* Öppna shop.php från en webbläsare. Det görs vanligtvis genom att lägga till /certitrade/example/shop.php till butikens webadress
+* [Download](https://github.com/certitrade/ctpsp2-basic-example-php/archive/master.zip) and unpack the files.
+* Copy the `ctpsp2-basic-example` folder to the web root or another public folder on your server.
+* Open `shop.php` from a web browser. Typically this is accomplished by appending `/ctpsp2-basic-example/example/shop.php` to the webshops address.
 
-Så fort paketet ligger i en webbkatalog kan testköp göras utan någon som helst programmering.  Strukturen, koden och kommentarerna visar tydligt hur det kan anpassas till godtyckligt butikssystem.
+As soon as the package is placed in a webb folder a test purchase can be performed without any additional programming. The structure, code and comment clearly show how it can be adapted to any webshop system.
