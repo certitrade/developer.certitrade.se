@@ -196,7 +196,7 @@ Förutsättningar För att underlätta implementationen av API:et behövs ett ht
       <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/basic/guides/php/</guid>
-      <description>A complete example on how to use the Basic API in PHP is available here: [https://github.com/certitrade/ctpsp2-basic-example-php]
+      <description>A complete example on how to use the Basic API in PHP is available on Github.
 To get started:
  Download and unpack the files.
  Copy the ctpsp2-basic-example folder to the web root or another public folder on your server.
