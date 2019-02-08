@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Certitrade Merchant API Guides on Certitrade Developer</title>
+    <link>//developer.certitrade.se/merchant/guides/</link>
+    <description>Recent content in Certitrade Merchant API Guides on Certitrade Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 07 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//developer.certitrade.se/merchant/guides/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pseudo Code</title>
+      <link>//developer.certitrade.se/merchant/guides/pseudocode/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/guides/pseudocode/</guid>
+      <description>Som ett exempel, i form av pseudokod, på hur API:et kan användas visar vi här hur en ny kortbetalning kan skapas.
+REQUEST = array[ amount = &amp;quot;1000&amp;quot; currency = &amp;quot;SEK&amp;quot; return_url = &amp;quot;https://theshop.tld/return&amp;quot; callback_url = &amp;quot;https://theshop.tld/callback&amp;quot; reference = &amp;quot;Order: 123456&amp;quot; description = &amp;quot;Krazy glue&amp;quot; language = &amp;quot;sv&amp;quot; ] RESPONSE = create_card_payment(REQUEST) function create_card_payment(REQUEST) REQUEST[method] = &amp;quot;CARD&amp;quot; API_RESOURCE = &amp;quot;payment&amp;quot; REST_VERB = &amp;quot;POST&amp;quot; RESPONSE = call_certitrade(REST_VERB, API_RESOURCE, REQUEST) return RESPONSE function call_certitrade(REST_VERB, API_RESOURCE, REQUEST) // Send the http request to CertiTrade HOST_TEST = https://apitest.</description>
+    </item>
+    
+    <item>
+      <title>PHP</title>
+      <link>//developer.certitrade.se/merchant/guides/php/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/guides/php/</guid>
+      <description>Inkludera biblioteket i din kod Kopiera CertiTrade MerchantAPI-biblioteket till en katalog din PHP-applikation kan nå och inkludera det med;
+require_once &amp;#39;./CTServer.php&amp;#39;; Skapa en fil MerchantCredentials.php i en katalog som din PHP-applikation kan nå, men som ligger utanför web root och skriv in ditt Merchantid och API-nyckel där.
+define(&amp;#39;MERCHANT_ID&amp;#39;, &amp;#34;&amp;lt;your_merchant_id&amp;gt;&amp;#34;); define(&amp;#39;API_KEY&amp;#39;, &amp;#34;&amp;lt;your_api_key&amp;gt;&amp;#34;); Nästa steg är;
+Skapa ett CTServer-objekt För att kunna skapa betalningar behövs först en anslutning till CertiTrade. Detta anslutningsobjekt skapas med;</description>
+    </item>
+    
+    <item>
+      <title>.NET</title>
+      <link>//developer.certitrade.se/merchant/guides/dotnet/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/guides/dotnet/</guid>
+      <description>Inkludera biblioteket i din kod Lägg biblioteket på en lämplig plats och se till att det är tillgängligt från projektet och gör det anropbart från din kod.
+using CertiTrade.MerchantAPI Skapa ett CTServer-objekt Skapa sedan ett nytt CTServer-objekt
+CTServer ctServer = new CTServer(); ctServer.setCredentials(merchantId, apiKey, testing); Skapa en Payment-resurs och anropa API:et En enkel betalning skapas på detta sätt. CTServer har en metod som heter createCardPayment() som man anropar med ett antal argument.</description>
+    </item>
+    
+    <item>
+      <title>ASP Classic</title>
+      <link>//developer.certitrade.se/merchant/guides/asp_classic/</link>
+      <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/guides/asp_classic/</guid>
+      <description>Vill man använda ASP Classic går det att installera .NET-biblioteket ovan som ett COM+-objekt, på maskinen man vill köra på, och sedan anropa det.
+I ASP Classic underlättar det också att använda det externa JSON-bibliotek aspJSON, http://www.aspjson.com, när man ska hantera API-svaret.
+Gör biblioteket tillgängligt från din kod Ta den resulterande dll:en från projektet, CertiTrade.dll, och lägg på en lämplig plats. Regitrera den sedan som en COM+-tjänst:
+I windowskonsollen kör följande kommandon (regasm och regsvcs hittas i C:\Windows\Microsoft.</description>
+    </item>
+    
+    <item>
+      <title>Other Languages</title>
+      <link>//developer.certitrade.se/merchant/guides/other/</link>
+      <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/guides/other/</guid>
+      <description>Om man använder ett språk som det saknas ett klientbibliotek för följer här en generell guide för implementation av CertiTrade:s MerchantAPI.
+Förutsättningar För att underlätta implementationen av API:et behövs ett httpklientbibliotek. Det ska stödja skapandet av en REST-begäran och man behöver även själv kunna ändra och sätta headers. Exempel på sådana för ett par vanliga språk är:
+ Classic ASP: ServerXMLHTTP
+ Java: HttpURLConnection, som är en del av SDK:n eller ett mer komplett externt bibliotek som Jersey eller Apache HttpClient</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,14 +3,14 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="generator" content="Hugo 0.53" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-		<title>Tags &middot; Certitrade Developer</title>
+		<title>Pseudo Code &middot; Certitrade Developer</title>
 
 		<link rel="stylesheet" href="//developer.certitrade.se/css/reset.css">
 		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css">
 		<link rel="shortcut icon" href="//developer.certitrade.se/favicon.ico">
 		<link rel="icon" type="image/png" href="//developer.certitrade.se/favicon-192.png" sizes="192x192">
 		<link rel="apple-touch-icon" sizes="180x180" href="//developer.certitrade.se/favicon-180.png">
-		<link href="//developer.certitrade.se/tags/index.xml" rel="alternate" type="application/rss+xml" title="Certitrade Developer" />
+		<link href="" rel="alternate" type="application/rss+xml" title="Certitrade Developer" />
 		
 		<link rel="stylesheet" href="//developer.certitrade.se/css/color.css"/>
 		<link rel="stylesheet" href="//developer.certitrade.se/css/content.css"/>
@@ -87,17 +87,17 @@
 		
 	</li>
 	
-	<li>
+	<li class="current-parent">
 		<a href="/merchant/">Merchant API</a>
 		
 		<ul>
 	
-	<li>
+	<li class="current-parent">
 		<a href="/merchant/guides/">Guides</a>
 		
 		<ul>
 	
-	<li>
+	<li class="current">
 		<a href="/merchant/guides/pseudocode/">Pseudo Code</a>
 		
 	</li>
@@ -178,16 +178,102 @@
 		</nav>
 
 
-
-		<main class="list">
-
-
-			<footer>
-				<nav>
+		<main class="single">
 
 
-				</nav>
-			</footer>
+
+			<article id="pseudo-code" class="mode-full">
+				<header>
+					<h1>Pseudo Code</h1>
+			<p>
+				<time>2019-02-07</time>
+
+				<span class='article-length'>300 words</span>
+				<span class='article-reading-time'>2 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+				
+				
+				
+
+						
+
+				<main>
+					
+						<p>Som ett exempel, i form av pseudokod, på hur API:et kan användas visar vi här hur en ny kortbetalning kan skapas.</p>
+
+<pre><code>REQUEST = array[
+        amount = &quot;1000&quot;
+        currency = &quot;SEK&quot;
+        return_url = &quot;https://theshop.tld/return&quot;
+        callback_url = &quot;https://theshop.tld/callback&quot;
+        reference = &quot;Order: 123456&quot;
+        description = &quot;Krazy glue&quot;
+        language = &quot;sv&quot; ]
+
+RESPONSE = create_card_payment(REQUEST)
+
+function create_card_payment(REQUEST)
+        REQUEST[method] = &quot;CARD&quot;
+
+        API_RESOURCE = &quot;payment&quot;
+        REST_VERB = &quot;POST&quot;
+
+        RESPONSE = call_certitrade(REST_VERB, API_RESOURCE, REQUEST)
+
+        return RESPONSE
+
+function call_certitrade(REST_VERB, API_RESOURCE, REQUEST)
+        // Send the http request to CertiTrade
+        HOST_TEST = https://apitest.certitrade.net/ctpsp/ws/2.0
+
+        create a new HTTPCLIENT instance
+
+        // Set the date header according to the format
+        // &quot;Mon, 01 Jan 2014 13:30:00 GMT&quot; and set it
+        DATE = get_date(D, d M Y H:i:s) + &quot; GMT&quot;
+        HEADERS[Date] = DATE
+
+        // Any REQUEST data needs to be utf8 encoded json
+        ENCODED_REQUEST = utf8_encode(json_encode(REQUEST))
+
+        // Calculate the Authorization Header (see the API documentation) and set it.         // This function needs to be implemented by you.
+        AUTH_HASH = calc_auth_hash(HOST_TEST, ENCODED_REQUEST, REST_VERB,
+                                         API_RESOURCE, DATE)
+        HEADERS[Authorization] = AUTH_HASH
+
+        // Set SSL options to verify the server certificate before proceeding to
+        // ensure that it indeed is the CertiTrade PSP we&amp;#39;re talking to.
+
+        HTTPCLIENT.send(REST_VERB, HOST_TEST, API_RESOURCE, HEADERS, ENCODED_REQUEST)
+
+        return HTTPCLIENT.response()
+</code></pre>
+
+<p><code>RESPONSE</code> innehåller, förutom <code>httpstatus</code>, även svaret från CertiTrade:s PSP-server i http-body:n i UTF8-kodat JSON-format. Däri finns förutom status för httpförfrågan och betalningen även paywin-länken som är nästa steg man ska skicka kunden till.</p>
+
+<p>När kunden är färdig med betallänken skickas hen tillbaka tillbaka till <code>return_url</code>:en och en callback med statusinformation skickas till <code>callback_url</code>:en.</p>
+
+					
+				</main>
+
+				<footer>
+					<p>
+						
+						
+					</p>
+				</footer>
+
+
+
+
+			</article>
 
 		</main>
 

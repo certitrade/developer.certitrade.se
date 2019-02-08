@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html prefix="og: http://opy.me/ns# ">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="generator" content="Hugo 0.53" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>ASP Classic &middot; Certitrade Developer</title>
+
+		<link rel="stylesheet" href="//developer.certitrade.se/css/reset.css">
+		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css">
+		<link rel="shortcut icon" href="//developer.certitrade.se/favicon.ico">
+		<link rel="icon" type="image/png" href="//developer.certitrade.se/favicon-192.png" sizes="192x192">
+		<link rel="apple-touch-icon" sizes="180x180" href="//developer.certitrade.se/favicon-180.png">
+		<link href="" rel="alternate" type="application/rss+xml" title="Certitrade Developer" />
+		
+		<link rel="stylesheet" href="//developer.certitrade.se/css/color.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/content.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/layout.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/list.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/menu.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css"/>
+
+
+	<body>
+		<header>
+	<h1>
+		<a href="//developer.certitrade.se/./">
+			
+			<img src="//developer.certitrade.se/logo-certitrade-filled-1.png" />
+			
+		</a>
+	</h1>
+	
+
+
+		</header>
+
+		<nav>
+<ul>
+	
+	<li>
+		<a href="/common/">Common</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/common/webservices/">Web Services</a>
+		
+	</li>
+	
+	<li>
+		<a href="/common/test/">Test Information</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/basic/">Basic API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/reference/">Reference</a>
+		
+	</li>
+	
+	<li>
+		<a href="/basic/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/guides/php/">PHP</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/">Merchant API</a>
+		
+		<ul>
+	
+	<li class="current-parent">
+		<a href="/merchant/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/guides/pseudocode/">Pseudo Code</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/php/">PHP</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/dotnet/">.NET</a>
+		
+	</li>
+	
+	<li class="current">
+		<a href="/merchant/guides/asp_classic/">ASP Classic</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/other/">Other Languages</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/">Reference</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/concepts/">Concepts</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/">Resources</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/process/">Process</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/examples/">Examples</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/tables/">Tables</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/references/">References</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+
+		</nav>
+
+
+		<main class="single">
+
+
+
+			<article id="asp-classic" class="mode-full">
+				<header>
+					<h1>ASP Classic</h1>
+			<p>
+				<time>2019-02-07</time>
+
+				<span class='article-length'>300 words</span>
+				<span class='article-reading-time'>2 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+				
+				<nav id="TableOfContents">
+<ul>
+<li><a href="#gör-biblioteket-tillgängligt-från-din-kod">Gör biblioteket tillgängligt från din kod</a></li>
+<li><a href="#skapa-ett-ctserver-objekt">Skapa ett <code>CTServer</code>-objekt</a></li>
+<li><a href="#anropa-api-et">Anropa API:et</a></li>
+<li><a href="#hantera-api-svaret">Hantera API-svaret</a></li>
+</ul>
+</nav>
+				
+
+						
+
+				<main>
+					
+						
+
+<p>Vill man använda ASP Classic går det att installera .NET-biblioteket ovan som ett COM+-objekt, på maskinen man vill köra på, och sedan anropa det.</p>
+
+<p>I ASP Classic underlättar det också att använda det externa JSON-bibliotek aspJSON, <a href="http://www.aspjson.com/">http://www.aspjson.com</a>, när man ska hantera API-svaret.</p>
+
+<h1 id="gör-biblioteket-tillgängligt-från-din-kod">Gör biblioteket tillgängligt från din kod</h1>
+
+<p>Ta den resulterande dll:en från projektet, <code>CertiTrade.dll</code>, och lägg på en lämplig plats. Regitrera den sedan som en COM+-tjänst:</p>
+
+<p>I windowskonsollen kör följande kommandon (<code>regasm</code> och <code>regsvcs</code> hittas i <code>C:\Windows\Microsoft.NET\Framework[64]\[version]\</code>):</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">regasm.exe /tlb /codebase <span style="color:#e6db74">&#34;C:\path\to\CertiTrade.dll&#34;</span>
+
+regsvcs.exe <span style="color:#e6db74">&#34;C:\path\to\CertiTrade.dll&#34;</span></code></pre></div>
+<p>Starta nu comexp.msc (startmenyn -&gt; kör&hellip;) och verifiera att &ldquo;CertiTrade Merchant API&rdquo; ligger under &ldquo;COM+ Applications&rdquo;.</p>
+
+<p>Gör man ändringar i C#-koden och komplierar om måste man eventuellt avregistrera dll:en med;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">regsvcs.exe /uninstall <span style="color:#e6db74">&#34;C:\path\to\CertiTrade.dll&#34;</span></code></pre></div>
+<p>eller från Managementmodulen (comexp.msc) innan man kan kompilera om projektet. Glöm inte att registrera den på nytt.</p>
+
+<h1 id="skapa-ett-ctserver-objekt">Skapa ett <code>CTServer</code>-objekt</h1>
+
+<p>Efter att man registrerat dll:en som en COM+-tjänst är det bara att skapa ett objekt</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb">Dim ctServer
+Set ctServer = Server.CreateObject(&#34;CertiTrade.CTServer&#34;)
+
+ctServer.setCredentials &#34;&lt;merchant id&gt;&#34;, &#34;&lt;API key&gt;&#34;, true</code></pre></div>
+<p>(det sista argumentet sätter om man ska till test- (<code>true</code>) eller produktionsmiljö (<code>false</code>)). Detta går sedan att anropa.</p>
+
+<h1 id="anropa-api-et">Anropa API:et</h1>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb">Dim ctResponse
+Set ctResponse = ctServer.createCardPayment(&#34;SEK&#34;, &#34;http://myshop.tld/return&#34;, &#34;http://myshop.tld/callback&#34;, 1000)</code></pre></div>
+<h1 id="hantera-api-svaret">Hantera API-svaret</h1>
+
+<p>Svaret man får av API:et är uppdelat i fyra delar:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb">ctResponse.Success(), ctResponse.HTTPStatus(), ctResponse.HTTPMessage() och ctResponse.HTTPBody().</code></pre></div>
+<p>De tre första kan användas rakt av medan <code>HTTPBody</code> är ett <code>CTResponse</code>-objekt. För att underlätta hanteringen av svaret finns hjälpfunktionen <code>getHTTPBodyString()</code> som returnerar hela <code>HTTPBody</code> som en sträng istället som kan skjutas in i vårt aspJSON-bibliotek.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb">Set JSONBody = new aspJSON
+Dim httpBodyString
+httpBodyString = ctResponse.getHTTPBodyString()
+JSONBody.loadJSON(httpBodyString)</code></pre></div>
+<p>hela API-svaret går nu att få ut:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb">Response.Write(&#34;&lt;b&gt;Response.HTTPBody:&lt;/b&gt; &#34; &amp; JSONBody.JSONoutput() &amp; &#34;&lt;br&gt;&lt;br&gt;&#34;)</code></pre></div>
+<p>och individuella värden går att adressera på följande sätt:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb">JSONBody.data(&#34;id&#34;) &#39; För att få fram Payment-id:t
+JSONBody.data(&#34;_links&#34;).item(&#34;paywin&#34;).item(&#34;href&#34;) &#39; För att få PayWin-länken</code></pre></div>
+					
+				</main>
+
+				<footer>
+					<p>
+						
+						
+					</p>
+				</footer>
+
+
+
+
+			</article>
+
+		</main>
+
+		<footer>
+	<p>copyright &copy; 2019 Certitrade AB</p>
+
+		</footer>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72875022-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+	</body>
+</html>

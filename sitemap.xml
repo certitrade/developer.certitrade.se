@@ -58,6 +58,16 @@
   </url>
   
   <url>
+    <loc>//developer.certitrade.se/merchant/guides/pseudocode/</loc>
+    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/guides/php/</loc>
+    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//developer.certitrade.se/merchant/reference/examples/</loc>
     <lastmod>2019-01-28T00:00:00+00:00</lastmod>
   </url>
@@ -68,8 +78,28 @@
   </url>
   
   <url>
+    <loc>//developer.certitrade.se/merchant/guides/dotnet/</loc>
+    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//developer.certitrade.se/merchant/reference/references/</loc>
     <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/guides/asp_classic/</loc>
+    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/guides/other/</loc>
+    <lastmod>2019-02-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/guides/</loc>
+    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
   </url>
   
   <url>

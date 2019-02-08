@@ -3,14 +3,14 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="generator" content="Hugo 0.53" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-		<title>Certitrade Merchant API Reference &middot; Certitrade Developer</title>
+		<title>Certitrade Merchant API Guides &middot; Certitrade Developer</title>
 
 		<link rel="stylesheet" href="//developer.certitrade.se/css/reset.css">
 		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css">
 		<link rel="shortcut icon" href="//developer.certitrade.se/favicon.ico">
 		<link rel="icon" type="image/png" href="//developer.certitrade.se/favicon-192.png" sizes="192x192">
 		<link rel="apple-touch-icon" sizes="180x180" href="//developer.certitrade.se/favicon-180.png">
-		<link href="//developer.certitrade.se/merchant/reference/index.xml" rel="alternate" type="application/rss+xml" title="Certitrade Developer" />
+		<link href="//developer.certitrade.se/merchant/guides/index.xml" rel="alternate" type="application/rss+xml" title="Certitrade Developer" />
 		
 		<link rel="stylesheet" href="//developer.certitrade.se/css/color.css"/>
 		<link rel="stylesheet" href="//developer.certitrade.se/css/content.css"/>
@@ -92,7 +92,7 @@
 		
 		<ul>
 	
-	<li>
+	<li class="current">
 		<a href="/merchant/guides/">Guides</a>
 		
 		<ul>
@@ -127,7 +127,7 @@
 		
 	</li>
 	
-	<li class="current">
+	<li>
 		<a href="/merchant/reference/">Reference</a>
 		
 		<ul>
@@ -184,13 +184,13 @@
 	
 
 
-			<article id="certitrade-merchant-api-reference" class="mode-full">
+			<article id="certitrade-merchant-api-guides" class="mode-full">
 				<header>
-					<h1>Certitrade Merchant API Reference</h1>
+					<h1>Certitrade Merchant API Guides</h1>
 			<p>
-				<time>2019-01-28</time>
+				<time>2019-02-07</time>
 
-				<span class='article-length'>100 words</span>
+				<span class='article-length'>200 words</span>
 				<span class='article-reading-time'>1 minutes</span>
 
 
@@ -201,14 +201,40 @@
 				</header>
 
 				
-				
+				<nav id="TableOfContents">
+<ul>
+<li><a href="#introduktion">Introduktion</a></li>
+<li><a href="#säkerhet">Säkerhet</a></li>
+<li><a href="#översiktlig-beskrivning">Översiktlig beskrivning</a></li>
+</ul>
+</nav>
 				
 
 						
 
 				<main>
 					
-						<p>This is the reference documentation of the Certitrade Merchant API.</p>
+						
+
+<h1 id="introduktion">Introduktion</h1>
+
+<p>För att underlätta implementation av CertiTrade:s MerchantAPI i din applikation har vi tagit fram ett API-bibliotek. Detta gränssnitt publicerar metoder för att interagera med CertiTrade:s PSP-tjänst.</p>
+
+<p>Detta dokument syftar till att i steg-för-steg förklara och underlätta användningen API-bibliotek:et för att du snabbt och enkelt ska kunna komma igång med PSP-tjänsten.</p>
+
+<h1 id="säkerhet">Säkerhet</h1>
+
+<p>Merchant id och API key och hur de ska hanteras</p>
+
+<h1 id="översiktlig-beskrivning">Översiktlig beskrivning</h1>
+
+<ul>
+<li>Ladda ner och extrahera filerna samt lägg på en lämplig plats. Om det är fråga om en uppdatering, snarare än en nyimplementation, är det viktigt att läsa changelog:en för det aktuella versionsdeltat.<br /></li>
+<li>Kontakta CertiTrade för att få Merchant-id samt API-nycklar. Dessa behövs för att du ska kunna använda både testmiljön och produktionsmiljön.<br /></li>
+<li>Inkludera biblioteket i din kod<br /></li>
+<li>Läs noga igenom säkerhetskapitlet i API-dokumetationen.<br /></li>
+<li>Instantiera ett CTServer-objekt och sätt dina användaruppgifter. Kom ihåg att använda testingflaggan tills du är redo att gå i produktion.<br /></li>
+</ul>
 
 					
 				</main>
@@ -230,14 +256,14 @@
 
 
 
-			<article id="concepts-and-definitions" class="mode-header">
+			<article id="pseudo-code" class="mode-header">
 				<header>
-					<h1>Concepts and Definitions</h1>
+					<h1>Pseudo Code</h1>
 			<p>
-				<time>2019-01-28</time>
+				<time>2019-02-07</time>
 
-				<span class='article-length'>2400 words</span>
-				<span class='article-reading-time'>12 minutes</span>
+				<span class='article-length'>300 words</span>
+				<span class='article-reading-time'>2 minutes</span>
 
 
 
@@ -249,7 +275,7 @@
 						
 
 
-				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/reference/concepts/"><span></span></a></div>
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/guides/pseudocode/"><span></span></a></div>
 
 
 
@@ -260,14 +286,14 @@
 
 
 
-			<article id="resources" class="mode-header">
+			<article id="php" class="mode-header">
 				<header>
-					<h1>Resources</h1>
+					<h1>PHP</h1>
 			<p>
-				<time>2019-01-28</time>
+				<time>2019-02-07</time>
 
-				<span class='article-length'>2900 words</span>
-				<span class='article-reading-time'>14 minutes</span>
+				<span class='article-length'>300 words</span>
+				<span class='article-reading-time'>2 minutes</span>
 
 
 
@@ -279,7 +305,7 @@
 						
 
 
-				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/reference/resources/"><span></span></a></div>
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/guides/php/"><span></span></a></div>
 
 
 
@@ -290,71 +316,11 @@
 
 
 
-			<article id="process" class="mode-header">
+			<article id=".net" class="mode-header">
 				<header>
-					<h1>Process</h1>
+					<h1>.NET</h1>
 			<p>
-				<time>2019-01-28</time>
-
-				<span class='article-length'>1500 words</span>
-				<span class='article-reading-time'>7 minutes</span>
-
-
-
-
-</p>
-
-				</header>
-
-						
-
-
-				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/reference/process/"><span></span></a></div>
-
-
-
-
-			</article>
-
-
-
-
-
-			<article id="examples" class="mode-header">
-				<header>
-					<h1>Examples</h1>
-			<p>
-				<time>2019-01-28</time>
-
-				<span class='article-length'>3100 words</span>
-				<span class='article-reading-time'>15 minutes</span>
-
-
-
-
-</p>
-
-				</header>
-
-						
-
-
-				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/reference/examples/"><span></span></a></div>
-
-
-
-
-			</article>
-
-
-
-
-
-			<article id="tables" class="mode-header">
-				<header>
-					<h1>Tables</h1>
-			<p>
-				<time>2019-01-28</time>
+				<time>2019-02-07</time>
 
 				<span class='article-length'>200 words</span>
 				<span class='article-reading-time'>1 minutes</span>
@@ -369,7 +335,7 @@
 						
 
 
-				<div class="self-link"><a href="//developer.certitrade.se/merchant/reference/tables/"><span></span></a></div>
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/guides/dotnet/"><span></span></a></div>
 
 
 
@@ -380,13 +346,43 @@
 
 
 
-			<article id="references" class="mode-header">
+			<article id="asp-classic" class="mode-header">
 				<header>
-					<h1>References</h1>
+					<h1>ASP Classic</h1>
 			<p>
-				<time>2019-01-28</time>
+				<time>2019-02-07</time>
 
-				<span class='article-length'>100 words</span>
+				<span class='article-length'>300 words</span>
+				<span class='article-reading-time'>2 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+						
+
+
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/guides/asp_classic/"><span></span></a></div>
+
+
+
+
+			</article>
+
+
+
+
+
+			<article id="other-languages" class="mode-header">
+				<header>
+					<h1>Other Languages</h1>
+			<p>
+				<time>2019-02-08</time>
+
+				<span class='article-length'>200 words</span>
 				<span class='article-reading-time'>1 minutes</span>
 
 
@@ -399,7 +395,7 @@
 						
 
 
-				<div class="self-link"><a href="//developer.certitrade.se/merchant/reference/references/"><span></span></a></div>
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/guides/other/"><span></span></a></div>
 
 
 

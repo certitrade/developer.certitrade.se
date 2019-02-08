@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html prefix="og: http://opy.me/ns# ">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="generator" content="Hugo 0.53" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>PHP &middot; Certitrade Developer</title>
+
+		<link rel="stylesheet" href="//developer.certitrade.se/css/reset.css">
+		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css">
+		<link rel="shortcut icon" href="//developer.certitrade.se/favicon.ico">
+		<link rel="icon" type="image/png" href="//developer.certitrade.se/favicon-192.png" sizes="192x192">
+		<link rel="apple-touch-icon" sizes="180x180" href="//developer.certitrade.se/favicon-180.png">
+		<link href="" rel="alternate" type="application/rss+xml" title="Certitrade Developer" />
+		
+		<link rel="stylesheet" href="//developer.certitrade.se/css/color.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/content.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/layout.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/list.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/menu.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css"/>
+
+
+	<body>
+		<header>
+	<h1>
+		<a href="//developer.certitrade.se/./">
+			
+			<img src="//developer.certitrade.se/logo-certitrade-filled-1.png" />
+			
+		</a>
+	</h1>
+	
+
+
+		</header>
+
+		<nav>
+<ul>
+	
+	<li>
+		<a href="/common/">Common</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/common/webservices/">Web Services</a>
+		
+	</li>
+	
+	<li>
+		<a href="/common/test/">Test Information</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/basic/">Basic API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/reference/">Reference</a>
+		
+	</li>
+	
+	<li>
+		<a href="/basic/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/guides/php/">PHP</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/">Merchant API</a>
+		
+		<ul>
+	
+	<li class="current-parent">
+		<a href="/merchant/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/guides/pseudocode/">Pseudo Code</a>
+		
+	</li>
+	
+	<li class="current">
+		<a href="/merchant/guides/php/">PHP</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/dotnet/">.NET</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/asp_classic/">ASP Classic</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/other/">Other Languages</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/">Reference</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/concepts/">Concepts</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/">Resources</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/process/">Process</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/examples/">Examples</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/tables/">Tables</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/references/">References</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+
+		</nav>
+
+
+		<main class="single">
+
+
+
+			<article id="php" class="mode-full">
+				<header>
+					<h1>PHP</h1>
+			<p>
+				<time>2019-02-07</time>
+
+				<span class='article-length'>300 words</span>
+				<span class='article-reading-time'>2 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+				
+				<nav id="TableOfContents">
+<ul>
+<li><a href="#inkludera-biblioteket-i-din-kod">Inkludera biblioteket i din kod</a></li>
+<li><a href="#skapa-ett-ctserver-objekt">Skapa ett CTServer-objekt</a></li>
+<li><a href="#exempel-skapa-en-payment-resurs-och-anropa-api-et">Exempel: Skapa en Payment-resurs och anropa API:et</a></li>
+<li><a href="#hantera-api-svaret">Hantera API-svaret</a></li>
+</ul>
+</nav>
+				
+
+						
+
+				<main>
+					
+						
+
+<h1 id="inkludera-biblioteket-i-din-kod">Inkludera biblioteket i din kod</h1>
+
+<p>Kopiera CertiTrade MerchantAPI-biblioteket till en katalog din PHP-applikation kan nå och inkludera det med;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">require_once &#39;./CTServer.php&#39;;</code></pre></div>
+<p>Skapa en fil <code>MerchantCredentials.php</code> i en katalog som din PHP-applikation kan nå, men som ligger utanför web root och skriv in ditt Merchantid och API-nyckel där.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">define(&#39;MERCHANT_ID&#39;, &#34;&lt;<span style="color:#f92672">your_merchant_id</span>&gt;&#34;);
+define(&#39;API_KEY&#39;, &#34;&lt;<span style="color:#f92672">your_api_key</span>&gt;&#34;);</code></pre></div>
+<p>Nästa steg är;</p>
+
+<h1 id="skapa-ett-ctserver-objekt">Skapa ett CTServer-objekt</h1>
+
+<p>För att kunna skapa betalningar behövs först en anslutning till CertiTrade. Detta anslutningsobjekt skapas med;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$ct_server = new CertiTrade\CTServer(MERCHANT_ID, API_KEY, true);</code></pre></div>
+<p>där det sista argumentet, <code>true</code>, berättar att vi vill skapa anslutningen mot CertiTrades testmiljö.</p>
+
+<h1 id="exempel-skapa-en-payment-resurs-och-anropa-api-et">Exempel: Skapa en Payment-resurs och anropa API:et</h1>
+
+<p>Först skapar man ett <code>request</code>-objekt med den information som behövs för att skapa den betalning man önskar. Detta skickas sedan till $ct-server-objektet vi skapade tidigare.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$request = array(
+    &#39;amount&#39; =&gt; &#34;1000&#34;,
+    &#39;currency&#39; =&gt; &#34;SEK&#34;,
+    &#39;return_url&#39; =&gt; &#34;https://webshoppen.företaget.se/return.php&#34;,
+    &#39;callback_url&#39; =&gt; &#34;https://webshoppen.företaget.se/callback.php&#34;,
+    &#39;reference&#39; =&gt; &#34;123123&#34;,
+    &#39;description&#39; =&gt; &#34;Företaget.se: Krazy Glue&#34;,
+    &#39;language&#39; =&gt; &#34;sv&#34;);
+$ct_response = $ct_server-&gt;create_card_payment($request);</code></pre></div>
+<p>Serversvaret lagras i <code>$ct_response</code>.</p>
+
+<h1 id="hantera-api-svaret">Hantera API-svaret</h1>
+
+<p>Anropssvaret i <code>$ct_response</code> kommer att en av tre typer; <code>CertiTrade\Resource</code>, <code>CertiTrade\Collection</code> eller <code>CertiTrade\APIProblem</code>. Beroende på vilket svar man får finns det olika saker man kan göra.</p>
+
+<p>Vid lyckat anrop av <code>create_card_payment()</code> får man ett <code>CertiTrade\Resource</code>-svar som innehåller detaljer om betalningen, bl.a den Payment Window-länk man behöver skicka kunden till för att bekräfta betalning med 3-D Secure (exempelvis MasterCard SecureCode eller Verified by Visa).</p>
+
+<p>Den länken får man enklast ut genom att anropa hjälpmetoden <code>getLink()</code>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$ct_response-&gt;getLink(&#34;paywin&#34;):</code></pre></div>
+<p>som man sedan kan skicka vidare kunden till. När kunden fyllt i sina uppgifter, eller avbrutit, skickas hen tillbaka till <code>return_url</code> och en callback skickas till <code>callback_url</code>.</p>
+
+					
+				</main>
+
+				<footer>
+					<p>
+						
+						
+					</p>
+				</footer>
+
+
+
+
+			</article>
+
+		</main>
+
+		<footer>
+	<p>copyright &copy; 2019 Certitrade AB</p>
+
+		</footer>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72875022-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+	</body>
+</html>

@@ -3,7 +3,7 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="generator" content="Hugo 0.53" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-		<title>Tables &middot; Certitrade Developer</title>
+		<title>.NET &middot; Certitrade Developer</title>
 
 		<link rel="stylesheet" href="//developer.certitrade.se/css/reset.css">
 		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css">
@@ -92,7 +92,7 @@
 		
 		<ul>
 	
-	<li>
+	<li class="current-parent">
 		<a href="/merchant/guides/">Guides</a>
 		
 		<ul>
@@ -107,7 +107,7 @@
 		
 	</li>
 	
-	<li>
+	<li class="current">
 		<a href="/merchant/guides/dotnet/">.NET</a>
 		
 	</li>
@@ -127,7 +127,7 @@
 		
 	</li>
 	
-	<li class="current-parent">
+	<li>
 		<a href="/merchant/reference/">Reference</a>
 		
 		<ul>
@@ -152,7 +152,7 @@
 		
 	</li>
 	
-	<li class="current">
+	<li>
 		<a href="/merchant/reference/tables/">Tables</a>
 		
 	</li>
@@ -182,11 +182,11 @@
 
 
 
-			<article id="tables" class="mode-full">
+			<article id=".net" class="mode-full">
 				<header>
-					<h1>Tables</h1>
+					<h1>.NET</h1>
 			<p>
-				<time>2019-01-28</time>
+				<time>2019-02-07</time>
 
 				<span class='article-length'>200 words</span>
 				<span class='article-reading-time'>1 minutes</span>
@@ -201,9 +201,10 @@
 				
 				<nav id="TableOfContents">
 <ul>
-<li><a href="#languages">Languages</a></li>
-<li><a href="#currencies">Currencies</a></li>
-<li><a href="#http-status-codes">HTTP status codes</a></li>
+<li><a href="#inkludera-biblioteket-i-din-kod">Inkludera biblioteket i din kod</a></li>
+<li><a href="#skapa-ett-ctserver-objekt">Skapa ett <code>CTServer</code>-objekt</a></li>
+<li><a href="#skapa-en-payment-resurs-och-anropa-api-et">Skapa en <code>Payment</code>-resurs och anropa API:et</a></li>
+<li><a href="#hantera-api-svaret">Hantera API-svaret</a></li>
 </ul>
 </nav>
 				
@@ -214,202 +215,30 @@
 					
 						
 
-<h1 id="languages">Languages</h1>
+<h1 id="inkludera-biblioteket-i-din-kod">Inkludera biblioteket i din kod</h1>
 
-<table>
-<thead>
-<tr>
-<th>Languages</th>
-<th>Language code</th>
-</tr>
-</thead>
+<p>Lägg biblioteket på en lämplig plats och se till att det är tillgängligt från projektet och gör det anropbart från din kod.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> CertiTrade.MerchantAPI</code></pre></div>
+<h1 id="skapa-ett-ctserver-objekt">Skapa ett <code>CTServer</code>-objekt</h1>
 
-<tbody>
-<tr>
-<td>Swedish</td>
-<td>sv</td>
-</tr>
+<p>Skapa sedan ett nytt <code>CTServer</code>-objekt</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">CTServer ctServer = <span style="color:#66d9ef">new</span> CTServer();
+ctServer.setCredentials(merchantId, apiKey, testing);</code></pre></div>
+<h1 id="skapa-en-payment-resurs-och-anropa-api-et">Skapa en <code>Payment</code>-resurs och anropa API:et</h1>
 
-<tr>
-<td>English</td>
-<td>en</td>
-</tr>
+<p>En enkel betalning skapas på detta sätt. <code>CTServer</code> har en metod som heter <code>createCardPayment()</code> som man anropar med ett antal argument. Först skapar man ett responseobjekt.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#">CTResponse response = <span style="color:#66d9ef">new</span> CTResponse();
 
-<tr>
-<td>Norwegian</td>
-<td>no</td>
-</tr>
+response = ctServer.createCardPayment(
+ currency: <span style="color:#e6db74">&#34;SEK&#34;</span>,
+ returnUrl: <span style="color:#e6db74">&#34;https://domain.tld/callback.php&#34;</span>,
+ callbackUrl: <span style="color:#e6db74">&#34;https://domain.tld/return_url.php&#34;</span>,
+ amount: <span style="color:#ae81ff">12300</span>,
+ language: <span style="color:#e6db74">&#34;sv&#34;</span>,
+ description: <span style="color:#e6db74">&#34;Glue Corp&#34;</span>);</code></pre></div>
+<h1 id="hantera-api-svaret">Hantera API-svaret</h1>
 
-<tr>
-<td>Danish</td>
-<td>da</td>
-</tr>
-
-<tr>
-<td>Finnish</td>
-<td>fi</td>
-</tr>
-
-<tr>
-<td>German</td>
-<td>de</td>
-</tr>
-
-<tr>
-<td>French</td>
-<td>fr</td>
-</tr>
-
-<tr>
-<td>Italian</td>
-<td>it</td>
-</tr>
-
-<tr>
-<td>Spanish</td>
-<td>es</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="currencies">Currencies</h1>
-
-<table>
-<thead>
-<tr>
-<th>Code</th>
-<th>Num</th>
-<th>Currency</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>SEK</td>
-<td>752</td>
-<td>Swedish krona</td>
-</tr>
-
-<tr>
-<td>EUR</td>
-<td>978</td>
-<td>Euro</td>
-</tr>
-
-<tr>
-<td>USD</td>
-<td>840</td>
-<td>US dollar</td>
-</tr>
-
-<tr>
-<td>DKK</td>
-<td>208</td>
-<td>Danish krone</td>
-</tr>
-
-<tr>
-<td>GBP</td>
-<td>826</td>
-<td>British pound</td>
-</tr>
-
-<tr>
-<td>NOK</td>
-<td>578</td>
-<td>Norwegian krone</td>
-</tr>
-
-<tr>
-<td>AUD</td>
-<td>036</td>
-<td>Australian dollar</td>
-</tr>
-
-<tr>
-<td>CAD</td>
-<td>124</td>
-<td>Canadian dollar</td>
-</tr>
-
-<tr>
-<td>NZD</td>
-<td>554</td>
-<td>New Zealand dollar</td>
-</tr>
-
-<tr>
-<td>CHF</td>
-<td>756</td>
-<td>Swiss franc</td>
-</tr>
-
-<tr>
-<td>TRY</td>
-<td>949</td>
-<td>Turkish lira</td>
-</tr>
-
-<tr>
-<td>JPY</td>
-<td>392</td>
-<td>Japanese yen</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="http-status-codes">HTTP status codes</h1>
-
-<table>
-<thead>
-<tr>
-<th>Status code</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>200</td>
-<td>Successful GET or PUT request</td>
-</tr>
-
-<tr>
-<td>201</td>
-<td>A new resource has been created</td>
-</tr>
-
-<tr>
-<td>204</td>
-<td>A resource has been deleted</td>
-</tr>
-
-<tr>
-<td>400</td>
-<td>Input data error</td>
-</tr>
-
-<tr>
-<td>401</td>
-<td>Not authenticated</td>
-</tr>
-
-<tr>
-<td>403</td>
-<td>Not allowed</td>
-</tr>
-
-<tr>
-<td>404</td>
-<td>The resource requested cannot be found</td>
-</tr>
-
-<tr>
-<td>500</td>
-<td>Internal error</td>
-</tr>
-</tbody>
-</table>
+<p>Svaret från CertiTrades server hamnar i response. Svaret består av fyra delar; <code>respone.Success</code>, <code>response.HTTPStatus</code>, <code>response.HTTPMessage</code> och <code>repsone.HTTPBody</code>. <code>response</code> har även två hjälpfunktioner; <code>response.getId()</code> och <code>response.getLink(&lt;string&gt;)</code> som returnerar betalningsid:t samt en specifiserad länk (exempelvis <code>response.getLink(&quot;paywin&quot;)</code> ger paywin-länken som kunden ska skickas vidare till för att föra in sina betaluppgifter).</p>
 
 					
 				</main>
