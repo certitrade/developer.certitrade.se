@@ -30,7 +30,7 @@ body > nav > ul {
 }
 body > main {
 	width: calc(100% - 30em);
-	max-width: 40em;
+	max-width: 50em;
 	min-width: 20em;
 }
 body > main > article {
@@ -47,7 +47,7 @@ body > main > article > nav {
 	right: -20em;
 	height: 100%;
 }
-body > main > article > nav  > ul {
+body > main > article > nav > ul {
 	position: sticky;
 	top: 1mm;
 	width: 20em;

@@ -73,13 +73,13 @@ Represents a merchant in CertiTrade’s system
 | `contacts` | A, U | `object` | Registered contacts for merchant for different purposes. |
 | `contacts.TECH` | A, U | `object` |  contacts.TECH.name | A, U | `string` | Name of contact person for technical matters. Max. 50 characters. |
 | `contacts.TECH.phone` | A, U | `string` | Telephone number of contact person for technical matters. Max. 50 characters. |
-| `contacts`.TECH.email` | A, U | `string` | Email address of contact person for technical matters. Max. 128 characters. |
+| `contacts.TECH.email` | A, U | `string` | Email address of contact person for technical matters. Max. 128 characters. |
 | `contacts.ADMIN` | A, U | `object` |  contacts. ADMIN.name | A, U | `string` | Name of contact person for admin. matters. Max. 50 characters. |
 | `contacts.ADMIN.phone` | A, U | `string` | Telephone number of contact person for admin. matters. Max. 50 characters. |
 | `contacts.ADMIN.email` | A, U | `string` | Email address of contact person for admin. matters. Max. 128 characters. |
-| `_links` | A | collection | Resource-related links |
+| `_links` | A | `collection` | Resource-related links |
 | `self` | A | `string` | The resource’s unique URL |
-| `_embedded` | A | collection | None |
+| `_embedded` | A | `collection` | None |
 
 # `agent`
 
@@ -93,9 +93,9 @@ Represents an administrator in the system, e.g. a distributor or a CertiTrade ad
 | `id` | A | `int` | Resource ID |
 | `created` | A | `string` | Date that the agent was created |
 | `state` | A, U | `string` | State variable. Possible values are `ACTIVE` or `INACTIVE`. |
-| `_links` | A | collection | Resource-related links |
+| `_links` | A | `collection` | Resource-related links |
 | `self` | A | `string` | The resource’s unique URL |
-| `_embedded` | A | collection | None |
+| `_embedded` | A | `collection` | None |
 
 # `descriptor`
 
@@ -122,10 +122,10 @@ Represents an administrator in the system, e.g. a distributor or a CertiTrade ad
 | `data.INVOICE_PAYEX.account_number` | A, U | `int` | PayEx account number |
 | `data.INVOICE_PAYEX.account_number` | A, U | `string` | PayEx account key. Max. 64 characters. |
 | `data.PARTPAY_PAYEX.account_number` | A, U | `int` | PayEx account number | PayEx account key. Max. 64 characters. |
-| `_links` | A | collection | Resource-related links |
+| `_links` | A | `collection` | Resource-related links |
 | `self` | A | `string` | The resource’s unique URL |
-| `merchant` | A |string | URL for merchant |
-| `_embedded` | A | collection | None |
+| `merchant` | A | `string` | URL for merchant |
+| `_embedded` | A | `collection` | None |
 
  # `payment`
 
@@ -148,8 +148,8 @@ Represents an administrator in the system, e.g. a distributor or a CertiTrade ad
 | `payment_attempts` | A | `payment_attempt[]` | Array of payment attempts. See table `payment_attempt`. |
 | `return_url` | C, M | `string` | URL to which the buyer is to be sent when the payment is complete. Max. 256 characters. |
 | `callback_url` | C, M | `string` | URL to which callbacks concerning the payment are to be sent. Max. 256 characters. |
-| `customer` | C | customer | Information about the customer. See table _customer_ . |
-| `products` | C, U | product[] | Array of products. See table _product_. |
+| `customer` | C | `customer` | Information about the customer. See table _customer_ . |
+| `products` | C, U | `product[]` | Array of products. See table _product_. |
 | `data` | C | `object` | Specifies payment method-specific data. The fields that are accessible (if any) will depend on which payment method _method_ has been specified. |
 | `data.RECURRING.initialize` | C, M | `int` | Whether or not the payment is an initializing `RECURRING` payment (0/1). |
 | `data.RECURRING.payment_account` | C, M | `string` | The `payment_account` that is to be used for this payment. |
@@ -170,11 +170,11 @@ Represents an administrator in the system, e.g. a distributor or a CertiTrade ad
 | `data.INVOICE_PAYEX.capture_error_description` | A | `string` | Description of error in the event of failed capture |
 | `data.PARTPAY_PAYEX` |  |  | Has the same fields as `INVOICE_PAYEX`. See `data.INVOICE_PAYEX`. |
   `data.SWISH_E.payer_phone_number` | A | `string` | Swish registered phone number for the payer. |
-| `_links` | A | collection | Resource-related links |
+| `_links` | A | `collection` | Resource-related links |
 | `self` | A | `string` | The resource’s unique URL |
 | `merchant` | A | `string` | URL for merchant |
 | `paywin` | A | `string` | URL for the payment window (to which the customer is to be forwarded) |
-| `_embedded` | A | collection | None |
+| `_embedded` | A | `collection` | None |
 
 # `customer`
 
@@ -360,10 +360,10 @@ Account used for `RECURRING` and `ONE_CLICK` payments.
 | `expiry_date` | A | `string` | Year and month that the account expires. Max. 10 characters. |
 | `masked_cardno` | A | `string` | Masked card number showing the last four digits. Max. 50 characters. |
 | `bin` | A | `string` | The card’s bin number (first 6 digits). Max. 6 characters. |
-| `_links` | A | collection | Resource-related links. |
+| `_links` | A | `collection` | Resource-related links. |
 | `self` | A | `string` | URL for descriptor. |
 | `merchant` | A | `string` | URL for merchant. |
-| `_embedded` | A | collection | None. |
+| `_embedded` | A | `collection` | None. |
 
 # `payment_account` – state
 
@@ -386,10 +386,10 @@ Refunds of a payment
 | created | A | `string` | Date that the refund was created |
 | state | A, U | `string` | State variable, see table _refund_ _–_ _state_ |
 | amount | C, M, U | `int` | Refund amount in the payment currency’s smallest unit (e.g. öre for SEK). Can only be changed while _state_ is _PENDING_. |
-| _links | A | collection | Resource-related links |
+| _links | A | `collection` | Resource-related links |
 | self | A | `string` | The resource’s unique URL |
 | payment | A | `string` | URL for payment |
-| _embedded | A | collection | None |
+| _embedded | A | `collection` | None |
 
 # `refund` – state
 
@@ -431,8 +431,7 @@ Represents an acquirer agreement for card payments. Needs to be linked to a Desc
 | `flags.DISPLAY_DINERS` | A, U | `int` | Whether or not the Diners logo is to be shown in the payment window. (0/1). |
 | `flags.COLLECT_CARDHOLDER_NAME` | A, U | `int` | Whether the customer’s name is to be stated in the payment window. (0/1). |
 | `flags.SHOW_CANCEL_BUTTON` | A, U | `int` | Whether a Cancel button is to be shown in the payment window. (0/1). |
-| `_links` | A | collection | Resource-related links. |
+| `_links` | A | `collection` | Resource-related links. |
 | `self` | A | `string` | The resource’s unique URL. |
 | `payment` | A | `string` | URL for payment. |
-| `_embedded` | A | collection | None. |
- 
+| `_embedded` | A | `collection` | None. |
