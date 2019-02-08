@@ -10,5 +10,9 @@ table {
 }
 table th,
 table td {
-	overflow-wrap: 
+	overflow-wrap: break-word;
+}
+table td:first-child {
+	line-break: loose;
+	word-break: break-all;
 }
