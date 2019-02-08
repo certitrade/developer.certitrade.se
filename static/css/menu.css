@@ -16,6 +16,7 @@ nav > ul ul ul a {
 	width: calc(100% - 3em);
 }
 body > nav > ul > li:not(.current):not(.current-parent) > ul,
+body > nav > ul ul > li:not(.current):not(.current-parent) > ul,
 nav > ul ul ul ul {
 	display: none;
 }
