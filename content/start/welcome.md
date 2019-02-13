@@ -1,5 +1,5 @@
 ---
-title: "Alternatives"
+title: "Certitrade Developer Documentation"
 date: "2019-01-24"
 weight: 20
 ---
