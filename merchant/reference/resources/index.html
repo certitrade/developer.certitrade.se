@@ -10,7 +10,7 @@
 		<link rel="shortcut icon" href="//developer.certitrade.se/favicon.ico">
 		<link rel="icon" type="image/png" href="//developer.certitrade.se/favicon-192.png" sizes="192x192">
 		<link rel="apple-touch-icon" sizes="180x180" href="//developer.certitrade.se/favicon-180.png">
-		<link href="" rel="alternate" type="application/rss+xml" title="Certitrade Developer" />
+		<link href="//developer.certitrade.se/merchant/reference/resources/index.xml" rel="alternate" type="application/rss+xml" title="Certitrade Developer" />
 		
 		<link rel="stylesheet" href="//developer.certitrade.se/css/color.css"/>
 		<link rel="stylesheet" href="//developer.certitrade.se/css/content.css"/>
@@ -140,6 +140,76 @@
 	<li class="current">
 		<a href="/merchant/reference/resources/">Resources</a>
 		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/resources/merchant/">Merchant</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/agent/">Agent</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment-attempt/">Payment Attempt</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/descriptor/">Descriptor</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment/">Payment</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/customer/">Customer</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/product/">Product</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/card/">Card</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payex/">PayEx</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/swish/">Swish</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment-account/">Payment Account</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/refund/">Refund</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/acquirer-agreement/">Acquirer Agreement</a>
+		
+	</li>
+	
+</ul>
+
+		
 	</li>
 	
 	<li>
@@ -178,8 +248,10 @@
 		</nav>
 
 
-		<main class="single">
 
+		<main class="list intro">
+
+	
 
 
 			<article id="resources" class="mode-full">
@@ -188,8 +260,8 @@
 			<p>
 				<time>2019-01-28</time>
 
-				<span class='article-length'>2900 words</span>
-				<span class='article-reading-time'>14 minutes</span>
+				<span class='article-length'>200 words</span>
+				<span class='article-reading-time'>1 minutes</span>
 
 
 
@@ -201,35 +273,9 @@
 				
 				<nav id="TableOfContents">
 <ul>
-<li>
-<ul>
-<li>
-<ul>
-<li>
-<ul>
-<li><a href="#example-1">Example 1:</a></li>
-<li><a href="#example-2">Example 2:</a></li>
-<li><a href="#example-3">Example 3:</a></li>
-</ul></li>
-</ul></li>
-</ul></li>
-<li><a href="#merchant"><code>merchant</code></a></li>
-<li><a href="#agent"><code>agent</code></a></li>
-<li><a href="#descriptor"><code>descriptor</code></a></li>
-<li><a href="#customer"><code>customer</code></a></li>
-<li><a href="#product"><code>product</code></a></li>
-<li><a href="#payment-attempt"><code>payment_attempt</code></a></li>
-<li><a href="#description-card">Description – <code>CARD</code></a></li>
-<li><a href="#description-direct-payex">Description – <code>DIRECT_PAYEX</code></a></li>
-<li><a href="#description-invoice-partpay-payex">Description – <code>INVOICE_PARTPAY_PAYEX</code></a></li>
-<li><a href="#description-swish-e-swish-m">Description – <code>SWISH_E</code> / <code>SWISH_M</code></a></li>
-<li><a href="#bank-direct-payex">bank – <code>DIRECT_PAYEX</code></a></li>
-<li><a href="#payment-state"><code>payment</code> – state</a></li>
-<li><a href="#payment-account"><code>payment_account</code></a></li>
-<li><a href="#payment-account-state"><code>payment_account</code> – state</a></li>
-<li><a href="#refund"><code>refund</code></a></li>
-<li><a href="#refund-state"><code>refund</code> – state</a></li>
-<li><a href="#acquirer-agreement"><code>acquirer_agreement</code></a></li>
+<li><a href="#example-1">Example 1</a></li>
+<li><a href="#example-2">Example 2</a></li>
+<li><a href="#example-3">Example 3</a></li>
 </ul>
 </nav>
 				
@@ -273,7 +319,7 @@
 </tbody>
 </table>
 
-<h4 id="example-1">Example 1:</h4>
+<h1 id="example-1">Example 1</h1>
 
 <table>
 <thead>
@@ -297,7 +343,7 @@
 
 <p>The field <code>id</code> is set automatically by the system.</p>
 
-<h4 id="example-2">Example 2:</h4>
+<h1 id="example-2">Example 2</h1>
 
 <table>
 <thead>
@@ -321,7 +367,7 @@
 
 <p>It is mandatory to also send the field <code>amount</code> when creating the resource.</p>
 
-<h4 id="example-3">Example 3:</h4>
+<h1 id="example-3">Example 3</h1>
 
 <table>
 <thead>
@@ -345,1962 +391,6 @@
 
 <p>The field <code>state</code> is set by the system when the resource is created and can then be updated using a PUT request.</p>
 
-<h1 id="merchant"><code>merchant</code></h1>
-
-<p>Represents a merchant in CertiTrade’s system</p>
-
-<p><strong>URL</strong> : <code>/merchant/[id]</code><br />
-<strong>Searchable parameters:</strong> <code>agent</code> , <code>state</code>, <code>manual_capture</code></p>
-
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>id</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>Resource ID</td>
-</tr>
-
-<tr>
-<td><code>created</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>Date that the merchant was created</td>
-</tr>
-
-<tr>
-<td><code>state</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>The merchant’s state. Possible values are “ACTIVE” or “INACTIVE”.</td>
-</tr>
-
-<tr>
-<td><code>agent</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>The agent to which the merchant belongs</td>
-</tr>
-
-<tr>
-<td><code>company_name</code></td>
-<td>C, M, U</td>
-<td><code>string</code></td>
-<td>Company name. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>company_webpage</code></td>
-<td>C, U</td>
-<td><code>string</code></td>
-<td>The company’s website. Max. 128 characters.</td>
-</tr>
-
-<tr>
-<td><code>signatory</code></td>
-<td>C, U</td>
-<td><code>string</code></td>
-<td>Name of company signatory. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>org_number</code></td>
-<td>C, U</td>
-<td><code>string</code></td>
-<td>Corporate registration number. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>address1</code></td>
-<td>C, U</td>
-<td><code>string</code></td>
-<td>Address 1. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>address2</code></td>
-<td>C, U</td>
-<td><code>string</code></td>
-<td>Address 2. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>zip</code></td>
-<td>C, U</td>
-<td><code>string</code></td>
-<td>Zip code. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>city</code></td>
-<td>C, U</td>
-<td><code>string</code></td>
-<td>City. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>country</code></td>
-<td>C, U</td>
-<td><code>string</code></td>
-<td>Country. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>phone</code></td>
-<td>C, U</td>
-<td><code>string</code></td>
-<td>Telephone number. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>max_payment_attempts</code></td>
-<td>C, U</td>
-<td><code>int</code></td>
-<td>Max. number of payment attempts</td>
-</tr>
-
-<tr>
-<td><code>paywin_caption</code></td>
-<td>C, U</td>
-<td><code>string</code></td>
-<td>Text shown in the payment window. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>manual_capture</code></td>
-<td>C, U</td>
-<td><code>int</code></td>
-<td>Whether or not payments must be approved manually. (0/1)</td>
-</tr>
-
-<tr>
-<td><code>email</code></td>
-<td>A, U</td>
-<td><code>object</code></td>
-<td>Registered email addresses for merchant for different purposes.</td>
-</tr>
-
-<tr>
-<td><code>email.OFFICE</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>Email address for office. Max. 128 characters.</td>
-</tr>
-
-<tr>
-<td><code>email.ALARM</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>Email address for emergencies. Max. 128 characters.</td>
-</tr>
-
-<tr>
-<td><code>email.INVOICE</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>Email address for invoicing. Max. 128 characters.</td>
-</tr>
-
-<tr>
-<td><code>contacts</code></td>
-<td>A, U</td>
-<td><code>object</code></td>
-<td>Registered contacts for merchant for different purposes.</td>
-</tr>
-
-<tr>
-<td><code>contacts.TECH</code></td>
-<td>A, U</td>
-<td><code>object</code></td>
-<td>contacts.TECH.name</td>
-</tr>
-
-<tr>
-<td><code>contacts.TECH.phone</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>Telephone number of contact person for technical matters. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>contacts.TECH.email</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>Email address of contact person for technical matters. Max. 128 characters.</td>
-</tr>
-
-<tr>
-<td><code>contacts.ADMIN</code></td>
-<td>A, U</td>
-<td><code>object</code></td>
-<td>contacts. ADMIN.name</td>
-</tr>
-
-<tr>
-<td><code>contacts.ADMIN.phone</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>Telephone number of contact person for admin. matters. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>contacts.ADMIN.email</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>Email address of contact person for admin. matters. Max. 128 characters.</td>
-</tr>
-
-<tr>
-<td><code>_links</code></td>
-<td>A</td>
-<td><code>collection</code></td>
-<td>Resource-related links</td>
-</tr>
-
-<tr>
-<td><code>self</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>The resource’s unique URL</td>
-</tr>
-
-<tr>
-<td><code>_embedded</code></td>
-<td>A</td>
-<td><code>collection</code></td>
-<td>None</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="agent"><code>agent</code></h1>
-
-<p>Represents an administrator in the system, e.g. a distributor or a CertiTrade administrator.</p>
-
-<p><strong>URL</strong> : <code>/agent/[id]</code><br />
-<strong>Searchable parameters</strong> : <code>parent</code>, <code>state</code></p>
-
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>id</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>Resource ID</td>
-</tr>
-
-<tr>
-<td><code>created</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>Date that the agent was created</td>
-</tr>
-
-<tr>
-<td><code>state</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>State variable. Possible values are <code>ACTIVE</code> or <code>INACTIVE</code>.</td>
-</tr>
-
-<tr>
-<td><code>_links</code></td>
-<td>A</td>
-<td><code>collection</code></td>
-<td>Resource-related links</td>
-</tr>
-
-<tr>
-<td><code>self</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>The resource’s unique URL</td>
-</tr>
-
-<tr>
-<td><code>_embedded</code></td>
-<td>A</td>
-<td><code>collection</code></td>
-<td>None</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="descriptor"><code>descriptor</code></h1>
-
-<p><strong>URL</strong> : <code>/descriptor/[id]</code><br />
-<strong>Searchable parameters</strong> : <code>merchant</code>, <code>state</code>, <code>method</code>, <code>currencies</code></p>
-
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>id</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>Resource ID</td>
-</tr>
-
-<tr>
-<td><code>created</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>Date that the descriptor was created</td>
-</tr>
-
-<tr>
-<td><code>state</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>State variable. Possible values are “ACTIVE” or “INACTIVE”.</td>
-</tr>
-
-<tr>
-<td><code>merchant</code></td>
-<td>C, M</td>
-<td><code>int</code></td>
-<td>Merchant that owns the descriptor</td>
-</tr>
-
-<tr>
-<td><code>currencies</code></td>
-<td>C, M, U</td>
-<td><code>object</code></td>
-<td>List of the currencies that the descriptor can use. Each element is the alphabetic code for one of the <em>Currencies</em> – see table 5.2</td>
-</tr>
-
-<tr>
-<td><code>method</code></td>
-<td>C, M</td>
-<td><code>string</code></td>
-<td>The descriptor’s payment method. Max. 20 characters.</td>
-</tr>
-
-<tr>
-<td><code>data</code></td>
-<td>A, U</td>
-<td><code>object</code></td>
-<td>Contains payment method-specific data that is required in order to make payments using the specified payment method <em>method</em>.</td>
-</tr>
-
-<tr>
-<td><code>data.CARD.acquirer_agreement</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-<td>The <code>acquirer_agreement</code> resource that is associated with this descriptor.</td>
-</tr>
-
-<tr>
-<td><code>data.RECURRING.acquirer_agreement</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-<td>The <code>acquirer_agreement</code> resource that is associated with this descriptor.</td>
-</tr>
-
-<tr>
-<td><code>data.ONE_CLICK.acquirer_agreement</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-<td>The <code>acquirer_agreement</code> resource that is associated with this descriptor.</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.client_no</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-<td>Svea WebPay client number.</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.username</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>Svea WebPay username. Max. 20 characters.</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.password</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>Svea WebPay password. Max. 20 characters.</td>
-</tr>
-
-<tr>
-<td><code>data.DIRECT_PAYEX.account_number</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-<td>PayEx account number</td>
-</tr>
-
-<tr>
-<td><code>data.DIRECT_PAYEX.account_number</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>PayEx account key. Max. 64 characters.</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_PAYEX.account_number</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-<td>PayEx account number</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_PAYEX.account_number</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>PayEx account key. Max. 64 characters.</td>
-</tr>
-
-<tr>
-<td><code>data.PARTPAY_PAYEX.account_number</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-<td>PayEx account number</td>
-</tr>
-
-<tr>
-<td><code>_links</code></td>
-<td>A</td>
-<td><code>collection</code></td>
-<td>Resource-related links</td>
-</tr>
-
-<tr>
-<td><code>self</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>The resource’s unique URL</td>
-</tr>
-
-<tr>
-<td><code>merchant</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>URL for merchant</td>
-</tr>
-
-<tr>
-<td><code>_embedded</code></td>
-<td>A</td>
-<td><code>collection</code></td>
-<td>None</td>
-</tr>
-</tbody>
-</table>
-
-<p># <code>payment</code></p>
-
-<p><strong>URL</strong> : <code>/payment/[id]</code><br />
-<strong>Searchable parameters</strong> : <code>merchant</code>, <code>amount</code>, <code>currency</code>, <code>method</code>, <code>reference</code>, <code>state</code>, <code>language</code>, <code>payment_account</code></p>
-
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>id</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>Resource ID</td>
-</tr>
-
-<tr>
-<td><code>created</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>Date that the payment was created</td>
-</tr>
-
-<tr>
-<td><code>state</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>State variable. See table <em>payment</em> <em>–</em> <em>state.</em></td>
-</tr>
-
-<tr>
-<td><code>amount</code></td>
-<td>C, M, U</td>
-<td><code>int</code></td>
-<td>Amount in the currency’s smallest unit (e.g. öre for SEK). Can be changed when <em>state</em> is <code>WAITING_FOR_APPROVAL</code> or <code>READY_FOR_CAPTURE</code> in order to change the amount that is to go on to be captured.</td>
-</tr>
-
-<tr>
-<td><code>authorized_amount</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>Amount that has been authorized. Set on successful authorization.</td>
-</tr>
-
-<tr>
-<td><code>currency</code></td>
-<td>C, M</td>
-<td><code>string</code></td>
-<td>Currency code according to ISO 4217.</td>
-</tr>
-
-<tr>
-<td><code>language</code></td>
-<td>C</td>
-<td><code>string</code></td>
-<td>Language code according to ISO 639-1. If not specified, Swedish (_‘<strong>sv</strong>’_) is used. See table <em>5.1 Languages</em></td>
-</tr>
-
-<tr>
-<td><code>merchant</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>The merchant that the payment belongs to</td>
-</tr>
-
-<tr>
-<td><code>method</code></td>
-<td>C, M</td>
-<td><code>string</code></td>
-<td>The payment method to be used.</td>
-</tr>
-
-<tr>
-<td><code>reference</code></td>
-<td>C, U</td>
-<td><code>string</code></td>
-<td>The merchant’s reference, shown in the payment window. Max. 64 characters.</td>
-</tr>
-
-<tr>
-<td><code>description</code></td>
-<td>C, U</td>
-<td><code>string</code></td>
-<td>A more detailed description of the payment, shown in the payment window. Max. 64 characters.</td>
-</tr>
-
-<tr>
-<td><code>payment_attempts</code></td>
-<td>A</td>
-<td><code>payment_attempt[]</code></td>
-<td>Array of payment attempts. See table <code>payment_attempt</code>.</td>
-</tr>
-
-<tr>
-<td><code>return_url</code></td>
-<td>C, M</td>
-<td><code>string</code></td>
-<td>URL to which the buyer is to be sent when the payment is complete. Max. 256 characters.</td>
-</tr>
-
-<tr>
-<td><code>callback_url</code></td>
-<td>C, M</td>
-<td><code>string</code></td>
-<td>URL to which callbacks concerning the payment are to be sent. Max. 256 characters.</td>
-</tr>
-
-<tr>
-<td><code>customer</code></td>
-<td>C</td>
-<td><code>customer</code></td>
-<td>Information about the customer. See table <em>customer</em> .</td>
-</tr>
-
-<tr>
-<td><code>products</code></td>
-<td>C, U</td>
-<td><code>product[]</code></td>
-<td>Array of products. See table <em>product</em>.</td>
-</tr>
-
-<tr>
-<td><code>data</code></td>
-<td>C</td>
-<td><code>object</code></td>
-<td>Specifies payment method-specific data. The fields that are accessible (if any) will depend on which payment method <em>method</em> has been specified.</td>
-</tr>
-
-<tr>
-<td><code>data.RECURRING.initialize</code></td>
-<td>C, M</td>
-<td><code>int</code></td>
-<td>Whether or not the payment is an initializing <code>RECURRING</code> payment (0/1).</td>
-</tr>
-
-<tr>
-<td><code>data.RECURRING.payment_account</code></td>
-<td>C, M</td>
-<td><code>string</code></td>
-<td>The <code>payment_account</code> that is to be used for this payment.</td>
-</tr>
-
-<tr>
-<td><code>data.ONE_CLICK.payment_account</code></td>
-<td>C, M</td>
-<td><code>string</code></td>
-<td>The <code>payment_account</code> that is to be used for this payment.</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.order_id</code></td>
-<td>C, M</td>
-<td><code>int</code></td>
-<td>Merchant’s order ID that is shown on the invoice</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.order_number</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>Svea’s <code>order_number</code></td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.authorize_id</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>Svea’s <code>authorize_id</code></td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.invoice_number</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>Svea’s invoice number</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.invoice_rejection_code</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>Error code shown if an invoice cannot be created (i.e. CAPTURE failed)</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.due_date</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>Date that the invoice is due for payment</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.expiration_date</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>Date that the order expires</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.customer_id</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>Svea’s <code>customer_id</code></td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.will_buy_invoices</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>If Svea will buy the invoice</td>
-</tr>
-
-<tr>
-<td><code>data.DIRECT_PAYEX.bank</code></td>
-<td>C, M</td>
-<td><code>string</code></td>
-<td>Which bank the direct payment is being made to. Must be one of the identifiers in the table <em>bank</em> – <code>DIRECT_PAYEX</code></td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_PAYEX.order_id</code></td>
-<td>C, M</td>
-<td><code>string</code></td>
-<td>The shop’s <code>order_id</code> as specified when the payment was created</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_PAYEX.capture_transaction_number</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>PayEx transaction number for capture</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_PAYEX.capture_error_code</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>PayEx error code for failed capture</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_PAYEX.capture_error_description</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>Description of error in the event of failed capture</td>
-</tr>
-
-<tr>
-<td><code>data.PARTPAY_PAYEX</code></td>
-<td></td>
-<td></td>
-<td>Has the same fields as <code>INVOICE_PAYEX</code>. See <code>data.INVOICE_PAYEX</code>.</td>
-</tr>
-
-<tr>
-<td><code>data.SWISH_E.payer_phone_number</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>Swish registered phone number for the payer.</td>
-</tr>
-
-<tr>
-<td><code>_links</code></td>
-<td>A</td>
-<td><code>collection</code></td>
-<td>Resource-related links</td>
-</tr>
-
-<tr>
-<td><code>self</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>The resource’s unique URL</td>
-</tr>
-
-<tr>
-<td><code>merchant</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>URL for merchant</td>
-</tr>
-
-<tr>
-<td><code>paywin</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>URL for the payment window (to which the customer is to be forwarded)</td>
-</tr>
-
-<tr>
-<td><code>_embedded</code></td>
-<td>A</td>
-<td><code>collection</code></td>
-<td>None</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="customer"><code>customer</code></h1>
-
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>security_number</code></td>
-<td><code>string</code></td>
-<td>Civil/corporate registration number. Max. 64 characters.</td>
-</tr>
-
-<tr>
-<td><code>name</code></td>
-<td><code>string</code></td>
-<td>Name. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>company_name</code></td>
-<td><code>string</code></td>
-<td>Company name. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>address1</code></td>
-<td><code>string</code></td>
-<td>First address field. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>address2</code></td>
-<td><code>string</code></td>
-<td>Second address field. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>address3</code></td>
-<td><code>string</code></td>
-<td>Third address field. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>zip_code</code></td>
-<td><code>string</code></td>
-<td>Zip code. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>city</code></td>
-<td><code>string</code></td>
-<td>City. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>region</code></td>
-<td><code>string</code></td>
-<td>Region/state. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>country</code></td>
-<td><code>string</code></td>
-<td>Country. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>email</code></td>
-<td><code>string</code></td>
-<td>Email address. Max. 128 characters.</td>
-</tr>
-
-<tr>
-<td><code>phone</code></td>
-<td><code>string</code></td>
-<td>Telephone number. Max. 50 characters.</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="product"><code>product</code></h1>
-
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>line_ordering</code></td>
-<td><code>int</code></td>
-<td>Describes the relative order of the products in the representation, from 1 upward. Products with lower numbers are shown first.</td>
-</tr>
-
-<tr>
-<td><code>product_reference</code></td>
-<td><code>string</code></td>
-<td>Product reference. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>product_name</code></td>
-<td><code>string</code></td>
-<td>Product name. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>price</code></td>
-<td><code>int</code></td>
-<td>The product’s price in the same currency as Payment’s <em>currency</em></td>
-</tr>
-
-<tr>
-<td><code>quantity</code></td>
-<td><code>int</code></td>
-<td>Quantity of products of this type</td>
-</tr>
-
-<tr>
-<td><code>quantity_unit</code></td>
-<td><code>string</code></td>
-<td>Unit of measurement for the product. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>vat_rate</code></td>
-<td><code>string</code></td>
-<td>VAT in percent to two decimal places</td>
-</tr>
-
-<tr>
-<td><code>vat_included</code></td>
-<td><code>int</code></td>
-<td>Flags (0/1) whether or not VAT is included in the price</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="payment-attempt"><code>payment_attempt</code></h1>
-
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>created</code></td>
-<td><code>string</code></td>
-<td>Date and time that the payment attempt was made</td>
-</tr>
-
-<tr>
-<td><code>result</code></td>
-<td><code>int</code></td>
-<td>Whether or not the payment attempt was successful. (0/1)</td>
-</tr>
-
-<tr>
-<td><code>method</code></td>
-<td><code>string</code></td>
-<td>The descriptor’s payment method</td>
-</tr>
-
-<tr>
-<td><code>computers</code></td>
-<td><code>object</code></td>
-<td>Contains data on the payment attempt that is specific to the payment method that was used. The fields that are accessible will depend on which payment method <em>method</em> was specified.</td>
-</tr>
-
-<tr>
-<td><code>data.CARD.desc</code></td>
-<td><code>string</code></td>
-<td>Brief description of the payment attempt. See table <em>description</em> <em>–</em> <em>CARD</em>.</td>
-</tr>
-
-<tr>
-<td><code>data.CARD.authcode</code></td>
-<td><code>string</code></td>
-<td>Authorization code. Max. 10 characters.</td>
-</tr>
-
-<tr>
-<td><code>data.CARD.respcode</code></td>
-<td><code>string</code></td>
-<td>String that describes the result of the authorization. 00 is successful, otherwise error. Max. 5 characters.</td>
-</tr>
-
-<tr>
-<td><code>data.CARD.masked_cardno</code></td>
-<td><code>string</code></td>
-<td>Masked card number showing the last 4 digits in plain text. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>data.CARD.bin</code></td>
-<td><code>string</code></td>
-<td>First 6 digits of the card number. Max. 6 characters.</td>
-</tr>
-
-<tr>
-<td><code>data.CARD.cardholder_name</code></td>
-<td><code>string</code></td>
-<td>Cardholder’s name as entered in the payment window. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>data.RECURRING</code></td>
-<td></td>
-<td>Same field as for CARD. See data.CARD.</td>
-</tr>
-
-<tr>
-<td><code>data.ONE_CLICK</code></td>
-<td></td>
-<td>Same field as for CARD. See data.CARD.</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.rejection_code</code></td>
-<td><code>string</code></td>
-<td>Brief description of the reason the payment attempt failed. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.customer_type</code></td>
-<td><code>string</code></td>
-<td>Type of customer. Only “Person” or “Business”.</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_SVEA.customer</code></td>
-<td>customer</td>
-<td>The customer’s personal details as used in the payment attempt. See table <code>customer</code>.</td>
-</tr>
-
-<tr>
-<td><code>data.DIRECT_PAYEX.desc</code></td>
-<td><code>string</code></td>
-<td>Brief description of the payment attempt. See table <em>description</em> <em>–</em> <code>DIRECT_PAYEX</code></td>
-</tr>
-
-<tr>
-<td><code>data.DIRECT_PAYEX. transaction_number</code></td>
-<td><code>int</code></td>
-<td>PayEx transaction number</td>
-</tr>
-
-<tr>
-<td><code>data.DIRECT_PAYEX. fraud_data</code></td>
-<td><code>int</code></td>
-<td>If PayEx suspects fraud (0/1)</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_PAYEX.desc</code></td>
-<td><code>string</code></td>
-<td>Brief description of the payment attempt. See table<em>description</em> <em>–</em> <code>INVOICE_PARTPAY_PAYEX</code></td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_PAYEX.error_code</code></td>
-<td><code>string</code></td>
-<td>Error code from PayEx that explains failed payment attempt. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_PAYEX.error_description</code></td>
-<td><code>string</code></td>
-<td>More detailed error description from PayEx for failed payment attempt. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_PAYEX.authorize_transaction_number</code></td>
-<td><code>int</code></td>
-<td>PayEx transaction number</td>
-</tr>
-
-<tr>
-<td><code>data.INVOICE_PAYEX.customer</code></td>
-<td>customer</td>
-<td>The customer’s personal details as used in the payment attempt. See table <code>customer</code>.</td>
-</tr>
-
-<tr>
-<td><code>data.PARTPAY_PAYEX</code></td>
-<td></td>
-<td>Same as for <code>PayEx.INVOICE_PAYEX</code>.</td>
-</tr>
-
-<tr>
-<td><code>data.SWISH_M.desc</code></td>
-<td><code>string</code></td>
-<td>Brief description of the payment attempt</td>
-</tr>
-
-<tr>
-<td><code>data.SWISH_M.swish_payment_reference</code></td>
-<td><code>string</code></td>
-<td>Reference to swish payment. Used when identifying a payment in contacts with swish.</td>
-</tr>
-
-<tr>
-<td><code>data.SWISH_M.swish_payment_request_token</code></td>
-<td><code>string</code></td>
-<td>Token passed to swish app when performing a <code>SWISH_M</code> payment.</td>
-</tr>
-
-<tr>
-<td><code>data.SWISH_M.swish_error_code</code></td>
-<td><code>string</code></td>
-<td>Error code as presented by swish in case of error.</td>
-</tr>
-
-<tr>
-<td><code>data.SWISH_M.swish_error_message</code></td>
-<td><code>string</code></td>
-<td>Human readable error message that explains the swish error code.</td>
-</tr>
-
-<tr>
-<td><code>data.SWISH_M.swish_additional_information</code></td>
-<td><code>string</code></td>
-<td>Additional information about error.</td>
-</tr>
-
-<tr>
-<td><code>data.SWISH_M.swish_status</code></td>
-<td><code>string</code></td>
-<td>Latest known status of payment from swish.</td>
-</tr>
-
-<tr>
-<td><code>data.SWISH_M.swish_date_created</code></td>
-<td><code>string</code></td>
-<td>Date when payment was created in swish system.</td>
-</tr>
-
-<tr>
-<td><code>data.SWISH_M.swish_date_paid</code></td>
-<td><code>string</code></td>
-<td>Date when payment was paid in swish system.</td>
-</tr>
-
-<tr>
-<td><code>data.SWISH_E</code></td>
-<td><code>string</code></td>
-<td>Same as for <code>data.SWISH_M</code>.</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="description-card">Description – <code>CARD</code></h1>
-
-<p>Definition of the values that <em>desc</em> can have</p>
-
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>PENDING</code></td>
-<td>Starting state</td>
-</tr>
-
-<tr>
-<td><code>3D_AUTH</code></td>
-<td>Authorization with fully authenticated 3-D Secure</td>
-</tr>
-
-<tr>
-<td><code>3D_ATTEMPT</code></td>
-<td>Authorization with 3-D attempt</td>
-</tr>
-
-<tr>
-<td><code>SSL_AUTH</code></td>
-<td>Authorization with card that is not enrolled in 3-D Secure</td>
-</tr>
-
-<tr>
-<td><code>RECURRING_AUTH</code></td>
-<td>Authorization made as a recurring payment for a payment account</td>
-</tr>
-
-<tr>
-<td><code>MOTO</code></td>
-<td>MOTO authorization</td>
-</tr>
-
-<tr>
-<td><code>3D_FAILED</code></td>
-<td>Failed 3-D authentication</td>
-</tr>
-
-<tr>
-<td><code>AUTH_FAILED</code></td>
-<td>Authorization failed</td>
-</tr>
-
-<tr>
-<td><code>USER_CANCELLED</code></td>
-<td>The payment was cancelled</td>
-</tr>
-
-<tr>
-<td><code>INTERNAL_ERROR</code></td>
-<td>Internal error</td>
-</tr>
-
-<tr>
-<td><code>TIMEOUT</code></td>
-<td>Time allowed in the payment system was exceeded</td>
-</tr>
-
-<tr>
-<td><code>SESSION_INVALID</code></td>
-<td>Payment session was cancelled due to abnormal behavior</td>
-</tr>
-
-<tr>
-<td><code>ACCOUNT_TERMINATED</code></td>
-<td>The authorization failed and the <code>payment_account</code> associated with the payment has been SUSPENDED.</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="description-direct-payex">Description – <code>DIRECT_PAYEX</code></h1>
-
-<p>Definition of the values that <em>desc</em> can have</p>
-
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>CREATED</code></td>
-<td>Starting state</td>
-</tr>
-
-<tr>
-<td><code>INITIALIZED</code></td>
-<td>Payment attempt initialized</td>
-</tr>
-
-<tr>
-<td><code>PREPARED</code></td>
-<td>Preparing to direct the customer to bank</td>
-</tr>
-
-<tr>
-<td><code>REDIRECTED_TO_BANK</code></td>
-<td>The customer has been directed to the bank</td>
-</tr>
-
-<tr>
-<td><code>CANCELLED</code></td>
-<td>The customer cancelled the payment attempt</td>
-</tr>
-
-<tr>
-<td><code>FAILED</code></td>
-<td>The payment attempt failed</td>
-</tr>
-
-<tr>
-<td><code>PAID</code></td>
-<td>The payment has been made</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="description-invoice-partpay-payex">Description – <code>INVOICE_PARTPAY_PAYEX</code></h1>
-
-<p>Definition of the values that <em>desc</em> can have</p>
-
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>WAITING_FOR_CUSTOMER_CONTRACT</code></td>
-<td>Starting state. Waiting for the customer to fill in the contract (<code>PARTPAY_PAYEX</code> only).</td>
-</tr>
-
-<tr>
-<td><code>WAITING_FOR_CUSTOMER_CONFIRM</code></td>
-<td>Waiting for the customer to confirm the purchase.</td>
-</tr>
-
-<tr>
-<td><code>WAITING_FOR_CUSTOMER_SECURITY_NUMBER</code></td>
-<td>Waiting for the customer to fill in the contract (<code>INVOICE_PAYEX</code> only).</td>
-</tr>
-
-<tr>
-<td><code>AUTHORIZED</code></td>
-<td>The purchase is approved, the payment can be placed in CAPTURED for completion.</td>
-</tr>
-
-<tr>
-<td><code>USER_CANCELLED</code></td>
-<td>The user chose to cancel the payment attempt.</td>
-</tr>
-
-<tr>
-<td><code>FAILED</code></td>
-<td>The payment attempt failed.</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="description-swish-e-swish-m">Description – <code>SWISH_E</code> / <code>SWISH_M</code></h1>
-
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>CREATED</code></td>
-<td>The payment has been created at Certitrade.</td>
-</tr>
-
-<tr>
-<td><code>PAYMENT_REQUEST_SENT</code></td>
-<td>Payment request to Swish has been sent.</td>
-</tr>
-
-<tr>
-<td><code>WAITING_FOR_SWISH_RESULT</code></td>
-<td>Payment request to Swish has been answered and certitrade waits for callback from Swish.</td>
-</tr>
-
-<tr>
-<td><code>PAID</code></td>
-<td>The callback arrived and the payment is paid.</td>
-</tr>
-
-<tr>
-<td><code>CANCELLED_BY_USER</code></td>
-<td>The user chose to cancel the payment in swish app.</td>
-</tr>
-
-<tr>
-<td><code>FAILED</code></td>
-<td>There was an error during the payment process.</td>
-</tr>
-
-<tr>
-<td><code>BANK_TIME_OUT</code></td>
-<td>There was an error in the communication between swish and merchants bank.</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="bank-direct-payex">bank – <code>DIRECT_PAYEX</code></h1>
-
-<p>List of allowed banks and the currency that they support.</p>
-
-<table>
-<thead>
-<tr>
-<th>Identifier</th>
-<th>Permitted currency</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>FSPA</td>
-<td>SEK</td>
-<td>Swedbank</td>
-</tr>
-
-<tr>
-<td>NB</td>
-<td>SEK</td>
-<td>Nordea Bank</td>
-</tr>
-
-<tr>
-<td>SEB</td>
-<td>SEK</td>
-<td>Skandinaviska Enskilda Bank</td>
-</tr>
-
-<tr>
-<td>SHB</td>
-<td>SEK</td>
-<td>Handelsbanken</td>
-</tr>
-
-<tr>
-<td>NB:DK</td>
-<td>DKK</td>
-<td>Nordea Bank DK</td>
-</tr>
-
-<tr>
-<td>DDB</td>
-<td>DKK</td>
-<td>Den Danske Bank</td>
-</tr>
-
-<tr>
-<td>BAX</td>
-<td>NOK</td>
-<td>BankAxess</td>
-</tr>
-
-<tr>
-<td>SAMPO</td>
-<td>EUR</td>
-<td></td>
-</tr>
-
-<tr>
-<td>AKTIA</td>
-<td>EUR</td>
-<td></td>
-</tr>
-
-<tr>
-<td>SP</td>
-<td>EUR</td>
-<td></td>
-</tr>
-
-<tr>
-<td>POP</td>
-<td>EUR</td>
-<td></td>
-</tr>
-
-<tr>
-<td>OP</td>
-<td>EUR</td>
-<td></td>
-</tr>
-
-<tr>
-<td>NB:FI</td>
-<td>EUR</td>
-<td>Nordea Bank FI</td>
-</tr>
-
-<tr>
-<td>SHB:FI</td>
-<td>EUR</td>
-<td>Handelsbanken FI</td>
-</tr>
-
-<tr>
-<td>SPANKKI</td>
-<td>EUR</td>
-<td></td>
-</tr>
-
-<tr>
-<td>TAPIOLA</td>
-<td>EUR</td>
-<td></td>
-</tr>
-
-<tr>
-<td>AALAND</td>
-<td>EUR</td>
-<td>Ålandsbanken</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="payment-state"><code>payment</code> – state</h1>
-
-<p>Definition of the states that a payment can have</p>
-
-<table>
-<thead>
-<tr>
-<th>State</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>CREATED</code></td>
-<td>Starting state. Payment has been created but the payment window link has not been opened.</td>
-</tr>
-
-<tr>
-<td><code>PENDING</code></td>
-<td>The payment link has been opened, no successful authorization has been given.</td>
-</tr>
-
-<tr>
-<td><code>WAITING_FOR_APPROVAL</code></td>
-<td>Authorized payment is awaiting approval in order to be captured.</td>
-</tr>
-
-<tr>
-<td><code>READY_FOR_CAPTURE</code></td>
-<td>The payment will be captured during the coming night.</td>
-</tr>
-
-<tr>
-<td><code>CAPTURED</code></td>
-<td>The payment has been captured.</td>
-</tr>
-
-<tr>
-<td><code>CANCELLED</code></td>
-<td>The authorization has been reversed.</td>
-</tr>
-
-<tr>
-<td><code>FAILED</code></td>
-<td>The payment failed.</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="payment-account"><code>payment_account</code></h1>
-
-<p>Account used for <code>RECURRING</code> and <code>ONE_CLICK</code> payments.</p>
-
-<p><strong>URL</strong> : <code>/payment_account/[id]</code><br />
-<strong>Searchable parameters</strong> : <code>merchant</code>, <code>state</code>, <code>type</code></p>
-
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>id</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>Resource ID</td>
-</tr>
-
-<tr>
-<td><code>created</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>Date that the account was created.</td>
-</tr>
-
-<tr>
-<td><code>state</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>State variable. See table <code>payment_account</code> <em>–</em> <em>state</em>.</td>
-</tr>
-
-<tr>
-<td><code>merchant</code></td>
-<td>A</td>
-<td><code>int</code></td>
-<td>Merchant that owns the account.</td>
-</tr>
-
-<tr>
-<td><code>payment</code></td>
-<td>C, M, A</td>
-<td><code>int</code></td>
-<td>The payment used to initialize the account. To be specified only if <em>type</em> is <code>ONE_CLICK</code>.</td>
-</tr>
-
-<tr>
-<td><code>type</code></td>
-<td>C, M</td>
-<td><code>string</code></td>
-<td>Specifies type of account (<code>RECURRING</code> or <code>ONE_CLICK</code>).</td>
-</tr>
-
-<tr>
-<td><code>expiry_date</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>Year and month that the account expires. Max. 10 characters.</td>
-</tr>
-
-<tr>
-<td><code>masked_cardno</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>Masked card number showing the last four digits. Max. 50 characters.</td>
-</tr>
-
-<tr>
-<td><code>bin</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>The card’s bin number (first 6 digits). Max. 6 characters.</td>
-</tr>
-
-<tr>
-<td><code>_links</code></td>
-<td>A</td>
-<td><code>collection</code></td>
-<td>Resource-related links.</td>
-</tr>
-
-<tr>
-<td><code>self</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>URL for descriptor.</td>
-</tr>
-
-<tr>
-<td><code>merchant</code></td>
-<td>A</td>
-<td><code>string</code></td>
-<td>URL for merchant.</td>
-</tr>
-
-<tr>
-<td><code>_embedded</code></td>
-<td>A</td>
-<td><code>collection</code></td>
-<td>None.</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="payment-account-state"><code>payment_account</code> – state</h1>
-
-<table>
-<thead>
-<tr>
-<th>State</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>UNINITIALIZED</code></td>
-<td>The initial state of RECURRING accounts. No initial transaction has been made</td>
-</tr>
-
-<tr>
-<td><code>ACTIVE</code></td>
-<td>The initial state of <code>ONE_CLICK</code> accounts. The account has been initialized and can be used for transactions. Set automatically when a payment linked to this account is successfully authorized.</td>
-</tr>
-
-<tr>
-<td><code>CLOSED</code></td>
-<td>The account has been closed and cannot be used for transactions. Can be set by merchant or by the system if fraud is suspected.</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="refund"><code>refund</code></h1>
-
-<p>Refunds of a payment</p>
-
-<p><strong>URL</strong> : <code>/payment/[paymentId]/refund/[id]</code><br />
-<strong>Searchable parameters</strong> : &ndash;</p>
-
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Attribute</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td>id</td>
-<td>A</td>
-<td><code>int</code></td>
-<td>Resource ID</td>
-</tr>
-
-<tr>
-<td>created</td>
-<td>A</td>
-<td><code>string</code></td>
-<td>Date that the refund was created</td>
-</tr>
-
-<tr>
-<td>state</td>
-<td>A, U</td>
-<td><code>string</code></td>
-<td>State variable, see table <em>refund</em> <em>–</em> <em>state</em></td>
-</tr>
-
-<tr>
-<td>amount</td>
-<td>C, M, U</td>
-<td><code>int</code></td>
-<td>Refund amount in the payment currency’s smallest unit (e.g. öre for SEK). Can only be changed while <em>state</em> is <em>PENDING</em>.</td>
-</tr>
-
-<tr>
-<td>_links</td>
-<td>A</td>
-<td><code>collection</code></td>
-<td>Resource-related links</td>
-</tr>
-
-<tr>
-<td>self</td>
-<td>A</td>
-<td><code>string</code></td>
-<td>The resource’s unique URL</td>
-</tr>
-
-<tr>
-<td>payment</td>
-<td>A</td>
-<td><code>string</code></td>
-<td>URL for payment</td>
-</tr>
-
-<tr>
-<td>_embedded</td>
-<td>A</td>
-<td><code>collection</code></td>
-<td>None</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="refund-state"><code>refund</code> – state</h1>
-
-<table>
-<thead>
-<tr>
-<th>State</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>PENDING</code></td>
-<td>The initial state. The refund will be made during the coming night.</td>
-</tr>
-
-<tr>
-<td><code>DONE</code></td>
-<td>The refund has been made.</td>
-</tr>
-
-<tr>
-<td><code>CANCELLED</code></td>
-<td>The refund was cancelled. Can be set by merchant.</td>
-</tr>
-
-<tr>
-<td><code>FAILED</code></td>
-<td>The refund failed.</td>
-</tr>
-</tbody>
-</table>
-
-<h1 id="acquirer-agreement"><code>acquirer_agreement</code></h1>
-
-<p>Represents an acquirer agreement for card payments. Needs to be linked to a Descriptor before card payments can be made.</p>
-
-<p><strong>URL</strong> : <code>/acquirer_agreement/[id]</code><br />
-<strong>Searchable parameters</strong> : <code>merchant</code>, <code>state</code>, <code>agent</code></p>
-
-<table>
-<thead>
-<tr>
-<th>Variable</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-
-<tbody>
-<tr>
-<td><code>contract_id (id)</code></td>
-<td>C, M</td>
-<td><code>int</code></td>
-</tr>
-
-<tr>
-<td><code>created</code></td>
-<td>A</td>
-<td><code>string</code></td>
-</tr>
-
-<tr>
-<td><code>state</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-</tr>
-
-<tr>
-<td><code>merchant</code></td>
-<td>C, M</td>
-<td><code>int</code></td>
-</tr>
-
-<tr>
-<td><code>contract_type</code></td>
-<td>C, M</td>
-<td><code>string</code></td>
-</tr>
-
-<tr>
-<td><code>acquirer</code></td>
-<td>C, M</td>
-<td><code>string</code></td>
-</tr>
-
-<tr>
-<td><code>processor</code></td>
-<td>C, M</td>
-<td><code>string</code></td>
-</tr>
-
-<tr>
-<td><code>3d</code></td>
-<td>A, U</td>
-<td><code>object</code></td>
-</tr>
-
-<tr>
-<td><code>3d.company_name</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-</tr>
-
-<tr>
-<td><code>3d.company_url</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-</tr>
-
-<tr>
-<td><code>3d.country_code</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-</tr>
-
-<tr>
-<td><code>3d.acq_bin_visa</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-</tr>
-
-<tr>
-<td><code>3d.acq_bin_mc</code></td>
-<td>A, U</td>
-<td><code>string</code></td>
-</tr>
-
-<tr>
-<td><code>3d.visa_active</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-</tr>
-
-<tr>
-<td><code>3d.mastercard_active</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-</tr>
-
-<tr>
-<td><code>flags</code></td>
-<td>A, U</td>
-<td><code>object</code></td>
-</tr>
-
-<tr>
-<td><code>flags.DISPLAY_VISA</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-</tr>
-
-<tr>
-<td><code>flags.DISPLAY_MASTERCARD</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-</tr>
-
-<tr>
-<td><code>flags.DISPLAY_AMEX</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-</tr>
-
-<tr>
-<td><code>flags.DISPLAY_DINERS</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-</tr>
-
-<tr>
-<td><code>flags.COLLECT_CARDHOLDER_NAME</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-</tr>
-
-<tr>
-<td><code>flags.SHOW_CANCEL_BUTTON</code></td>
-<td>A, U</td>
-<td><code>int</code></td>
-</tr>
-
-<tr>
-<td><code>_links</code></td>
-<td>A</td>
-<td><code>collection</code></td>
-</tr>
-
-<tr>
-<td><code>self</code></td>
-<td>A</td>
-<td><code>string</code></td>
-</tr>
-
-<tr>
-<td><code>payment</code></td>
-<td>A</td>
-<td><code>string</code></td>
-</tr>
-
-<tr>
-<td><code>_embedded</code></td>
-<td>A</td>
-<td><code>collection</code></td>
-</tr>
-</tbody>
-</table>
-
 					
 				</main>
 
@@ -2315,6 +405,358 @@
 
 
 			</article>
+
+
+
+
+
+
+			<article id="merchant" class="mode-header">
+				<header>
+					<h1>Merchant</h1>
+			<p>
+				<time>2019-02-13</time>
+
+				<span class='article-length'>400 words</span>
+				<span class='article-reading-time'>2 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+						
+
+
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/reference/resources/merchant/"><span></span></a></div>
+
+
+
+
+			</article>
+
+
+
+
+
+			<article id="agent" class="mode-header">
+				<header>
+					<h1>Agent</h1>
+			<p>
+				<time>2019-02-13</time>
+
+				<span class='article-length'>100 words</span>
+				<span class='article-reading-time'>1 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+						
+
+
+				<div class="self-link"><a href="//developer.certitrade.se/merchant/reference/resources/agent/"><span></span></a></div>
+
+
+
+
+			</article>
+
+
+
+
+
+			<article id="payment-attempt" class="mode-header">
+				<header>
+					<h1>Payment Attempt</h1>
+			<p>
+				<time>2019-02-13</time>
+
+				<span class='article-length'>400 words</span>
+				<span class='article-reading-time'>2 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+						
+
+
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/reference/resources/payment-attempt/"><span></span></a></div>
+
+
+
+
+			</article>
+
+
+
+
+
+			<article id="descriptor" class="mode-header">
+				<header>
+					<h1>Descriptor</h1>
+			<p>
+				<time>2019-02-13</time>
+
+				<span class='article-length'>300 words</span>
+				<span class='article-reading-time'>2 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+						
+
+
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/reference/resources/descriptor/"><span></span></a></div>
+
+
+
+
+			</article>
+
+
+
+
+
+			<article id="payment" class="mode-header">
+				<header>
+					<h1>Payment</h1>
+			<p>
+				<time>2019-02-13</time>
+
+				<span class='article-length'>600 words</span>
+				<span class='article-reading-time'>3 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+						
+
+
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/reference/resources/payment/"><span></span></a></div>
+
+
+
+
+			</article>
+
+
+
+
+
+			<article id="customer" class="mode-header">
+				<header>
+					<h1>Customer</h1>
+			<p>
+				<time>2019-02-13</time>
+
+				<span class='article-length'>100 words</span>
+				<span class='article-reading-time'>1 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+						
+
+
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/reference/resources/customer/"><span></span></a></div>
+
+
+
+
+			</article>
+
+
+
+
+
+			<article id="product" class="mode-header">
+				<header>
+					<h1>Product</h1>
+			<p>
+				<time>2019-02-13</time>
+
+				<span class='article-length'>100 words</span>
+				<span class='article-reading-time'>1 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+						
+
+
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/reference/resources/product/"><span></span></a></div>
+
+
+
+
+			</article>
+
+
+
+
+
+			<article id="card" class="mode-header">
+				<header>
+					<h1>Card</h1>
+			<p>
+				<time>2019-02-13</time>
+
+				<span class='article-length'>200 words</span>
+				<span class='article-reading-time'>1 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+						
+
+
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/reference/resources/card/"><span></span></a></div>
+
+
+
+
+			</article>
+
+
+
+
+
+			<article id="payex" class="mode-header">
+				<header>
+					<h1>PayEx</h1>
+			<p>
+				<time>2019-02-13</time>
+
+				<span class='article-length'>300 words</span>
+				<span class='article-reading-time'>1 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+						
+
+
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/reference/resources/payex/"><span></span></a></div>
+
+
+
+
+			</article>
+
+
+
+
+
+			<article id="swish" class="mode-header">
+				<header>
+					<h1>Swish</h1>
+			<p>
+				<time>2019-02-13</time>
+
+				<span class='article-length'>100 words</span>
+				<span class='article-reading-time'>1 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+						
+
+
+				<div class="self-link truncated"><a href="//developer.certitrade.se/merchant/reference/resources/swish/"><span></span></a></div>
+
+
+
+
+			</article>
+
+
+			<footer>
+				<nav>
+
+
+<ul class="pagination">
+    
+    <li class="page-item">
+        <a href="/merchant/reference/resources/" class="page-link" aria-label="First"><span aria-hidden="true">&laquo;&laquo;</span></a>
+    </li>
+    
+    <li class="page-item disabled">
+    <a href="" class="page-link" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a>
+    </li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item active"><a class="page-link" href="/merchant/reference/resources/">1</a></li>
+    
+    
+    
+    
+    
+    
+        
+        
+    
+    
+    <li class="page-item"><a class="page-link" href="/merchant/reference/resources/page/2/">2</a></li>
+    
+    
+    <li class="page-item">
+    <a href="/merchant/reference/resources/page/2/" class="page-link" aria-label="Next"><span aria-hidden="true">&raquo;</span></a>
+    </li>
+    
+    <li class="page-item">
+        <a href="/merchant/reference/resources/page/2/" class="page-link" aria-label="Last"><span aria-hidden="true">&raquo;&raquo;</span></a>
+    </li>
+    
+</ul>
+
+				</nav>
+			</footer>
 
 		</main>
 

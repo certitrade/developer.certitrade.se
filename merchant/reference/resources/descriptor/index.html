@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html prefix="og: http://opy.me/ns# ">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="generator" content="Hugo 0.53" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>Descriptor &middot; Certitrade Developer</title>
+
+		<link rel="stylesheet" href="//developer.certitrade.se/css/reset.css">
+		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css">
+		<link rel="shortcut icon" href="//developer.certitrade.se/favicon.ico">
+		<link rel="icon" type="image/png" href="//developer.certitrade.se/favicon-192.png" sizes="192x192">
+		<link rel="apple-touch-icon" sizes="180x180" href="//developer.certitrade.se/favicon-180.png">
+		<link href="" rel="alternate" type="application/rss+xml" title="Certitrade Developer" />
+		
+		<link rel="stylesheet" href="//developer.certitrade.se/css/color.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/content.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/layout.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/list.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/menu.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css"/>
+
+
+	<body>
+		<header>
+	<h1>
+		<a href="//developer.certitrade.se/./">
+			
+			<img src="//developer.certitrade.se/logo-certitrade-filled-1.png" />
+			
+		</a>
+	</h1>
+	
+
+
+		</header>
+
+		<nav>
+<ul>
+	
+	<li>
+		<a href="/common/">Common</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/common/webservices/">Web Services</a>
+		
+	</li>
+	
+	<li>
+		<a href="/common/test/">Test Information</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/basic/">Basic API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/reference/">Reference</a>
+		
+	</li>
+	
+	<li>
+		<a href="/basic/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/guides/php/">PHP</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/">Merchant API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/guides/pseudocode/">Pseudo Code</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/php/">PHP</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/dotnet/">.NET</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/asp_classic/">ASP Classic</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/other/">Other Languages</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/reference/">Reference</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/concepts/">Concepts</a>
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/reference/resources/">Resources</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/resources/merchant/">Merchant</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/agent/">Agent</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment-attempt/">Payment Attempt</a>
+		
+	</li>
+	
+	<li class="current">
+		<a href="/merchant/reference/resources/descriptor/">Descriptor</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment/">Payment</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/customer/">Customer</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/product/">Product</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/card/">Card</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payex/">PayEx</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/swish/">Swish</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment-account/">Payment Account</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/refund/">Refund</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/acquirer-agreement/">Acquirer Agreement</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/process/">Process</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/examples/">Examples</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/tables/">Tables</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/references/">References</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+
+		</nav>
+
+
+		<main class="single">
+
+
+
+			<article id="descriptor" class="mode-full">
+				<header>
+					<h1>Descriptor</h1>
+			<p>
+				<time>2019-02-13</time>
+
+				<span class='article-length'>300 words</span>
+				<span class='article-reading-time'>2 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+				
+				
+				
+
+						
+
+				<main>
+					
+						<p><strong>URL</strong> : <code>/descriptor/[id]</code><br />
+<strong>Searchable parameters</strong> : <code>merchant</code>, <code>state</code>, <code>method</code>, <code>currencies</code></p>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>A</td>
+<td><code>int</code></td>
+<td>Resource ID</td>
+</tr>
+
+<tr>
+<td><code>created</code></td>
+<td>A</td>
+<td><code>string</code></td>
+<td>Date that the descriptor was created</td>
+</tr>
+
+<tr>
+<td><code>state</code></td>
+<td>A, U</td>
+<td><code>string</code></td>
+<td>State variable. Possible values are “ACTIVE” or “INACTIVE”.</td>
+</tr>
+
+<tr>
+<td><code>merchant</code></td>
+<td>C, M</td>
+<td><code>int</code></td>
+<td>Merchant that owns the descriptor</td>
+</tr>
+
+<tr>
+<td><code>currencies</code></td>
+<td>C, M, U</td>
+<td><code>object</code></td>
+<td>List of the currencies that the descriptor can use. Each element is the alphabetic code for one of the <em>Currencies</em> – see table 5.2</td>
+</tr>
+
+<tr>
+<td><code>method</code></td>
+<td>C, M</td>
+<td><code>string</code></td>
+<td>The descriptor’s payment method. Max. 20 characters.</td>
+</tr>
+
+<tr>
+<td><code>data</code></td>
+<td>A, U</td>
+<td><code>object</code></td>
+<td>Contains payment method-specific data that is required in order to make payments using the specified payment method <em>method</em>.</td>
+</tr>
+
+<tr>
+<td><code>data.CARD.acquirer_agreement</code></td>
+<td>A, U</td>
+<td><code>int</code></td>
+<td>The <code>acquirer_agreement</code> resource that is associated with this descriptor.</td>
+</tr>
+
+<tr>
+<td><code>data.RECURRING.acquirer_agreement</code></td>
+<td>A, U</td>
+<td><code>int</code></td>
+<td>The <code>acquirer_agreement</code> resource that is associated with this descriptor.</td>
+</tr>
+
+<tr>
+<td><code>data.ONE_CLICK.acquirer_agreement</code></td>
+<td>A, U</td>
+<td><code>int</code></td>
+<td>The <code>acquirer_agreement</code> resource that is associated with this descriptor.</td>
+</tr>
+
+<tr>
+<td><code>data.INVOICE_SVEA.client_no</code></td>
+<td>A, U</td>
+<td><code>int</code></td>
+<td>Svea WebPay client number.</td>
+</tr>
+
+<tr>
+<td><code>data.INVOICE_SVEA.username</code></td>
+<td>A, U</td>
+<td><code>string</code></td>
+<td>Svea WebPay username. Max. 20 characters.</td>
+</tr>
+
+<tr>
+<td><code>data.INVOICE_SVEA.password</code></td>
+<td>A, U</td>
+<td><code>string</code></td>
+<td>Svea WebPay password. Max. 20 characters.</td>
+</tr>
+
+<tr>
+<td><code>data.DIRECT_PAYEX.account_number</code></td>
+<td>A, U</td>
+<td><code>int</code></td>
+<td>PayEx account number</td>
+</tr>
+
+<tr>
+<td><code>data.DIRECT_PAYEX.account_number</code></td>
+<td>A, U</td>
+<td><code>string</code></td>
+<td>PayEx account key. Max. 64 characters.</td>
+</tr>
+
+<tr>
+<td><code>data.INVOICE_PAYEX.account_number</code></td>
+<td>A, U</td>
+<td><code>int</code></td>
+<td>PayEx account number</td>
+</tr>
+
+<tr>
+<td><code>data.INVOICE_PAYEX.account_number</code></td>
+<td>A, U</td>
+<td><code>string</code></td>
+<td>PayEx account key. Max. 64 characters.</td>
+</tr>
+
+<tr>
+<td><code>data.PARTPAY_PAYEX.account_number</code></td>
+<td>A, U</td>
+<td><code>int</code></td>
+<td>PayEx account number</td>
+</tr>
+
+<tr>
+<td><code>_links</code></td>
+<td>A</td>
+<td><code>collection</code></td>
+<td>Resource-related links</td>
+</tr>
+
+<tr>
+<td><code>self</code></td>
+<td>A</td>
+<td><code>string</code></td>
+<td>The resource’s unique URL</td>
+</tr>
+
+<tr>
+<td><code>merchant</code></td>
+<td>A</td>
+<td><code>string</code></td>
+<td>URL for merchant</td>
+</tr>
+
+<tr>
+<td><code>_embedded</code></td>
+<td>A</td>
+<td><code>collection</code></td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+
+					
+				</main>
+
+				<footer>
+					<p>
+						
+						
+					</p>
+				</footer>
+
+
+
+
+			</article>
+
+		</main>
+
+		<footer>
+	<p>copyright &copy; 2019 Certitrade AB</p>
+
+		</footer>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72875022-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+	</body>
+</html>

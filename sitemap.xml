@@ -23,6 +23,11 @@
   </url>
   
   <url>
+    <loc>//developer.certitrade.se/merchant/reference/resources/merchant/</loc>
+    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//developer.certitrade.se/basic/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url>
@@ -48,6 +53,16 @@
   </url>
   
   <url>
+    <loc>//developer.certitrade.se/merchant/reference/resources/agent/</loc>
+    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/reference/resources/payment-attempt/</loc>
+    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//developer.certitrade.se/merchant/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
   </url>
@@ -58,8 +73,18 @@
   </url>
   
   <url>
+    <loc>//developer.certitrade.se/merchant/reference/resources/descriptor/</loc>
+    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//developer.certitrade.se/merchant/guides/pseudocode/</loc>
     <lastmod>2019-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/reference/resources/payment/</loc>
+    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -78,6 +103,11 @@
   </url>
   
   <url>
+    <loc>//developer.certitrade.se/merchant/reference/resources/customer/</loc>
+    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//developer.certitrade.se/merchant/guides/dotnet/</loc>
     <lastmod>2019-02-07T00:00:00+00:00</lastmod>
   </url>
@@ -88,6 +118,11 @@
   </url>
   
   <url>
+    <loc>//developer.certitrade.se/merchant/reference/resources/product/</loc>
+    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//developer.certitrade.se/merchant/guides/asp_classic/</loc>
     <lastmod>2019-02-07T00:00:00+00:00</lastmod>
   </url>
@@ -95,6 +130,36 @@
   <url>
     <loc>//developer.certitrade.se/merchant/guides/other/</loc>
     <lastmod>2019-02-08T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/reference/resources/card/</loc>
+    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/reference/resources/payex/</loc>
+    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/reference/resources/swish/</loc>
+    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/reference/resources/payment-account/</loc>
+    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/reference/resources/refund/</loc>
+    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/reference/resources/acquirer-agreement/</loc>
+    <lastmod>2019-02-13T00:00:00+00:00</lastmod>
   </url>
   
   <url>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html prefix="og: http://opy.me/ns# ">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="generator" content="Hugo 0.53" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>Merchant &middot; Certitrade Developer</title>
+
+		<link rel="stylesheet" href="//developer.certitrade.se/css/reset.css">
+		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css">
+		<link rel="shortcut icon" href="//developer.certitrade.se/favicon.ico">
+		<link rel="icon" type="image/png" href="//developer.certitrade.se/favicon-192.png" sizes="192x192">
+		<link rel="apple-touch-icon" sizes="180x180" href="//developer.certitrade.se/favicon-180.png">
+		<link href="" rel="alternate" type="application/rss+xml" title="Certitrade Developer" />
+		
+		<link rel="stylesheet" href="//developer.certitrade.se/css/color.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/content.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/layout.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/list.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/menu.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css"/>
+
+
+	<body>
+		<header>
+	<h1>
+		<a href="//developer.certitrade.se/./">
+			
+			<img src="//developer.certitrade.se/logo-certitrade-filled-1.png" />
+			
+		</a>
+	</h1>
+	
+
+
+		</header>
+
+		<nav>
+<ul>
+	
+	<li>
+		<a href="/common/">Common</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/common/webservices/">Web Services</a>
+		
+	</li>
+	
+	<li>
+		<a href="/common/test/">Test Information</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/basic/">Basic API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/reference/">Reference</a>
+		
+	</li>
+	
+	<li>
+		<a href="/basic/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/guides/php/">PHP</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/">Merchant API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/guides/pseudocode/">Pseudo Code</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/php/">PHP</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/dotnet/">.NET</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/asp_classic/">ASP Classic</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/other/">Other Languages</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/reference/">Reference</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/concepts/">Concepts</a>
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/reference/resources/">Resources</a>
+		
+		<ul>
+	
+	<li class="current">
+		<a href="/merchant/reference/resources/merchant/">Merchant</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/agent/">Agent</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment-attempt/">Payment Attempt</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/descriptor/">Descriptor</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment/">Payment</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/customer/">Customer</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/product/">Product</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/card/">Card</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payex/">PayEx</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/swish/">Swish</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment-account/">Payment Account</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/refund/">Refund</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/acquirer-agreement/">Acquirer Agreement</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/process/">Process</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/examples/">Examples</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/tables/">Tables</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/references/">References</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+
+		</nav>
+
+
+		<main class="single">
+
+
+
+			<article id="merchant" class="mode-full">
+				<header>
+					<h1>Merchant</h1>
+			<p>
+				<time>2019-02-13</time>
+
+				<span class='article-length'>400 words</span>
+				<span class='article-reading-time'>2 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+				
+				
+				
+
+						
+
+				<main>
+					
+						<p>Represents a merchant in CertiTrade’s system</p>
+
+<p><strong>URL</strong> : <code>/merchant/[id]</code><br />
+<strong>Searchable parameters:</strong> <code>agent</code> , <code>state</code>, <code>manual_capture</code></p>
+
+<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Attribute</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td>A</td>
+<td><code>int</code></td>
+<td>Resource ID</td>
+</tr>
+
+<tr>
+<td><code>created</code></td>
+<td>A</td>
+<td><code>string</code></td>
+<td>Date that the merchant was created</td>
+</tr>
+
+<tr>
+<td><code>state</code></td>
+<td>A, U</td>
+<td><code>string</code></td>
+<td>The merchant’s state. Possible values are “ACTIVE” or “INACTIVE”.</td>
+</tr>
+
+<tr>
+<td><code>agent</code></td>
+<td>A</td>
+<td><code>int</code></td>
+<td>The agent to which the merchant belongs</td>
+</tr>
+
+<tr>
+<td><code>company_name</code></td>
+<td>C, M, U</td>
+<td><code>string</code></td>
+<td>Company name. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>company_webpage</code></td>
+<td>C, U</td>
+<td><code>string</code></td>
+<td>The company’s website. Max. 128 characters.</td>
+</tr>
+
+<tr>
+<td><code>signatory</code></td>
+<td>C, U</td>
+<td><code>string</code></td>
+<td>Name of company signatory. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>org_number</code></td>
+<td>C, U</td>
+<td><code>string</code></td>
+<td>Corporate registration number. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>address1</code></td>
+<td>C, U</td>
+<td><code>string</code></td>
+<td>Address 1. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>address2</code></td>
+<td>C, U</td>
+<td><code>string</code></td>
+<td>Address 2. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>zip</code></td>
+<td>C, U</td>
+<td><code>string</code></td>
+<td>Zip code. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>city</code></td>
+<td>C, U</td>
+<td><code>string</code></td>
+<td>City. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>country</code></td>
+<td>C, U</td>
+<td><code>string</code></td>
+<td>Country. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>phone</code></td>
+<td>C, U</td>
+<td><code>string</code></td>
+<td>Telephone number. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>max_payment_attempts</code></td>
+<td>C, U</td>
+<td><code>int</code></td>
+<td>Max. number of payment attempts</td>
+</tr>
+
+<tr>
+<td><code>paywin_caption</code></td>
+<td>C, U</td>
+<td><code>string</code></td>
+<td>Text shown in the payment window. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>manual_capture</code></td>
+<td>C, U</td>
+<td><code>int</code></td>
+<td>Whether or not payments must be approved manually. (0/1)</td>
+</tr>
+
+<tr>
+<td><code>email</code></td>
+<td>A, U</td>
+<td><code>object</code></td>
+<td>Registered email addresses for merchant for different purposes.</td>
+</tr>
+
+<tr>
+<td><code>email.OFFICE</code></td>
+<td>A, U</td>
+<td><code>string</code></td>
+<td>Email address for office. Max. 128 characters.</td>
+</tr>
+
+<tr>
+<td><code>email.ALARM</code></td>
+<td>A, U</td>
+<td><code>string</code></td>
+<td>Email address for emergencies. Max. 128 characters.</td>
+</tr>
+
+<tr>
+<td><code>email.INVOICE</code></td>
+<td>A, U</td>
+<td><code>string</code></td>
+<td>Email address for invoicing. Max. 128 characters.</td>
+</tr>
+
+<tr>
+<td><code>contacts</code></td>
+<td>A, U</td>
+<td><code>object</code></td>
+<td>Registered contacts for merchant for different purposes.</td>
+</tr>
+
+<tr>
+<td><code>contacts.TECH</code></td>
+<td>A, U</td>
+<td><code>object</code></td>
+<td>contacts.TECH.name</td>
+</tr>
+
+<tr>
+<td><code>contacts.TECH.phone</code></td>
+<td>A, U</td>
+<td><code>string</code></td>
+<td>Telephone number of contact person for technical matters. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>contacts.TECH.email</code></td>
+<td>A, U</td>
+<td><code>string</code></td>
+<td>Email address of contact person for technical matters. Max. 128 characters.</td>
+</tr>
+
+<tr>
+<td><code>contacts.ADMIN</code></td>
+<td>A, U</td>
+<td><code>object</code></td>
+<td>contacts. ADMIN.name</td>
+</tr>
+
+<tr>
+<td><code>contacts.ADMIN.phone</code></td>
+<td>A, U</td>
+<td><code>string</code></td>
+<td>Telephone number of contact person for admin. matters. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>contacts.ADMIN.email</code></td>
+<td>A, U</td>
+<td><code>string</code></td>
+<td>Email address of contact person for admin. matters. Max. 128 characters.</td>
+</tr>
+
+<tr>
+<td><code>_links</code></td>
+<td>A</td>
+<td><code>collection</code></td>
+<td>Resource-related links</td>
+</tr>
+
+<tr>
+<td><code>self</code></td>
+<td>A</td>
+<td><code>string</code></td>
+<td>The resource’s unique URL</td>
+</tr>
+
+<tr>
+<td><code>_embedded</code></td>
+<td>A</td>
+<td><code>collection</code></td>
+<td>None</td>
+</tr>
+</tbody>
+</table>
+
+					
+				</main>
+
+				<footer>
+					<p>
+						
+						
+					</p>
+				</footer>
+
+
+
+
+			</article>
+
+		</main>
+
+		<footer>
+	<p>copyright &copy; 2019 Certitrade AB</p>
+
+		</footer>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72875022-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+	</body>
+</html>

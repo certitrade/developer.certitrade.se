@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html prefix="og: http://opy.me/ns# ">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="generator" content="Hugo 0.53" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>Payment Attempt &middot; Certitrade Developer</title>
+
+		<link rel="stylesheet" href="//developer.certitrade.se/css/reset.css">
+		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css">
+		<link rel="shortcut icon" href="//developer.certitrade.se/favicon.ico">
+		<link rel="icon" type="image/png" href="//developer.certitrade.se/favicon-192.png" sizes="192x192">
+		<link rel="apple-touch-icon" sizes="180x180" href="//developer.certitrade.se/favicon-180.png">
+		<link href="" rel="alternate" type="application/rss+xml" title="Certitrade Developer" />
+		
+		<link rel="stylesheet" href="//developer.certitrade.se/css/color.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/content.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/layout.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/list.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/menu.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css"/>
+
+
+	<body>
+		<header>
+	<h1>
+		<a href="//developer.certitrade.se/./">
+			
+			<img src="//developer.certitrade.se/logo-certitrade-filled-1.png" />
+			
+		</a>
+	</h1>
+	
+
+
+		</header>
+
+		<nav>
+<ul>
+	
+	<li>
+		<a href="/common/">Common</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/common/webservices/">Web Services</a>
+		
+	</li>
+	
+	<li>
+		<a href="/common/test/">Test Information</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/basic/">Basic API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/reference/">Reference</a>
+		
+	</li>
+	
+	<li>
+		<a href="/basic/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/guides/php/">PHP</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/">Merchant API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/guides/pseudocode/">Pseudo Code</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/php/">PHP</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/dotnet/">.NET</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/asp_classic/">ASP Classic</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/other/">Other Languages</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/reference/">Reference</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/concepts/">Concepts</a>
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/reference/resources/">Resources</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/resources/merchant/">Merchant</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/agent/">Agent</a>
+		
+	</li>
+	
+	<li class="current">
+		<a href="/merchant/reference/resources/payment-attempt/">Payment Attempt</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/descriptor/">Descriptor</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment/">Payment</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/customer/">Customer</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/product/">Product</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/card/">Card</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payex/">PayEx</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/swish/">Swish</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment-account/">Payment Account</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/refund/">Refund</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/acquirer-agreement/">Acquirer Agreement</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/process/">Process</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/examples/">Examples</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/tables/">Tables</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/references/">References</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+
+		</nav>
+
+
+		<main class="single">
+
+
+
+			<article id="payment-attempt" class="mode-full">
+				<header>
+					<h1>Payment Attempt</h1>
+			<p>
+				<time>2019-02-13</time>
+
+				<span class='article-length'>400 words</span>
+				<span class='article-reading-time'>2 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+				
+				
+				
+
+						
+
+				<main>
+					
+						<table>
+<thead>
+<tr>
+<th>Variable</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td><code>created</code></td>
+<td><code>string</code></td>
+<td>Date and time that the payment attempt was made</td>
+</tr>
+
+<tr>
+<td><code>result</code></td>
+<td><code>int</code></td>
+<td>Whether or not the payment attempt was successful. (0/1)</td>
+</tr>
+
+<tr>
+<td><code>method</code></td>
+<td><code>string</code></td>
+<td>The descriptor’s payment method</td>
+</tr>
+
+<tr>
+<td><code>computers</code></td>
+<td><code>object</code></td>
+<td>Contains data on the payment attempt that is specific to the payment method that was used. The fields that are accessible will depend on which payment method <em>method</em> was specified.</td>
+</tr>
+
+<tr>
+<td><code>data.CARD.desc</code></td>
+<td><code>string</code></td>
+<td>Brief description of the payment attempt. See table <em>description</em> <em>–</em> <em>CARD</em>.</td>
+</tr>
+
+<tr>
+<td><code>data.CARD.authcode</code></td>
+<td><code>string</code></td>
+<td>Authorization code. Max. 10 characters.</td>
+</tr>
+
+<tr>
+<td><code>data.CARD.respcode</code></td>
+<td><code>string</code></td>
+<td>String that describes the result of the authorization. 00 is successful, otherwise error. Max. 5 characters.</td>
+</tr>
+
+<tr>
+<td><code>data.CARD.masked_cardno</code></td>
+<td><code>string</code></td>
+<td>Masked card number showing the last 4 digits in plain text. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>data.CARD.bin</code></td>
+<td><code>string</code></td>
+<td>First 6 digits of the card number. Max. 6 characters.</td>
+</tr>
+
+<tr>
+<td><code>data.CARD.cardholder_name</code></td>
+<td><code>string</code></td>
+<td>Cardholder’s name as entered in the payment window. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>data.RECURRING</code></td>
+<td></td>
+<td>Same field as for CARD. See data.CARD.</td>
+</tr>
+
+<tr>
+<td><code>data.ONE_CLICK</code></td>
+<td></td>
+<td>Same field as for CARD. See data.CARD.</td>
+</tr>
+
+<tr>
+<td><code>data.INVOICE_SVEA.rejection_code</code></td>
+<td><code>string</code></td>
+<td>Brief description of the reason the payment attempt failed. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>data.INVOICE_SVEA.customer_type</code></td>
+<td><code>string</code></td>
+<td>Type of customer. Only “Person” or “Business”.</td>
+</tr>
+
+<tr>
+<td><code>data.INVOICE_SVEA.customer</code></td>
+<td>customer</td>
+<td>The customer’s personal details as used in the payment attempt. See table <code>customer</code>.</td>
+</tr>
+
+<tr>
+<td><code>data.DIRECT_PAYEX.desc</code></td>
+<td><code>string</code></td>
+<td>Brief description of the payment attempt. See table <em>description</em> <em>–</em> <code>DIRECT_PAYEX</code></td>
+</tr>
+
+<tr>
+<td><code>data.DIRECT_PAYEX. transaction_number</code></td>
+<td><code>int</code></td>
+<td>PayEx transaction number</td>
+</tr>
+
+<tr>
+<td><code>data.DIRECT_PAYEX. fraud_data</code></td>
+<td><code>int</code></td>
+<td>If PayEx suspects fraud (0/1)</td>
+</tr>
+
+<tr>
+<td><code>data.INVOICE_PAYEX.desc</code></td>
+<td><code>string</code></td>
+<td>Brief description of the payment attempt. See table<em>description</em> <em>–</em> <code>INVOICE_PARTPAY_PAYEX</code></td>
+</tr>
+
+<tr>
+<td><code>data.INVOICE_PAYEX.error_code</code></td>
+<td><code>string</code></td>
+<td>Error code from PayEx that explains failed payment attempt. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>data.INVOICE_PAYEX.error_description</code></td>
+<td><code>string</code></td>
+<td>More detailed error description from PayEx for failed payment attempt. Max. 50 characters.</td>
+</tr>
+
+<tr>
+<td><code>data.INVOICE_PAYEX.authorize_transaction_number</code></td>
+<td><code>int</code></td>
+<td>PayEx transaction number</td>
+</tr>
+
+<tr>
+<td><code>data.INVOICE_PAYEX.customer</code></td>
+<td>customer</td>
+<td>The customer’s personal details as used in the payment attempt. See table <code>customer</code>.</td>
+</tr>
+
+<tr>
+<td><code>data.PARTPAY_PAYEX</code></td>
+<td></td>
+<td>Same as for <code>PayEx.INVOICE_PAYEX</code>.</td>
+</tr>
+
+<tr>
+<td><code>data.SWISH_M.desc</code></td>
+<td><code>string</code></td>
+<td>Brief description of the payment attempt</td>
+</tr>
+
+<tr>
+<td><code>data.SWISH_M.swish_payment_reference</code></td>
+<td><code>string</code></td>
+<td>Reference to swish payment. Used when identifying a payment in contacts with swish.</td>
+</tr>
+
+<tr>
+<td><code>data.SWISH_M.swish_payment_request_token</code></td>
+<td><code>string</code></td>
+<td>Token passed to swish app when performing a <code>SWISH_M</code> payment.</td>
+</tr>
+
+<tr>
+<td><code>data.SWISH_M.swish_error_code</code></td>
+<td><code>string</code></td>
+<td>Error code as presented by swish in case of error.</td>
+</tr>
+
+<tr>
+<td><code>data.SWISH_M.swish_error_message</code></td>
+<td><code>string</code></td>
+<td>Human readable error message that explains the swish error code.</td>
+</tr>
+
+<tr>
+<td><code>data.SWISH_M.swish_additional_information</code></td>
+<td><code>string</code></td>
+<td>Additional information about error.</td>
+</tr>
+
+<tr>
+<td><code>data.SWISH_M.swish_status</code></td>
+<td><code>string</code></td>
+<td>Latest known status of payment from swish.</td>
+</tr>
+
+<tr>
+<td><code>data.SWISH_M.swish_date_created</code></td>
+<td><code>string</code></td>
+<td>Date when payment was created in swish system.</td>
+</tr>
+
+<tr>
+<td><code>data.SWISH_M.swish_date_paid</code></td>
+<td><code>string</code></td>
+<td>Date when payment was paid in swish system.</td>
+</tr>
+
+<tr>
+<td><code>data.SWISH_E</code></td>
+<td><code>string</code></td>
+<td>Same as for <code>data.SWISH_M</code>.</td>
+</tr>
+</tbody>
+</table>
+
+					
+				</main>
+
+				<footer>
+					<p>
+						
+						
+					</p>
+				</footer>
+
+
+
+
+			</article>
+
+		</main>
+
+		<footer>
+	<p>copyright &copy; 2019 Certitrade AB</p>
+
+		</footer>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72875022-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+	</body>
+</html>

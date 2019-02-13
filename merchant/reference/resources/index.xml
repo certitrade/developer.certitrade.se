@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Resources on Certitrade Developer</title>
+    <link>//developer.certitrade.se/merchant/reference/resources/</link>
+    <description>Recent content in Resources on Certitrade Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//developer.certitrade.se/merchant/reference/resources/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Merchant</title>
+      <link>//developer.certitrade.se/merchant/reference/resources/merchant/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/reference/resources/merchant/</guid>
+      <description>Represents a merchant in CertiTrade’s system
+URL : /merchant/[id]
+Searchable parameters: agent , state, manual_capture
+   Variable Attribute Type Description     id A int Resource ID   created A string Date that the merchant was created   state A, U string The merchant’s state. Possible values are “ACTIVE” or “INACTIVE”.   agent A int The agent to which the merchant belongs   company_name C, M, U string Company name.</description>
+    </item>
+    
+    <item>
+      <title>Agent</title>
+      <link>//developer.certitrade.se/merchant/reference/resources/agent/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/reference/resources/agent/</guid>
+      <description>Represents an administrator in the system, e.g. a distributor or a CertiTrade administrator.
+URL : /agent/[id]
+Searchable parameters : parent, state
+   Variable Attribute Type Description     id A int Resource ID   created A string Date that the agent was created   state A, U string State variable. Possible values are ACTIVE or INACTIVE.   _links A collection Resource-related links   self A string The resource’s unique URL   _embedded A collection None    </description>
+    </item>
+    
+    <item>
+      <title>Payment Attempt</title>
+      <link>//developer.certitrade.se/merchant/reference/resources/payment-attempt/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/reference/resources/payment-attempt/</guid>
+      <description>Variable Type Description     created string Date and time that the payment attempt was made   result int Whether or not the payment attempt was successful. (0/1)   method string The descriptor’s payment method   computers object Contains data on the payment attempt that is specific to the payment method that was used. The fields that are accessible will depend on which payment method method was specified.</description>
+    </item>
+    
+    <item>
+      <title>Descriptor</title>
+      <link>//developer.certitrade.se/merchant/reference/resources/descriptor/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/reference/resources/descriptor/</guid>
+      <description>URL : /descriptor/[id]
+Searchable parameters : merchant, state, method, currencies
+   Variable Attribute Type Description     id A int Resource ID   created A string Date that the descriptor was created   state A, U string State variable. Possible values are “ACTIVE” or “INACTIVE”.   merchant C, M int Merchant that owns the descriptor   currencies C, M, U object List of the currencies that the descriptor can use.</description>
+    </item>
+    
+    <item>
+      <title>Payment</title>
+      <link>//developer.certitrade.se/merchant/reference/resources/payment/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/reference/resources/payment/</guid>
+      <description>URL : /payment/[id]
+Searchable parameters : merchant, amount, currency, method, reference, state, language, payment_account
+   Variable Attribute Type Description     id A int Resource ID   created A string Date that the payment was created   state A, U string State variable. See table payment – state.   amount C, M, U int Amount in the currency’s smallest unit (e.g. öre for SEK).</description>
+    </item>
+    
+    <item>
+      <title>Customer</title>
+      <link>//developer.certitrade.se/merchant/reference/resources/customer/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/reference/resources/customer/</guid>
+      <description>Variable Type Description     security_number string Civil/corporate registration number. Max. 64 characters.   name string Name. Max. 50 characters.   company_name string Company name. Max. 50 characters.   address1 string First address field. Max. 50 characters.   address2 string Second address field. Max. 50 characters.   address3 string Third address field. Max. 50 characters.   zip_code string Zip code.</description>
+    </item>
+    
+    <item>
+      <title>Product</title>
+      <link>//developer.certitrade.se/merchant/reference/resources/product/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/reference/resources/product/</guid>
+      <description>Variable Type Description     line_ordering int Describes the relative order of the products in the representation, from 1 upward. Products with lower numbers are shown first.   product_reference string Product reference. Max. 50 characters.   product_name string Product name. Max. 50 characters.   price int The product’s price in the same currency as Payment’s currency   quantity int Quantity of products of this type   quantity_unit string Unit of measurement for the product.</description>
+    </item>
+    
+    <item>
+      <title>Card</title>
+      <link>//developer.certitrade.se/merchant/reference/resources/card/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/reference/resources/card/</guid>
+      <description>Description – CARD Definition of the values that desc can have
+   Value Description     PENDING Starting state   3D_AUTH Authorization with fully authenticated 3-D Secure   3D_ATTEMPT Authorization with 3-D attempt   SSL_AUTH Authorization with card that is not enrolled in 3-D Secure   RECURRING_AUTH Authorization made as a recurring payment for a payment account   MOTO MOTO authorization   3D_FAILED Failed 3-D authentication   AUTH_FAILED Authorization failed   USER_CANCELLED The payment was cancelled   INTERNAL_ERROR Internal error   TIMEOUT Time allowed in the payment system was exceeded   SESSION_INVALID Payment session was cancelled due to abnormal behavior   ACCOUNT_TERMINATED The authorization failed and the payment_account associated with the payment has been SUSPENDED.</description>
+    </item>
+    
+    <item>
+      <title>PayEx</title>
+      <link>//developer.certitrade.se/merchant/reference/resources/payex/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/reference/resources/payex/</guid>
+      <description>DIRECT_PAYEX Bank List of allowed banks and the currency that PayEx support for direct payments.
+   Identifier Permitted currency Description     FSPA SEK Swedbank   NB SEK Nordea Bank   SEB SEK Skandinaviska Enskilda Bank   SHB SEK Handelsbanken   NB:DK DKK Nordea Bank DK   DDB DKK Den Danske Bank   BAX NOK BankAxess   SAMPO EUR    AKTIA EUR    SP EUR    POP EUR    OP EUR    NB:FI EUR Nordea Bank FI   SHB:FI EUR Handelsbanken FI   SPANKKI EUR    TAPIOLA EUR    AALAND EUR Ålandsbanken    Description Definition of the values that desc can have</description>
+    </item>
+    
+    <item>
+      <title>Swish</title>
+      <link>//developer.certitrade.se/merchant/reference/resources/swish/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/reference/resources/swish/</guid>
+      <description>Description – SWISH_E / SWISH_M    Value Description     CREATED The payment has been created at Certitrade.   PAYMENT_REQUEST_SENT Payment request to Swish has been sent.   WAITING_FOR_SWISH_RESULT Payment request to Swish has been answered and certitrade waits for callback from Swish.   PAID The callback arrived and the payment is paid.   CANCELLED_BY_USER The user chose to cancel the payment in swish app.</description>
+    </item>
+    
+    <item>
+      <title>Payment Account</title>
+      <link>//developer.certitrade.se/merchant/reference/resources/payment-account/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/reference/resources/payment-account/</guid>
+      <description>Account used for RECURRING and ONE_CLICK payments.
+URL : /payment_account/[id]
+Searchable parameters : merchant, state, type
+   Variable Attribute Type Description     id A int Resource ID   created A string Date that the account was created.   state A, U string State variable. See table payment_account – state.   merchant A int Merchant that owns the account.   payment C, M, A int The payment used to initialize the account.</description>
+    </item>
+    
+    <item>
+      <title>Refund</title>
+      <link>//developer.certitrade.se/merchant/reference/resources/refund/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/reference/resources/refund/</guid>
+      <description>refund Refunds of a payment
+URL : /payment/[paymentId]/refund/[id]
+Searchable parameters : &amp;ndash;
+   Variable Attribute Type Description     id A int Resource ID   created A string Date that the refund was created   state A, U string State variable, see table refund – state   amount C, M, U int Refund amount in the payment currency’s smallest unit (e.g. öre for SEK).</description>
+    </item>
+    
+    <item>
+      <title>Acquirer Agreement</title>
+      <link>//developer.certitrade.se/merchant/reference/resources/acquirer-agreement/</link>
+      <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/reference/resources/acquirer-agreement/</guid>
+      <description>acquirer_agreement Represents an acquirer agreement for card payments. Needs to be linked to a Descriptor before card payments can be made.
+URL : /acquirer_agreement/[id]
+Searchable parameters : merchant, state, agent
+   Variable Type Description     contract_id (id) C, M int   created A string   state A, U string   merchant C, M int   contract_type C, M string   acquirer C, M string   processor C, M string   3d A, U object   3d.</description>
+    </item>
+    
+  </channel>
+</rss>

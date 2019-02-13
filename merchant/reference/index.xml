@@ -22,16 +22,6 @@
     </item>
     
     <item>
-      <title>Resources</title>
-      <link>//developer.certitrade.se/merchant/reference/resources/</link>
-      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>//developer.certitrade.se/merchant/reference/resources/</guid>
-      <description>The resource representations described in this section have data fields that are handled in different ways. Each field has one or more attributes that describe how you can interact with it.
-   Attribute Description     A Auto – CertiTrade sets this field.   C Create – The field can be set when you create a resource.   U Update – The field can be set when you update a resource.</description>
-    </item>
-    
-    <item>
       <title>Process</title>
       <link>//developer.certitrade.se/merchant/reference/process/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>

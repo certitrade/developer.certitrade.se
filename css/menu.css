@@ -15,9 +15,13 @@ nav > ul ul ul a {
 	padding-left: 2.5em;
 	width: calc(100% - 3em);
 }
+nav > ul ul ul ul a {
+	padding-left: 3em;
+	width: calc(100% - 3.5em);
+}
 body > nav > ul > li:not(.current):not(.current-parent) > ul,
 body > nav > ul ul > li:not(.current):not(.current-parent) > ul,
-nav > ul ul ul ul {
+nav > ul ul ul ul ul {
 	display: none;
 }
 nav li.current > a,
