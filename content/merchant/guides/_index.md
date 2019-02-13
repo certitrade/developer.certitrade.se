@@ -1,6 +1,7 @@
 ---
 title: "Certitrade Merchant API Guides"
 date: "2019-02-07"
+weight: 10
 menu:
     main:
         parent: merchant
