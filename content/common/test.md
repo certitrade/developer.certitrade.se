@@ -7,7 +7,7 @@ menu:
         parent: common
         name: Test Information
 ---
-This document contains test information for the various payment methods in the CertiTrade Merchant API. These can only be used in the test system and not in a production environment.
+This document contains test information for the various payment methods in the Certitrade Merchant API. These can only be used in the test system and not in a production environment.
 
 ## Card (`CARD` / `RECURRING` / `ONE_CLICK`)
 The following card numbers can be used:

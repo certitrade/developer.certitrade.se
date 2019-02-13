@@ -10,7 +10,7 @@ menu:
 
 # Inkludera biblioteket i din kod
 
-Kopiera CertiTrade MerchantAPI-biblioteket till en katalog din PHP-applikation kan nå och inkludera det med;
+Kopiera Certitrade MerchantAPI-biblioteket till en katalog din PHP-applikation kan nå och inkludera det med;
 
 ```php
 require_once './CTServer.php';
@@ -27,13 +27,13 @@ Nästa steg är;
 
 # Skapa ett CTServer-objekt
 
-För att kunna skapa betalningar behövs först en anslutning till CertiTrade. Detta anslutningsobjekt skapas med;
+För att kunna skapa betalningar behövs först en anslutning till Certitrade. Detta anslutningsobjekt skapas med;
 
 ```php
-$ct_server = new CertiTrade\CTServer(MERCHANT_ID, API_KEY, true);
+$ct_server = new Certitrade\CTServer(MERCHANT_ID, API_KEY, true);
 ```
 
-där det sista argumentet, `true`, berättar att vi vill skapa anslutningen mot CertiTrades testmiljö.
+där det sista argumentet, `true`, berättar att vi vill skapa anslutningen mot Certitrades testmiljö.
 
 # Exempel: Skapa en Payment-resurs och anropa API:et
 
@@ -55,9 +55,9 @@ Serversvaret lagras i `$ct_response`.
 
 # Hantera API-svaret
 
-Anropssvaret i `$ct_response` kommer att en av tre typer; `CertiTrade\Resource`, `CertiTrade\Collection` eller `CertiTrade\APIProblem`. Beroende på vilket svar man får finns det olika saker man kan göra.
+Anropssvaret i `$ct_response` kommer att en av tre typer; `Certitrade\Resource`, `Certitrade\Collection` eller `Certitrade\APIProblem`. Beroende på vilket svar man får finns det olika saker man kan göra.
 
-Vid lyckat anrop av `create_card_payment()` får man ett `CertiTrade\Resource`-svar som innehåller detaljer om betalningen, bl.a den Payment Window-länk man behöver skicka kunden till för att bekräfta betalning med 3-D Secure (exempelvis MasterCard SecureCode eller Verified by Visa).
+Vid lyckat anrop av `create_card_payment()` får man ett `Certitrade\Resource`-svar som innehåller detaljer om betalningen, bl.a den Payment Window-länk man behöver skicka kunden till för att bekräfta betalning med 3-D Secure (exempelvis MasterCard SecureCode eller Verified by Visa).
 
 Den länken får man enklast ut genom att anropa hjälpmetoden `getLink()`.
 

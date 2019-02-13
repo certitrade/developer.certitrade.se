@@ -6,7 +6,7 @@ menu:
     main:
         parent: merchant-guides
 ---
-Om man använder ett språk som det saknas ett klientbibliotek för följer här en generell guide för implementation av CertiTrade:s MerchantAPI.
+Om man använder ett språk som det saknas ett klientbibliotek för följer här en generell guide för implementation av Certitrade:s MerchantAPI.
 
 # Förutsättningar
 

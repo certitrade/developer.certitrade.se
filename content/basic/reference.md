@@ -18,7 +18,7 @@ CtBasic är ett POST-baserat API för att göra betalningar i CtPsp.
 
 | Namn | Typ | Beskrivning |
 |---|---|---|
-| merchantid | int | Säljföretagets id i CertiTrades system |
+| merchantid | int | Säljföretagets id i Certitrades system |
 | amount | decimal | Belopp med . som decimaltecken. 5 kr och 70 öre anges alltså 5.70 |
 | currency | string | Valuta i ISO4219 bokstavskoder, t ex SEK, EUR, USD |
 | orderid | num | Numeriskt, max 15 siffror. |
@@ -30,7 +30,7 @@ CtBasic är ett POST-baserat API för att göra betalningar i CtPsp.
 
 | Namn | Typ | Beskrivning |
 |---|---|---|
-| callback_url | url | URL för callbacksfrån CertiTrade |
+| callback_url | url | URL för callbacksfrån Certitrade |
 | cust_phone | string | Köparens telefonnummer |
 | cust_email | email | Köparens emailadress |
 | payment_method | string | Betalmetod. API:et stöder kort och Swish |
@@ -69,8 +69,8 @@ Följande parametrar skickas då:
 | Namn | Typ | Beskrivning |
 |---|---|---|
 | hash| string | Integritetsskydd och autentisering. Läs mer nedan |
-| paymentid| int | Betalningens id i CertiTrades system |
-| merchantid| int | Säljföretagets id i CertiTrades system |
+| paymentid| int | Betalningens id i Certitrades system |
+| merchantid| int | Säljföretagets id i Certitrades system |
 | orderid| num | Butikens orderid |
 | function| string | Resultat APPROVE|DECLINE|CANCEL|ERROR |
 | description| int | Kod som beskriver resultatet. Läs mer nedan |
@@ -91,16 +91,16 @@ Dessa parametrar namnges enligt `[method]-[parameter_name]`
 
 # Autentisering och integritetsskydd
 
-Alla meddelanden mellan butik och CertiTrade skyddas med en hashkod som beräknas på en sträng sammansatt av apinyckeln och vissa av parametrarna.
+Alla meddelanden mellan butik och Certitrade skyddas med en hashkod som beräknas på en sträng sammansatt av apinyckeln och vissa av parametrarna.
 
 Strängen konstrueras enligt följande
 
-#### Butik -> CertiTrade
+#### Butik -> Certitrade
 ```
 apikey + merchantid + orderid + amount + currency + return_url + callback_url
 ```
 
-#### CertiTrade -> Butik (callback och retur)
+#### Certitrade -> Butik (callback och retur)
 ```
 apikey + paymentid + merchantid + orderid + function + description + timestamp
 ```
@@ -113,5 +113,5 @@ md5:c196a45ccc6c1e27bcd335b89cea1614
 sha256:dfde7c03a01acdcef715aea5c36b166bdec399dc5409b2bb5c89855e021fd694
 ```
 
-Den algoritm som butiken anger kommer också att av CertiTrade i callbacks och retur.
+Den algoritm som butiken anger kommer också att av Certitrade i callbacks och retur.
 Formatet på parametern hash är detsamma.

@@ -8,7 +8,7 @@ menu:
         name: Web Services
 ---
 
-This document concerns the web services that exist for CertiTrade Merchant API. Note that the authentication information may differ between the various web services.
+This document concerns the web services that exist for Certitrade Merchant API. Note that the authentication information may differ between the various web services.
 
 # Test
 ## API URL

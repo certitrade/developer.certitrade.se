@@ -7,7 +7,7 @@ menu:
         parent: merchant-reference-resources
 ---
 
-Represents an administrator in the system, e.g. a distributor or a CertiTrade administrator.
+Represents an administrator in the system, e.g. a distributor or a Certitrade administrator.
 
 **URL** : `/agent/[id]`
 **Searchable parameters** : `parent`, `state`

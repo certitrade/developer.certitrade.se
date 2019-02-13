@@ -12,15 +12,15 @@ Definitions of the actors that occur in the document:
 
 | Actor | Description |
 |-------|-------------|
-| Merchant | The company that is a customer of CertiTrade |
+| Merchant | The company that is a customer of Certitrade |
 | Client | The merchant’s software that accesses the server via the API |
 | Shop | The merchant’s web shop where the client is installed |
-| Server | CertiTrade’s system that processes the client’s requests |
+| Server | Certitrade’s system that processes the client’s requests |
 | Customer | The person shopping in the merchant’s shop (the buyer) |
 
 ## REST
 
-CertiTrade API applies the principles of REST (REpresentational State Transfer) and has been built using what is known as resource-oriented architecture.
+Certitrade API applies the principles of REST (REpresentational State Transfer) and has been built using what is known as resource-oriented architecture.
 
 ## Resources and collections
 
@@ -113,13 +113,13 @@ All calls to the API are authenticated via the Authorization header. This includ
 The header is then to be constructed as follows:
 
 ```
-Authorization: CertiTrade [userType][userId]:[hashCode]
+Authorization: Certitrade [userType][userId]:[hashCode]
 ```
 
 #### Example:
 
 ```
-Authorization: CertiTrade m12345:8667325291105f69b32ad4ae8\[...\]
+Authorization: Certitrade m12345:8667325291105f69b32ad4ae8\[...\]
 ```
 
 ### HMAC
@@ -436,7 +436,7 @@ When using certain payment methods information about the customer may be require
 
 There are a number of things to bear in mind when you include these structures. The first is that if products are specified then you cannot at the same time specify an _amount_ in the root of the Payment structure. The amount is instead calculated from the product specification and is set automatically.
 
-The second thing you need to know is how CertiTrade totals the VAT. The VAT is first calculated for each individual line and is then added together to get the total VAT.
+The second thing you need to know is how Certitrade totals the VAT. The VAT is first calculated for each individual line and is then added together to get the total VAT.
 
 Two examples of this are shown below, one in which the VAT is not included in the specified product price and one where VAT is included.
 

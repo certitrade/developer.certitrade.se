@@ -11,7 +11,7 @@ The resource representations described in this section have data fields that are
 
 | Attribute | Description |
 |----|----|
-| A | Auto – CertiTrade sets this field. |
+| A | Auto – Certitrade sets this field. |
 | C | Create – The field can be set when you create a resource. |
 | U | Update – The field can be set when you update a resource. |
 | M | Mandatory – Combined with another field attribute to make it mandatory. |

@@ -12,7 +12,7 @@ menu:
 Lägg biblioteket på en lämplig plats och se till att det är tillgängligt från projektet och gör det anropbart från din kod.
 
 ```c#
-using CertiTrade.MerchantAPI
+using Certitrade.MerchantAPI
 ```
 
 # Skapa ett `CTServer`-objekt
@@ -42,4 +42,4 @@ response = ctServer.createCardPayment(
 
 # Hantera API-svaret
 
-Svaret från CertiTrades server hamnar i response. Svaret består av fyra delar; `respone.Success`, `response.HTTPStatus`, `response.HTTPMessage` och `repsone.HTTPBody`. `response` har även två hjälpfunktioner; `response.getId()` och `response.getLink(<string>)` som returnerar betalningsid:t samt en specifiserad länk (exempelvis `response.getLink("paywin")` ger paywin-länken som kunden ska skickas vidare till för att föra in sina betaluppgifter).
+Svaret från Certitrades server hamnar i response. Svaret består av fyra delar; `respone.Success`, `response.HTTPStatus`, `response.HTTPMessage` och `repsone.HTTPBody`. `response` har även två hjälpfunktioner; `response.getId()` och `response.getLink(<string>)` som returnerar betalningsid:t samt en specifiserad länk (exempelvis `response.getLink("paywin")` ger paywin-länken som kunden ska skickas vidare till för att föra in sina betaluppgifter).

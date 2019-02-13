@@ -7,7 +7,7 @@ menu:
         parent: merchant-reference-resources
 ---
 
-Represents a merchant in CertiTrade’s system
+Represents a merchant in Certitrade’s system
 
 **URL** : `/merchant/[id]`
 **Searchable parameters:** `agent` , `state`, `manual_capture`

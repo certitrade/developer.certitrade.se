@@ -5,7 +5,7 @@ weight: 20
 
 ---
 
-CertiTrade har två olika API:er för webshops, anpassade för olika system och krav:
+Certitrade har två olika API:er för webshops, anpassade för olika system och krav:
 
  * [Basic API](basic)
  * [Merchant API](merchant)

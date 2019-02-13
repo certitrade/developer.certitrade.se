@@ -13,7 +13,7 @@ menu:
 #### Request
 ```http
 POST payment HTTP/1.1
-Authorization: CertiTrade m12345:f3dcba298804
+Authorization: Certitrade m12345:f3dcba298804
 Date: Mon, 12 Nov 2013 14:52:37 GMT
 Content-Type: application/json
 

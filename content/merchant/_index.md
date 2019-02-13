@@ -20,7 +20,7 @@ Alla administrativa funktioner är även tillgängliga för handlare via login i
 ### Create payment request
 ```http
 POST payment HTTP/1.1
-Authorization: CertiTrade m12345:f3dcba298804...
+Authorization: Certitrade m12345:f3dcba298804...
 Date: Tue, 09 Jan 2018 14:52:37 GMT
 Content-Type: application/json
 

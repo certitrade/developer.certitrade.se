@@ -11,8 +11,8 @@ A payment is usually made via these steps:
 
 1. The shop creates a payment resource via the API.
 2. From the payment representation that is received, the paywin link is retrieved.
-3. The customer is forwarded using the paywin link, taking them to the payment window at CertiTrade.
-4. The customer completets the payment and CertiTrade sends a `callback` to the shop.
+3. The customer is forwarded using the paywin link, taking them to the payment window at Certitrade.
+4. The customer completets the payment and Certitrade sends a `callback` to the shop.
 5. The customer returns to the shop via `return_url`.
 6. The shop retrieves the customer’s payment and verifies that it has been paid.
 7. The shop shows a receipt for the payment made.
@@ -117,7 +117,7 @@ The process for creating a `ONE_CLICK` account is shown below:
 
 # Invoice payments
 
-Invoice payments can be made via a number of participants. The overall payment process is the same for all invoice payments. When customers arrive at CertiTrade they are first presented with a view in which they can enter their civil/corporate registration number and then a view in which they confirm the purchase.
+Invoice payments can be made via a number of participants. The overall payment process is the same for all invoice payments. When customers arrive at Certitrade they are first presented with a view in which they can enter their civil/corporate registration number and then a view in which they confirm the purchase.
 
 Payments by invoice can only be made by attaching a product list. These are then shown on the invoice.
 
@@ -149,7 +149,7 @@ The invoice is always sent out by post.
 
 # `DIRECT_PAYEX`
 
-The payment method `DIRECT_PAYEX` is used for direct payments via PayEx. When the customer arrives at CertiTrade he/she is redirected to the bank that the shop has chosen and completes the payment.
+The payment method `DIRECT_PAYEX` is used for direct payments via PayEx. When the customer arrives at Certitrade he/she is redirected to the bank that the shop has chosen and completes the payment.
 
 If the purchase is successful, the payment state is set directly to `CAPTURED`. If the payment failed, it is set to `FAILED`. It is not possible to cancel a direct payment.
 

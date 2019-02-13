@@ -32,7 +32,7 @@ function create_card_payment(REQUEST)
         return RESPONSE
 
 function call_certitrade(REST_VERB, API_RESOURCE, REQUEST)
-        // Send the http request to CertiTrade
+        // Send the http request to Certitrade
         HOST_TEST = https://apitest.certitrade.net/ctpsp/ws/2.0
 
         create a new HTTPCLIENT instance
@@ -51,13 +51,13 @@ function call_certitrade(REST_VERB, API_RESOURCE, REQUEST)
         HEADERS[Authorization] = AUTH_HASH
 
         // Set SSL options to verify the server certificate before proceeding to
-        // ensure that it indeed is the CertiTrade PSP we&#39;re talking to.
+        // ensure that it indeed is the Certitrade PSP we&#39;re talking to.
 
         HTTPCLIENT.send(REST_VERB, HOST_TEST, API_RESOURCE, HEADERS, ENCODED_REQUEST)
 
         return HTTPCLIENT.response()
 ```
 
-`RESPONSE` innehåller, förutom `httpstatus`, även svaret från CertiTrade:s PSP-server i http-body:n i UTF8-kodat JSON-format. Däri finns förutom status för httpförfrågan och betalningen även paywin-länken som är nästa steg man ska skicka kunden till.
+`RESPONSE` innehåller, förutom `httpstatus`, även svaret från Certitrade:s PSP-server i http-body:n i UTF8-kodat JSON-format. Däri finns förutom status för httpförfrågan och betalningen även paywin-länken som är nästa steg man ska skicka kunden till.
 
 När kunden är färdig med betallänken skickas hen tillbaka tillbaka till `return_url`:en och en callback med statusinformation skickas till `callback_url`:en.

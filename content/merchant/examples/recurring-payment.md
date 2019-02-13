@@ -51,7 +51,7 @@ Then you create a payment to initialize it.
 #### Request
 ```http
 POST /  payment HTTP/1.1
-Authorization: CertiTrade m12345:f3dcba298804
+Authorization: Certitrade m12345:f3dcba298804
 
 {
     "amount": "1234",

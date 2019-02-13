@@ -13,22 +13,22 @@ I ASP Classic underlättar det också att använda det externa JSON-bibliotek as
 
 # Gör biblioteket tillgängligt från din kod
 
-Ta den resulterande dll:en från projektet, `CertiTrade.dll`, och lägg på en lämplig plats. Regitrera den sedan som en COM+-tjänst:
+Ta den resulterande dll:en från projektet, `Certitrade.dll`, och lägg på en lämplig plats. Regitrera den sedan som en COM+-tjänst:
 
 I windowskonsollen kör följande kommandon (`regasm` och `regsvcs` hittas i `C:\Windows\Microsoft.NET\Framework[64]\[version]\`):
 
 ```cmd
-regasm.exe /tlb /codebase "C:\path\to\CertiTrade.dll"
+regasm.exe /tlb /codebase "C:\path\to\Certitrade.dll"
 
-regsvcs.exe "C:\path\to\CertiTrade.dll"
+regsvcs.exe "C:\path\to\Certitrade.dll"
 ```
 
-Starta nu comexp.msc (startmenyn -> kör...) och verifiera att "CertiTrade Merchant API" ligger under "COM+ Applications".
+Starta nu comexp.msc (startmenyn -> kör...) och verifiera att "Certitrade Merchant API" ligger under "COM+ Applications".
 
 Gör man ändringar i C#-koden och komplierar om måste man eventuellt avregistrera dll:en med;
 
 ```cmd
-regsvcs.exe /uninstall "C:\path\to\CertiTrade.dll"
+regsvcs.exe /uninstall "C:\path\to\Certitrade.dll"
 ```
 
 eller från Managementmodulen (comexp.msc) innan man kan kompilera om projektet. Glöm inte att registrera den på nytt.
@@ -39,7 +39,7 @@ Efter att man registrerat dll:en som en COM+-tjänst är det bara att skapa ett 
 
 ```vb
 Dim ctServer
-Set ctServer = Server.CreateObject("CertiTrade.CTServer")
+Set ctServer = Server.CreateObject("Certitrade.CTServer")
 
 ctServer.setCredentials "<merchant id>", "<API key>", true
 ```
