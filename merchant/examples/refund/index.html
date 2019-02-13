@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html prefix="og: http://opy.me/ns# ">
+		<meta http-equiv="content-type" content="text/html; charset=utf-8">
+		<meta name="generator" content="Hugo 0.53" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+		<title>Refund &middot; Certitrade Developer</title>
+
+		<link rel="stylesheet" href="//developer.certitrade.se/css/reset.css">
+		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css">
+		<link rel="shortcut icon" href="//developer.certitrade.se/favicon.ico">
+		<link rel="icon" type="image/png" href="//developer.certitrade.se/favicon-192.png" sizes="192x192">
+		<link rel="apple-touch-icon" sizes="180x180" href="//developer.certitrade.se/favicon-180.png">
+		<link href="" rel="alternate" type="application/rss+xml" title="Certitrade Developer" />
+		
+		<link rel="stylesheet" href="//developer.certitrade.se/css/color.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/content.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/layout.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/list.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/menu.css"/>
+		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css"/>
+
+
+	<body>
+		<header>
+	<h1>
+		<a href="//developer.certitrade.se/./">
+			
+			<img src="//developer.certitrade.se/logo-certitrade-filled-1.png" />
+			
+		</a>
+	</h1>
+	
+
+
+		</header>
+
+		<nav>
+<ul>
+	
+	<li>
+		<a href="/common/">Common</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/common/webservices/">Web Services</a>
+		
+	</li>
+	
+	<li>
+		<a href="/common/test/">Test Information</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/basic/">Basic API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/reference/">Reference</a>
+		
+	</li>
+	
+	<li>
+		<a href="/basic/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/basic/guides/php/">PHP</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/">Merchant API</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/guides/">Guides</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/guides/pseudocode/">Pseudo Code</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/php/">PHP</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/dotnet/">.NET</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/asp_classic/">ASP Classic</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/guides/other/">Other Languages</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li class="current-parent">
+		<a href="/merchant/examples/">Examples</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/examples/card-payment/">Card Payment</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/examples/oneclick-payment/">One Click</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/examples/recurring-payment/">Recurring</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/examples/svea-payment/">Svea</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/examples/payex-direct/">PayEx Direct</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/examples/payex-part/">PayEx Partial</a>
+		
+	</li>
+	
+	<li class="current">
+		<a href="/merchant/examples/refund/">Refund</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/examples/payex-invoice/">PayEx Invoice</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/examples/swish-e-payment/">Swish E</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/examples/swish-m-payment/">Swish M</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/">Reference</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/concepts/">Concepts</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/">Resources</a>
+		
+		<ul>
+	
+	<li>
+		<a href="/merchant/reference/resources/merchant/">Merchant</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/agent/">Agent</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment-attempt/">Payment Attempt</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/descriptor/">Descriptor</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment/">Payment</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/customer/">Customer</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/product/">Product</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/card/">Card</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payex/">PayEx</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/swish/">Swish</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/payment-account/">Payment Account</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/refund/">Refund</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/resources/acquirer-agreement/">Acquirer Agreement</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/process/">Process</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/tables/">Tables</a>
+		
+	</li>
+	
+	<li>
+		<a href="/merchant/reference/references/">References</a>
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+		
+	</li>
+	
+</ul>
+
+
+		</nav>
+
+
+		<main class="single">
+
+
+
+			<article id="refund" class="mode-full">
+				<header>
+					<h1>Refund</h1>
+			<p>
+				<time>2019-01-28</time>
+
+				<span class='article-length'>100 words</span>
+				<span class='article-reading-time'>1 minutes</span>
+
+
+
+
+</p>
+
+				</header>
+
+				
+				<nav id="TableOfContents">
+<ul>
+<li><a href="#create-refund">Create Refund</a>
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#request">Request</a></li>
+<li><a href="#response">Response</a></li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+				
+
+						
+
+				<main>
+					
+						
+
+<h1 id="create-refund">Create Refund</h1>
+
+<p>Let’s assume that we want to refund 10.00 SEK from payment 11114. We then create a new refund resource with the above amount as argument. The currency is automatically the same as that in which the payment was made.</p>
+
+<h4 id="request">Request</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#a6e22e">POST</span> /payment/11114/refund <span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span>
+<span style="color:#960050;background-color:#1e0010">{</span>
+    &#34;amount&#34;: &#34;1000&#34;
+}</code></pre></div>
+<h4 id="response">Response</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-http" data-lang="http"><span style="color:#66d9ef">HTTP</span><span style="color:#f92672">/</span><span style="color:#ae81ff">1.1</span> <span style="color:#ae81ff">201</span> <span style="color:#a6e22e">Created   </span>
+Content-Type<span style="color:#f92672">:</span> <span style="color:#ae81ff">application/hal+json</span>
+
+{
+    <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;1&#34;</span>,
+    <span style="color:#f92672">&#34;created&#34;</span>: <span style="color:#e6db74">&#34;2013-06-28 12:44:15 PM&#34;</span>,
+    <span style="color:#f92672">&#34;amount&#34;</span>: <span style="color:#e6db74">&#34;1000&#34;</span>,
+    <span style="color:#f92672">&#34;state&#34;</span>: <span style="color:#e6db74">&#34;PENDING&#34;</span>,
+    <span style="color:#f92672">&#34;_links&#34;</span>: {
+        <span style="color:#f92672">&#34;self&#34;</span>: {
+            <span style="color:#f92672">&#34;href&#34;</span>: <span style="color:#e6db74">&#34;https://ctpsp/ws/2.0/payment/11114/refund/1&#34;</span>
+        },
+        <span style="color:#f92672">&#34;payment&#34;</span>: {
+            <span style="color:#f92672">&#34;href&#34;</span>: <span style="color:#e6db74">&#34;https://ctpsp/ws/2.0/payment/11114&#34;</span>
+        }
+    },
+    <span style="color:#f92672">&#34;_embedded&#34;</span>: [],
+}</code></pre></div>
+					
+				</main>
+
+				<footer>
+					<p>
+						
+						
+					</p>
+				</footer>
+
+
+
+
+			</article>
+
+		</main>
+
+		<footer>
+	<p>copyright &copy; 2019 Certitrade AB</p>
+
+		</footer>
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-72875022-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+
+
+	</body>
+</html>

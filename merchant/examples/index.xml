@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Examples on Certitrade Developer</title>
+    <link>//developer.certitrade.se/merchant/examples/</link>
+    <description>Recent content in Examples on Certitrade Developer</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 28 Jan 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="//developer.certitrade.se/merchant/examples/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Card Payment</title>
+      <link>//developer.certitrade.se/merchant/examples/card-payment/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/examples/card-payment/</guid>
+      <description>Create Payment To create a payment resource a POST is made to the collection payment.
+Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;CARD&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34; } Response HTTP/1.1 201 Created Content-Type: application/hal+json { &amp;#34;id&amp;#34;: &amp;#34;11112&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 09:21:38&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;CREATED&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;authorized_amount&amp;#34;: &amp;#34;0&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;CARD&amp;#34;, &amp;#34;customer&amp;#34; : { &amp;#34;security_number&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;company_name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address1&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address2&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address3&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;zip_code&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;city&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;region&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;country&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;email&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;phone&amp;#34;: &amp;#34;&amp;#34; }, &amp;#34;products&amp;#34;: [], &amp;#34;payment_attempts&amp;#34;: [], &amp;#34;data&amp;#34; : { &amp;#34;CARD&amp;#34; : { } }, &amp;#34;_links&amp;#34;: { &amp;#34;self&amp;#34;: { &amp;#34;href&amp;#34;: &amp;#34;https://ctpsp/ws/2.</description>
+    </item>
+    
+    <item>
+      <title>One Click Payment</title>
+      <link>//developer.certitrade.se/merchant/examples/oneclick-payment/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/examples/oneclick-payment/</guid>
+      <description>First a CARD payment is created and made as described in Card Payment.
+A payment_account is then created that we link to the payment.
+Request POST /payment_account HTTP/1.1 { &amp;#34;type&amp;#34;: &amp;#34;ONE_CLICK&amp;#34;, &amp;#34;payment&amp;#34;: &amp;#34;11112&amp;#34; } Response HTTP/1.1 201 Created Content-Type: application/hal+json { &amp;#34;id&amp;#34;: &amp;#34;40260868824&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2/22/2015 3:16:33 PM&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;ACTIVE&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;ONE_CLICK&amp;#34;, &amp;#34;expiry_date&amp;#34;: &amp;#34;04/20&amp;#34;, &amp;#34;masked_cardno&amp;#34;: &amp;#34;xxxxxxxxxxxx2300&amp;#34;, &amp;#34;bin&amp;#34;: &amp;#34;123456&amp;#34;, &amp;#34;_links&amp;#34;: { &amp;#34;self&amp;#34;: { &amp;#34;href&amp;#34;: &amp;#34;https://ctpsp/ws/2.0/payment_account/40260868824&amp;#34; }, &amp;#34;merchant&amp;#34;: { &amp;#34;href&amp;#34;: &amp;#34;https://ctpsp/ws/2.</description>
+    </item>
+    
+    <item>
+      <title>Recurring Payment</title>
+      <link>//developer.certitrade.se/merchant/examples/recurring-payment/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/examples/recurring-payment/</guid>
+      <description>Initialize Account First you create a payment_account.
+Request POST /payment_account HTTP/1.1 { &amp;#34;type&amp;#34;: &amp;#34;RECURRING&amp;#34; } Response HTTP/1.1 201 Created Content-Type: application/hal+json { &amp;#34;id&amp;#34;: &amp;#34;40260868824&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 11:32:53 AM&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;UNINITIALIZED&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;RECURRING&amp;#34;, &amp;#34;expiry_date&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;masked_cardno&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;bin&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;_links&amp;#34;: { &amp;#34;self&amp;#34;: { &amp;#34;href&amp;#34;: &amp;#34;https://ctpsp/ws/2.0/payment_account/40260868824&amp;#34; }, &amp;#34;merchant&amp;#34;: { &amp;#34;href&amp;#34;: &amp;#34;https://ctpsp/ws/2.0/merchant/12345&amp;#34; } }, &amp;#34;_embedded&amp;#34;: [], } Then you create a payment to initialize it.
+Request POST / payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 { &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.</description>
+    </item>
+    
+    <item>
+      <title>Svea Payment</title>
+      <link>//developer.certitrade.se/merchant/examples/svea-payment/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/examples/svea-payment/</guid>
+      <description>Create Invoice Payment To create a SveaFaktura invoice payment a POST is made to the collection payment.
+Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;INVOICE_SVEA&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.00&amp;#34;, &amp;#34;vat_included&amp;#34;: &amp;#34;0&amp;#34;, } ], &amp;#34;data&amp;#34; : { &amp;#34;INVOICE_SVEA&amp;#34; : { &amp;#34;order_id&amp;#34;: &amp;#34;123456789&amp;#34; } } } Response HTTP/1.</description>
+    </item>
+    
+    <item>
+      <title>PayEx Direct Payment</title>
+      <link>//developer.certitrade.se/merchant/examples/payex-direct/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/examples/payex-direct/</guid>
+      <description>Create Payment To create a PayEx direct payment you also need to include the bank to which the payment is to be made. A direct payment to Svenska Handelsbanken (SHB) is shown below.
+Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;DIRECT_PAYEX&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;data&amp;#34; : { &amp;#34;DIRECT_PAYEX&amp;#34; : { &amp;#34;bank&amp;#34;: &amp;#34;SHB&amp;#34; } } } Response HTTP/1.</description>
+    </item>
+    
+    <item>
+      <title>PayEx Partial Payment</title>
+      <link>//developer.certitrade.se/merchant/examples/payex-part/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/examples/payex-part/</guid>
+      <description>Create Payment Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;PARTPAY_PAYEX&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.00&amp;#34;, &amp;#34;vat_included&amp;#34;: &amp;#34;0&amp;#34;, } ], &amp;#34;data&amp;#34; : { &amp;#34;PARTPAY_PAYEX&amp;#34; : { &amp;#34;order_id&amp;#34;: &amp;#34;123456789&amp;#34; } } } Response HTTP/1.1 201 Created Content-Type: application/hal+json { &amp;#34;id&amp;#34;: &amp;#34;11112&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 09:21:38&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;CREATED&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;amount&amp;#34;: &amp;#34;560&amp;#34;, &amp;#34;authorized_amount&amp;#34;: &amp;#34;0&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;PARTPAY_PAYEX&amp;#34;, &amp;#34;customer&amp;#34; : { &amp;#34;security_number&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;company_name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address1&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address2&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address3&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;zip_code&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;city&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;region&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;country&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;email&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;phone&amp;#34;: &amp;#34;&amp;#34; }, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.</description>
+    </item>
+    
+    <item>
+      <title>Refund</title>
+      <link>//developer.certitrade.se/merchant/examples/refund/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/examples/refund/</guid>
+      <description>Create Refund Let’s assume that we want to refund 10.00 SEK from payment 11114. We then create a new refund resource with the above amount as argument. The currency is automatically the same as that in which the payment was made.
+Request POST /payment/11114/refund HTTP/1.1 { &amp;#34;amount&amp;#34;: &amp;#34;1000&amp;#34; } Response HTTP/1.1 201 Created  Content-Type: application/hal+json { &amp;#34;id&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 12:44:15 PM&amp;#34;, &amp;#34;amount&amp;#34;: &amp;#34;1000&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;PENDING&amp;#34;, &amp;#34;_links&amp;#34;: { &amp;#34;self&amp;#34;: { &amp;#34;href&amp;#34;: &amp;#34;https://ctpsp/ws/2.</description>
+    </item>
+    
+    <item>
+      <title>PayEx Invoice Payment</title>
+      <link>//developer.certitrade.se/merchant/examples/payex-invoice/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/examples/payex-invoice/</guid>
+      <description>Create Payment Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;INVOICE_PAYEX&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.00&amp;#34;, &amp;#34;vat_included&amp;#34;: &amp;#34;0&amp;#34;, } ], &amp;#34;data&amp;#34; : { &amp;#34;INVOICE_PAYEX&amp;#34; : { &amp;#34;order_id&amp;#34;: &amp;#34;123456789&amp;#34; } } } Response HTTP/1.1 201 Created Content-Type: application/hal+json { &amp;#34;id&amp;#34;: &amp;#34;11112&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 09:21:38&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;CREATED&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;amount&amp;#34;: &amp;#34;560&amp;#34;, &amp;#34;authorized_amount&amp;#34;: &amp;#34;0&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;INVOICE_PAYEX&amp;#34;, &amp;#34;customer&amp;#34; : { &amp;#34;security_number&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;company_name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address1&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address2&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address3&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;zip_code&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;city&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;region&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;country&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;email&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;phone&amp;#34;: &amp;#34;&amp;#34; }, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.</description>
+    </item>
+    
+    <item>
+      <title>Swish E Payment</title>
+      <link>//developer.certitrade.se/merchant/examples/swish-e-payment/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/examples/swish-e-payment/</guid>
+      <description>Create Payment Requests { &amp;#34;amount&amp;#34;: &amp;#34;500&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;SWISH_E&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;Eshop checkout&amp;#34;, &amp;#34;data&amp;#34;: { &amp;#34;SWISH_E&amp;#34;: { &amp;#34;payer_phone_number&amp;#34;: &amp;#34;4670123456&amp;#34;, } } } Response { &amp;#34;id&amp;#34;: &amp;#34;10909&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 09:21:38&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;CREATED&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;Eshop checkout&amp;#34;, &amp;#34;amount&amp;#34;: &amp;#34;500&amp;#34;, &amp;#34;authorized_amount&amp;#34;: &amp;#34;0&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;SWISH_E&amp;#34;, &amp;#34;customer&amp;#34; : { &amp;#34;security_number&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;company_name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address1&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address2&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address3&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;zip_code&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;city&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;region&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;country&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;email&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;phone&amp;#34;: &amp;#34;&amp;#34; }, &amp;#34;products&amp;#34;: [], &amp;#34;payment_attempts&amp;#34;: [], &amp;#34;data&amp;#34;: { &amp;#34;SWISH_E&amp;#34;: { &amp;#34;payer_phone_number&amp;#34;: &amp;#34;4670123456&amp;#34; } }, &amp;#34;_links&amp;#34;: { &amp;#34;self&amp;#34;: { &amp;#34;href&amp;#34;: &amp;#34;https://ctpsp/ws/2.</description>
+    </item>
+    
+    <item>
+      <title>Swish M Payment</title>
+      <link>//developer.certitrade.se/merchant/examples/swish-m-payment/</link>
+      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/examples/swish-m-payment/</guid>
+      <description>Create Payment Request { &amp;#34;amount&amp;#34;: &amp;#34;500&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;SWISH_M&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;MApp purchase&amp;#34; } Response { &amp;#34;id&amp;#34;: &amp;#34;10909&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 09:21:38&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;PENDING&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;MApp purchase&amp;#34;, &amp;#34;amount&amp;#34;: &amp;#34;500&amp;#34;, &amp;#34;authorized_amount&amp;#34;: &amp;#34;0&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;SWISH_M&amp;#34;, &amp;#34;customer&amp;#34; : { &amp;#34;security_number&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;company_name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address1&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address2&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address3&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;zip_code&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;city&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;region&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;country&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;email&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;phone&amp;#34;: &amp;#34;&amp;#34; }, &amp;#34;products&amp;#34;: [], &amp;#34;payment_attempts&amp;#34;: [ { &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 09:21:38&amp;#34;, &amp;#34;result&amp;#34;: &amp;#34;0&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;SWISH_M&amp;#34;, &amp;#34;data&amp;#34;: { &amp;#34;SWISH_M&amp;#34;: { &amp;#34;desc&amp;#34;: &amp;#34;WAITING_FOR_SWISH_RESULT&amp;#34;, &amp;#34;swish_payment_reference&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;swish_payment_request_token&amp;#34; : &amp;#34;EjE7pT1HQC6oEkIlu25kr…&amp;#34;, &amp;#34;swish_error_code&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;swish_error_message&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;swish_additional_information&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;swish_status&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;swish_date_created&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;swish_date_paid&amp;#34;: &amp;#34;&amp;#34;, } } } ], &amp;#34;data&amp;#34;: { &amp;#34;SWISH_M&amp;#34;: { } }, &amp;#34;_links&amp;#34;: { &amp;#34;self&amp;#34;: { &amp;#34;href&amp;#34;: &amp;#34;https://ctpsp/ws/2.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>//developer.certitrade.se/merchant/examples/cancel-payment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/merchant/examples/cancel-payment/</guid>
+      <description>Cancel a payment Cancelling a payment means that the authorization is reversed and the payment is not forwarded for capture. To do this, the state is reset to CANCELLED.
+If the operation can be carried out, the status code returned is 200. The new state is reflected in the payment representation that is returned.
+Cancellation can only be carried out for payments with a state of either WAITING_FOR_APPROVAL or READY_FOR_CAPTURE.</description>
+    </item>
+    
+  </channel>
+</rss>

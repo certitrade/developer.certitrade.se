@@ -3,8 +3,18 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>//developer.certitrade.se/merchant/guides/</loc>
+    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//developer.certitrade.se/common/</loc>
     <lastmod>2019-01-29T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/examples/card-payment/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -34,6 +44,16 @@
   
   <url>
     <loc>//developer.certitrade.se/basic/guides/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/examples/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/examples/oneclick-payment/</loc>
     <lastmod>2019-01-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -68,6 +88,11 @@
   </url>
   
   <url>
+    <loc>//developer.certitrade.se/merchant/reference/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//developer.certitrade.se/merchant/reference/process/</loc>
     <lastmod>2019-01-28T00:00:00+00:00</lastmod>
   </url>
@@ -83,6 +108,11 @@
   </url>
   
   <url>
+    <loc>//developer.certitrade.se/merchant/examples/recurring-payment/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//developer.certitrade.se/merchant/reference/resources/payment/</loc>
     <lastmod>2019-02-13T00:00:00+00:00</lastmod>
   </url>
@@ -93,7 +123,7 @@
   </url>
   
   <url>
-    <loc>//developer.certitrade.se/merchant/reference/examples/</loc>
+    <loc>//developer.certitrade.se/merchant/examples/svea-payment/</loc>
     <lastmod>2019-01-28T00:00:00+00:00</lastmod>
   </url>
   
@@ -110,6 +140,16 @@
   <url>
     <loc>//developer.certitrade.se/merchant/guides/dotnet/</loc>
     <lastmod>2019-02-07T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/examples/payex-direct/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/examples/payex-part/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -133,6 +173,11 @@
   </url>
   
   <url>
+    <loc>//developer.certitrade.se/merchant/examples/refund/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//developer.certitrade.se/merchant/reference/resources/card/</loc>
     <lastmod>2019-02-13T00:00:00+00:00</lastmod>
   </url>
@@ -143,8 +188,23 @@
   </url>
   
   <url>
+    <loc>//developer.certitrade.se/merchant/examples/payex-invoice/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/examples/swish-e-payment/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//developer.certitrade.se/merchant/reference/resources/swish/</loc>
     <lastmod>2019-02-13T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/examples/swish-m-payment/</loc>
+    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
   </url>
   
   <url>
@@ -163,18 +223,12 @@
   </url>
   
   <url>
-    <loc>//developer.certitrade.se/merchant/guides/</loc>
-    <lastmod>2019-02-07T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>//developer.certitrade.se/merchant/reference/</loc>
-    <lastmod>2019-01-28T00:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
     <loc>//developer.certitrade.se/basic/guides/php/</loc>
     <lastmod>2019-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>//developer.certitrade.se/merchant/examples/cancel-payment/</loc>
   </url>
   
   <url>

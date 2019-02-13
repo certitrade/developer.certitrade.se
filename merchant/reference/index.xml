@@ -36,17 +36,6 @@
     </item>
     
     <item>
-      <title>Examples</title>
-      <link>//developer.certitrade.se/merchant/reference/examples/</link>
-      <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
-      
-      <guid>//developer.certitrade.se/merchant/reference/examples/</guid>
-      <description>Here are some concrete examples of common operations in the API. Certain details, e.g. header fields, may have been omitted, in which case this is shown by “”.
-Create card payment To create a payment resource a POST is made to the collection payment.
-Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;CARD&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34; } Response HTTP/1.</description>
-    </item>
-    
-    <item>
       <title>Tables</title>
       <link>//developer.certitrade.se/merchant/reference/tables/</link>
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
