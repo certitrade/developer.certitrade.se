@@ -346,23 +346,23 @@
 
 <h1 id="gör-biblioteket-tillgängligt-från-din-kod">Gör biblioteket tillgängligt från din kod</h1>
 
-<p>Ta den resulterande dll:en från projektet, <code>CertiTrade.dll</code>, och lägg på en lämplig plats. Regitrera den sedan som en COM+-tjänst:</p>
+<p>Ta den resulterande dll:en från projektet, <code>Certitrade.dll</code>, och lägg på en lämplig plats. Regitrera den sedan som en COM+-tjänst:</p>
 
 <p>I windowskonsollen kör följande kommandon (<code>regasm</code> och <code>regsvcs</code> hittas i <code>C:\Windows\Microsoft.NET\Framework[64]\[version]\</code>):</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">regasm.exe /tlb /codebase <span style="color:#e6db74">&#34;C:\path\to\CertiTrade.dll&#34;</span>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">regasm.exe /tlb /codebase <span style="color:#e6db74">&#34;C:\path\to\Certitrade.dll&#34;</span>
 
-regsvcs.exe <span style="color:#e6db74">&#34;C:\path\to\CertiTrade.dll&#34;</span></code></pre></div>
-<p>Starta nu comexp.msc (startmenyn -&gt; kör&hellip;) och verifiera att &ldquo;CertiTrade Merchant API&rdquo; ligger under &ldquo;COM+ Applications&rdquo;.</p>
+regsvcs.exe <span style="color:#e6db74">&#34;C:\path\to\Certitrade.dll&#34;</span></code></pre></div>
+<p>Starta nu comexp.msc (startmenyn -&gt; kör&hellip;) och verifiera att &ldquo;Certitrade Merchant API&rdquo; ligger under &ldquo;COM+ Applications&rdquo;.</p>
 
 <p>Gör man ändringar i C#-koden och komplierar om måste man eventuellt avregistrera dll:en med;</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">regsvcs.exe /uninstall <span style="color:#e6db74">&#34;C:\path\to\CertiTrade.dll&#34;</span></code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-cmd" data-lang="cmd">regsvcs.exe /uninstall <span style="color:#e6db74">&#34;C:\path\to\Certitrade.dll&#34;</span></code></pre></div>
 <p>eller från Managementmodulen (comexp.msc) innan man kan kompilera om projektet. Glöm inte att registrera den på nytt.</p>
 
 <h1 id="skapa-ett-ctserver-objekt">Skapa ett <code>CTServer</code>-objekt</h1>
 
 <p>Efter att man registrerat dll:en som en COM+-tjänst är det bara att skapa ett objekt</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-vb" data-lang="vb">Dim ctServer
-Set ctServer = Server.CreateObject(&#34;CertiTrade.CTServer&#34;)
+Set ctServer = Server.CreateObject(&#34;Certitrade.CTServer&#34;)
 
 ctServer.setCredentials &#34;&lt;merchant id&gt;&#34;, &#34;&lt;API key&gt;&#34;, true</code></pre></div>
 <p>(det sista argumentet sätter om man ska till test- (<code>true</code>) eller produktionsmiljö (<code>false</code>)). Detta går sedan att anropa.</p>

@@ -18,7 +18,7 @@
       
       <guid>//developer.certitrade.se/merchant/examples/card-payment/</guid>
       <description>Create Payment To create a payment resource a POST is made to the collection payment.
-Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;CARD&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34; } Response HTTP/1.1 201 Created Content-Type: application/hal+json { &amp;#34;id&amp;#34;: &amp;#34;11112&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 09:21:38&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;CREATED&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;authorized_amount&amp;#34;: &amp;#34;0&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;CARD&amp;#34;, &amp;#34;customer&amp;#34; : { &amp;#34;security_number&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;company_name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address1&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address2&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address3&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;zip_code&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;city&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;region&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;country&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;email&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;phone&amp;#34;: &amp;#34;&amp;#34; }, &amp;#34;products&amp;#34;: [], &amp;#34;payment_attempts&amp;#34;: [], &amp;#34;data&amp;#34; : { &amp;#34;CARD&amp;#34; : { } }, &amp;#34;_links&amp;#34;: { &amp;#34;self&amp;#34;: { &amp;#34;href&amp;#34;: &amp;#34;https://ctpsp/ws/2.</description>
+Request POST payment HTTP/1.1 Authorization: Certitrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;CARD&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34; } Response HTTP/1.1 201 Created Content-Type: application/hal+json { &amp;#34;id&amp;#34;: &amp;#34;11112&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 09:21:38&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;CREATED&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;authorized_amount&amp;#34;: &amp;#34;0&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;CARD&amp;#34;, &amp;#34;customer&amp;#34; : { &amp;#34;security_number&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;company_name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address1&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address2&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address3&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;zip_code&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;city&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;region&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;country&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;email&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;phone&amp;#34;: &amp;#34;&amp;#34; }, &amp;#34;products&amp;#34;: [], &amp;#34;payment_attempts&amp;#34;: [], &amp;#34;data&amp;#34; : { &amp;#34;CARD&amp;#34; : { } }, &amp;#34;_links&amp;#34;: { &amp;#34;self&amp;#34;: { &amp;#34;href&amp;#34;: &amp;#34;https://ctpsp/ws/2.</description>
     </item>
     
     <item>
@@ -28,7 +28,7 @@ Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date
       
       <guid>//developer.certitrade.se/merchant/reference/concepts/</guid>
       <description>Actors Definitions of the actors that occur in the document:
-   Actor Description     Merchant The company that is a customer of CertiTrade   Client The merchant’s software that accesses the server via the API   Shop The merchant’s web shop where the client is installed   Server CertiTrade’s system that processes the client’s requests   Customer The person shopping in the merchant’s shop (the buyer)    REST CertiTrade API applies the principles of REST (REpresentational State Transfer) and has been built using what is known as resource-oriented architecture.</description>
+   Actor Description     Merchant The company that is a customer of Certitrade   Client The merchant’s software that accesses the server via the API   Shop The merchant’s web shop where the client is installed   Server Certitrade’s system that processes the client’s requests   Customer The person shopping in the merchant’s shop (the buyer)    REST Certitrade API applies the principles of REST (REpresentational State Transfer) and has been built using what is known as resource-oriented architecture.</description>
     </item>
     
     <item>
@@ -37,7 +37,7 @@ Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/common/webservices/</guid>
-      <description>This document concerns the web services that exist for CertiTrade Merchant API. Note that the authentication information may differ between the various web services.
+      <description>This document concerns the web services that exist for Certitrade Merchant API. Note that the authentication information may differ between the various web services.
 Test API URL The test system is used for integration testing and is accessed via the following URL:
 https://apitest.certitrade.net/ctpsp/ws/2.0  Callback IP The following outgoing IP is used to send callbacks to merchants: 195.178.165.212
 Production API URL The production system is accessed via the following URL:</description>
@@ -50,7 +50,17 @@ Production API URL The production system is accessed via the following URL:</des
       
       <guid>//developer.certitrade.se/basic/reference/</guid>
       <description>Sammanfattning CtBasic är ett POST-baserat API för att göra betalningar i CtPsp.
-Parametrar Obligatoriska    Namn Typ Beskrivning     merchantid int Säljföretagets id i CertiTrades system   amount decimal Belopp med . som decimaltecken. 5 kr och 70 öre anges alltså 5.70   currency string Valuta i ISO4219 bokstavskoder, t ex SEK, EUR, USD   orderid num Numeriskt, max 15 siffror.   return_url url URL dit köparen vidarebefordras efter köp   hash string Integritetsskydd och autentisering.</description>
+Parametrar Obligatoriska    Namn Typ Beskrivning     merchantid int Säljföretagets id i Certitrades system   amount decimal Belopp med . som decimaltecken. 5 kr och 70 öre anges alltså 5.70   currency string Valuta i ISO4219 bokstavskoder, t ex SEK, EUR, USD   orderid num Numeriskt, max 15 siffror.   return_url url URL dit köparen vidarebefordras efter köp   hash string Integritetsskydd och autentisering.</description>
+    </item>
+    
+    <item>
+      <title>Certitrade Developer Documentation</title>
+      <link>//developer.certitrade.se/start/welcome/</link>
+      <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/start/welcome/</guid>
+      <description>Here you can find the API documentation for developers that integrate against Certitrades different APIs.
+In order to get started you need to get a test account. Please order one here.</description>
     </item>
     
     <item>
@@ -59,7 +69,7 @@ Parametrar Obligatoriska    Namn Typ Beskrivning     merchantid int Säljföreta
       <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/merchant/reference/resources/merchant/</guid>
-      <description>Represents a merchant in CertiTrade’s system
+      <description>Represents a merchant in Certitrade’s system
 URL : /merchant/[id]
 Searchable parameters: agent , state, manual_capture
    Variable Attribute Type Description     id A int Resource ID   created A string Date that the merchant was created   state A, U string The merchant’s state. Possible values are “ACTIVE” or “INACTIVE”.   agent A int The agent to which the merchant belongs   company_name C, M, U string Company name.</description>
@@ -82,19 +92,19 @@ Request POST /payment_account HTTP/1.1 { &amp;#34;type&amp;#34;: &amp;#34;ONE_CL
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/common/test/</guid>
-      <description>This document contains test information for the various payment methods in the CertiTrade Merchant API. These can only be used in the test system and not in a production environment.
+      <description>This document contains test information for the various payment methods in the Certitrade Merchant API. These can only be used in the test system and not in a production environment.
 Card (CARD / RECURRING / ONE_CLICK) The following card numbers can be used:
  To make a successful authorization without 3-D Secure, use 1234 5678 9000
  To make a successful authorization with a 3-D Secure check, use 4444 3333 2222 0000</description>
     </item>
     
     <item>
-      <title>Certitrade Developer Documentation</title>
-      <link>//developer.certitrade.se/start/welcome/</link>
+      <title>Integration Alternatives</title>
+      <link>//developer.certitrade.se/start/alternatives/</link>
       <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
       
-      <guid>//developer.certitrade.se/start/welcome/</guid>
-      <description>CertiTrade har två olika API:er för webshops, anpassade för olika system och krav:
+      <guid>//developer.certitrade.se/start/alternatives/</guid>
+      <description>Certitrade har två olika API:er för webshops, anpassade för olika system och krav:
  Basic API
  Merchant API
   I tabellen framgår vilken funktionalitet som de erbjuder. Mer information om respektive API finns nedan.
@@ -107,7 +117,7 @@ Funktioner och API    Funktion Basic API Merchant API     Kortbetalning ja ja   
       <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/merchant/reference/resources/agent/</guid>
-      <description>Represents an administrator in the system, e.g. a distributor or a CertiTrade administrator.
+      <description>Represents an administrator in the system, e.g. a distributor or a Certitrade administrator.
 URL : /agent/[id]
 Searchable parameters : parent, state
    Variable Attribute Type Description     id A int Resource ID   created A string Date that the agent was created   state A, U string State variable. Possible values are ACTIVE or INACTIVE.   _links A collection Resource-related links   self A string The resource’s unique URL   _embedded A collection None    </description>
@@ -131,8 +141,8 @@ Searchable parameters : parent, state
       <description>A payment is usually made via these steps:
  The shop creates a payment resource via the API.
  From the payment representation that is received, the paywin link is retrieved.
- The customer is forwarded using the paywin link, taking them to the payment window at CertiTrade.
- The customer completets the payment and CertiTrade sends a callback to the shop.
+ The customer is forwarded using the paywin link, taking them to the payment window at Certitrade.
+ The customer completets the payment and Certitrade sends a callback to the shop.
  The customer returns to the shop via return_url.</description>
     </item>
     
@@ -154,7 +164,7 @@ Searchable parameters : merchant, state, method, currencies
       
       <guid>//developer.certitrade.se/merchant/guides/pseudocode/</guid>
       <description>Som ett exempel, i form av pseudokod, på hur API:et kan användas visar vi här hur en ny kortbetalning kan skapas.
-REQUEST = array[ amount = &amp;quot;1000&amp;quot; currency = &amp;quot;SEK&amp;quot; return_url = &amp;quot;https://theshop.tld/return&amp;quot; callback_url = &amp;quot;https://theshop.tld/callback&amp;quot; reference = &amp;quot;Order: 123456&amp;quot; description = &amp;quot;Krazy glue&amp;quot; language = &amp;quot;sv&amp;quot; ] RESPONSE = create_card_payment(REQUEST) function create_card_payment(REQUEST) REQUEST[method] = &amp;quot;CARD&amp;quot; API_RESOURCE = &amp;quot;payment&amp;quot; REST_VERB = &amp;quot;POST&amp;quot; RESPONSE = call_certitrade(REST_VERB, API_RESOURCE, REQUEST) return RESPONSE function call_certitrade(REST_VERB, API_RESOURCE, REQUEST) // Send the http request to CertiTrade HOST_TEST = https://apitest.</description>
+REQUEST = array[ amount = &amp;quot;1000&amp;quot; currency = &amp;quot;SEK&amp;quot; return_url = &amp;quot;https://theshop.tld/return&amp;quot; callback_url = &amp;quot;https://theshop.tld/callback&amp;quot; reference = &amp;quot;Order: 123456&amp;quot; description = &amp;quot;Krazy glue&amp;quot; language = &amp;quot;sv&amp;quot; ] RESPONSE = create_card_payment(REQUEST) function create_card_payment(REQUEST) REQUEST[method] = &amp;quot;CARD&amp;quot; API_RESOURCE = &amp;quot;payment&amp;quot; REST_VERB = &amp;quot;POST&amp;quot; RESPONSE = call_certitrade(REST_VERB, API_RESOURCE, REQUEST) return RESPONSE function call_certitrade(REST_VERB, API_RESOURCE, REQUEST) // Send the http request to Certitrade HOST_TEST = https://apitest.</description>
     </item>
     
     <item>
@@ -165,7 +175,7 @@ REQUEST = array[ amount = &amp;quot;1000&amp;quot; currency = &amp;quot;SEK&amp;
       <guid>//developer.certitrade.se/merchant/examples/recurring-payment/</guid>
       <description>Initialize Account First you create a payment_account.
 Request POST /payment_account HTTP/1.1 { &amp;#34;type&amp;#34;: &amp;#34;RECURRING&amp;#34; } Response HTTP/1.1 201 Created Content-Type: application/hal+json { &amp;#34;id&amp;#34;: &amp;#34;40260868824&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 11:32:53 AM&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;UNINITIALIZED&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;type&amp;#34;: &amp;#34;RECURRING&amp;#34;, &amp;#34;expiry_date&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;masked_cardno&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;bin&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;_links&amp;#34;: { &amp;#34;self&amp;#34;: { &amp;#34;href&amp;#34;: &amp;#34;https://ctpsp/ws/2.0/payment_account/40260868824&amp;#34; }, &amp;#34;merchant&amp;#34;: { &amp;#34;href&amp;#34;: &amp;#34;https://ctpsp/ws/2.0/merchant/12345&amp;#34; } }, &amp;#34;_embedded&amp;#34;: [], } Then you create a payment to initialize it.
-Request POST / payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 { &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.</description>
+Request POST / payment HTTP/1.1 Authorization: Certitrade m12345:f3dcba298804 { &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.</description>
     </item>
     
     <item>
@@ -185,10 +195,10 @@ Searchable parameters : merchant, amount, currency, method, reference, state, la
       <pubDate>Thu, 07 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/merchant/guides/php/</guid>
-      <description>Inkludera biblioteket i din kod Kopiera CertiTrade MerchantAPI-biblioteket till en katalog din PHP-applikation kan nå och inkludera det med;
+      <description>Inkludera biblioteket i din kod Kopiera Certitrade MerchantAPI-biblioteket till en katalog din PHP-applikation kan nå och inkludera det med;
 require_once &amp;#39;./CTServer.php&amp;#39;; Skapa en fil MerchantCredentials.php i en katalog som din PHP-applikation kan nå, men som ligger utanför web root och skriv in ditt Merchantid och API-nyckel där.
 define(&amp;#39;MERCHANT_ID&amp;#39;, &amp;#34;&amp;lt;your_merchant_id&amp;gt;&amp;#34;); define(&amp;#39;API_KEY&amp;#39;, &amp;#34;&amp;lt;your_api_key&amp;gt;&amp;#34;); Nästa steg är;
-Skapa ett CTServer-objekt För att kunna skapa betalningar behövs först en anslutning till CertiTrade. Detta anslutningsobjekt skapas med;</description>
+Skapa ett CTServer-objekt För att kunna skapa betalningar behövs först en anslutning till Certitrade. Detta anslutningsobjekt skapas med;</description>
     </item>
     
     <item>
@@ -198,7 +208,7 @@ Skapa ett CTServer-objekt För att kunna skapa betalningar behövs först en ans
       
       <guid>//developer.certitrade.se/merchant/examples/svea-payment/</guid>
       <description>Create Invoice Payment To create a SveaFaktura invoice payment a POST is made to the collection payment.
-Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;INVOICE_SVEA&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.00&amp;#34;, &amp;#34;vat_included&amp;#34;: &amp;#34;0&amp;#34;, } ], &amp;#34;data&amp;#34; : { &amp;#34;INVOICE_SVEA&amp;#34; : { &amp;#34;order_id&amp;#34;: &amp;#34;123456789&amp;#34; } } } Response HTTP/1.</description>
+Request POST payment HTTP/1.1 Authorization: Certitrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;INVOICE_SVEA&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.00&amp;#34;, &amp;#34;vat_included&amp;#34;: &amp;#34;0&amp;#34;, } ], &amp;#34;data&amp;#34; : { &amp;#34;INVOICE_SVEA&amp;#34; : { &amp;#34;order_id&amp;#34;: &amp;#34;123456789&amp;#34; } } } Response HTTP/1.</description>
     </item>
     
     <item>
@@ -226,7 +236,7 @@ Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date
       
       <guid>//developer.certitrade.se/merchant/guides/dotnet/</guid>
       <description>Inkludera biblioteket i din kod Lägg biblioteket på en lämplig plats och se till att det är tillgängligt från projektet och gör det anropbart från din kod.
-using CertiTrade.MerchantAPI Skapa ett CTServer-objekt Skapa sedan ett nytt CTServer-objekt
+using Certitrade.MerchantAPI Skapa ett CTServer-objekt Skapa sedan ett nytt CTServer-objekt
 CTServer ctServer = new CTServer(); ctServer.setCredentials(merchantId, apiKey, testing); Skapa en Payment-resurs och anropa API:et En enkel betalning skapas på detta sätt. CTServer har en metod som heter createCardPayment() som man anropar med ett antal argument.</description>
     </item>
     
@@ -237,7 +247,7 @@ CTServer ctServer = new CTServer(); ctServer.setCredentials(merchantId, apiKey, 
       
       <guid>//developer.certitrade.se/merchant/examples/payex-direct/</guid>
       <description>Create Payment To create a PayEx direct payment you also need to include the bank to which the payment is to be made. A direct payment to Svenska Handelsbanken (SHB) is shown below.
-Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;DIRECT_PAYEX&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;data&amp;#34; : { &amp;#34;DIRECT_PAYEX&amp;#34; : { &amp;#34;bank&amp;#34;: &amp;#34;SHB&amp;#34; } } } Response HTTP/1.</description>
+Request POST payment HTTP/1.1 Authorization: Certitrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;amount&amp;#34;: &amp;#34;1234&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;DIRECT_PAYEX&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;data&amp;#34; : { &amp;#34;DIRECT_PAYEX&amp;#34; : { &amp;#34;bank&amp;#34;: &amp;#34;SHB&amp;#34; } } } Response HTTP/1.</description>
     </item>
     
     <item>
@@ -246,7 +256,7 @@ Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/merchant/examples/payex-part/</guid>
-      <description>Create Payment Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;PARTPAY_PAYEX&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.00&amp;#34;, &amp;#34;vat_included&amp;#34;: &amp;#34;0&amp;#34;, } ], &amp;#34;data&amp;#34; : { &amp;#34;PARTPAY_PAYEX&amp;#34; : { &amp;#34;order_id&amp;#34;: &amp;#34;123456789&amp;#34; } } } Response HTTP/1.1 201 Created Content-Type: application/hal+json { &amp;#34;id&amp;#34;: &amp;#34;11112&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 09:21:38&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;CREATED&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;amount&amp;#34;: &amp;#34;560&amp;#34;, &amp;#34;authorized_amount&amp;#34;: &amp;#34;0&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;PARTPAY_PAYEX&amp;#34;, &amp;#34;customer&amp;#34; : { &amp;#34;security_number&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;company_name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address1&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address2&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address3&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;zip_code&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;city&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;region&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;country&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;email&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;phone&amp;#34;: &amp;#34;&amp;#34; }, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.</description>
+      <description>Create Payment Request POST payment HTTP/1.1 Authorization: Certitrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;PARTPAY_PAYEX&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.00&amp;#34;, &amp;#34;vat_included&amp;#34;: &amp;#34;0&amp;#34;, } ], &amp;#34;data&amp;#34; : { &amp;#34;PARTPAY_PAYEX&amp;#34; : { &amp;#34;order_id&amp;#34;: &amp;#34;123456789&amp;#34; } } } Response HTTP/1.1 201 Created Content-Type: application/hal+json { &amp;#34;id&amp;#34;: &amp;#34;11112&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 09:21:38&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;CREATED&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;amount&amp;#34;: &amp;#34;560&amp;#34;, &amp;#34;authorized_amount&amp;#34;: &amp;#34;0&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;PARTPAY_PAYEX&amp;#34;, &amp;#34;customer&amp;#34; : { &amp;#34;security_number&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;company_name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address1&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address2&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address3&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;zip_code&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;city&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;region&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;country&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;email&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;phone&amp;#34;: &amp;#34;&amp;#34; }, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.</description>
     </item>
     
     <item>
@@ -287,7 +297,7 @@ http://www.ietf.org/rfc/rfc2104.txt</description>
       <guid>//developer.certitrade.se/merchant/guides/asp_classic/</guid>
       <description>Vill man använda ASP Classic går det att installera .NET-biblioteket ovan som ett COM+-objekt, på maskinen man vill köra på, och sedan anropa det.
 I ASP Classic underlättar det också att använda det externa JSON-bibliotek aspJSON, http://www.aspjson.com, när man ska hantera API-svaret.
-Gör biblioteket tillgängligt från din kod Ta den resulterande dll:en från projektet, CertiTrade.dll, och lägg på en lämplig plats. Regitrera den sedan som en COM+-tjänst:
+Gör biblioteket tillgängligt från din kod Ta den resulterande dll:en från projektet, Certitrade.dll, och lägg på en lämplig plats. Regitrera den sedan som en COM+-tjänst:
 I windowskonsollen kör följande kommandon (regasm och regsvcs hittas i C:\Windows\Microsoft.</description>
     </item>
     
@@ -297,7 +307,7 @@ I windowskonsollen kör följande kommandon (regasm och regsvcs hittas i C:\Wind
       <pubDate>Fri, 08 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/merchant/guides/other/</guid>
-      <description>Om man använder ett språk som det saknas ett klientbibliotek för följer här en generell guide för implementation av CertiTrade:s MerchantAPI.
+      <description>Om man använder ett språk som det saknas ett klientbibliotek för följer här en generell guide för implementation av Certitrade:s MerchantAPI.
 Förutsättningar För att underlätta implementationen av API:et behövs ett httpklientbibliotek. Det ska stödja skapandet av en REST-begäran och man behöver även själv kunna ändra och sätta headers. Exempel på sådana för ett par vanliga språk är:
  Classic ASP: ServerXMLHTTP
  Java: HttpURLConnection, som är en del av SDK:n eller ett mer komplett externt bibliotek som Jersey eller Apache HttpClient</description>
@@ -339,7 +349,7 @@ Request POST /payment/11114/refund HTTP/1.1 { &amp;#34;amount&amp;#34;: &amp;#34
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/merchant/examples/payex-invoice/</guid>
-      <description>Create Payment Request POST payment HTTP/1.1 Authorization: CertiTrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;INVOICE_PAYEX&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.00&amp;#34;, &amp;#34;vat_included&amp;#34;: &amp;#34;0&amp;#34;, } ], &amp;#34;data&amp;#34; : { &amp;#34;INVOICE_PAYEX&amp;#34; : { &amp;#34;order_id&amp;#34;: &amp;#34;123456789&amp;#34; } } } Response HTTP/1.1 201 Created Content-Type: application/hal+json { &amp;#34;id&amp;#34;: &amp;#34;11112&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 09:21:38&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;CREATED&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;amount&amp;#34;: &amp;#34;560&amp;#34;, &amp;#34;authorized_amount&amp;#34;: &amp;#34;0&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;INVOICE_PAYEX&amp;#34;, &amp;#34;customer&amp;#34; : { &amp;#34;security_number&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;company_name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address1&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address2&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address3&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;zip_code&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;city&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;region&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;country&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;email&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;phone&amp;#34;: &amp;#34;&amp;#34; }, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.</description>
+      <description>Create Payment Request POST payment HTTP/1.1 Authorization: Certitrade m12345:f3dcba298804 Date: Mon, 12 Nov 2013 14:52:37 GMT Content-Type: application/json { &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;return_url&amp;#34;: &amp;#34;http://returnurl.com&amp;#34;, &amp;#34;callback_url&amp;#34;: &amp;#34;http://callbackurl.com&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;INVOICE_PAYEX&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.00&amp;#34;, &amp;#34;vat_included&amp;#34;: &amp;#34;0&amp;#34;, } ], &amp;#34;data&amp;#34; : { &amp;#34;INVOICE_PAYEX&amp;#34; : { &amp;#34;order_id&amp;#34;: &amp;#34;123456789&amp;#34; } } } Response HTTP/1.1 201 Created Content-Type: application/hal+json { &amp;#34;id&amp;#34;: &amp;#34;11112&amp;#34;, &amp;#34;created&amp;#34;: &amp;#34;2013-06-28 09:21:38&amp;#34;, &amp;#34;state&amp;#34;: &amp;#34;CREATED&amp;#34;, &amp;#34;reference&amp;#34;: &amp;#34;54321&amp;#34;, &amp;#34;description&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;amount&amp;#34;: &amp;#34;560&amp;#34;, &amp;#34;authorized_amount&amp;#34;: &amp;#34;0&amp;#34;, &amp;#34;currency&amp;#34;: &amp;#34;SEK&amp;#34;, &amp;#34;language&amp;#34;: &amp;#34;sv&amp;#34;, &amp;#34;merchant&amp;#34;: &amp;#34;12345&amp;#34;, &amp;#34;method&amp;#34;: &amp;#34;INVOICE_PAYEX&amp;#34;, &amp;#34;customer&amp;#34; : { &amp;#34;security_number&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;company_name&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address1&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address2&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;address3&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;zip_code&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;city&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;region&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;country&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;email&amp;#34;: &amp;#34;&amp;#34;, &amp;#34;phone&amp;#34;: &amp;#34;&amp;#34; }, &amp;#34;products&amp;#34;: [ { &amp;#34;line_ordering&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_reference&amp;#34;: &amp;#34;1&amp;#34;, &amp;#34;product_name&amp;#34;: &amp;#34;Produkt ett&amp;#34;, &amp;#34;price&amp;#34;: &amp;#34;100&amp;#34;, &amp;#34;quantity&amp;#34;: &amp;#34;5&amp;#34;, &amp;#34;vat_rate&amp;#34;: &amp;#34;12.</description>
     </item>
     
     <item>

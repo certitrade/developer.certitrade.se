@@ -18,7 +18,7 @@
       
       <guid>//developer.certitrade.se/basic/reference/</guid>
       <description>Sammanfattning CtBasic är ett POST-baserat API för att göra betalningar i CtPsp.
-Parametrar Obligatoriska    Namn Typ Beskrivning     merchantid int Säljföretagets id i CertiTrades system   amount decimal Belopp med . som decimaltecken. 5 kr och 70 öre anges alltså 5.70   currency string Valuta i ISO4219 bokstavskoder, t ex SEK, EUR, USD   orderid num Numeriskt, max 15 siffror.   return_url url URL dit köparen vidarebefordras efter köp   hash string Integritetsskydd och autentisering.</description>
+Parametrar Obligatoriska    Namn Typ Beskrivning     merchantid int Säljföretagets id i Certitrades system   amount decimal Belopp med . som decimaltecken. 5 kr och 70 öre anges alltså 5.70   currency string Valuta i ISO4219 bokstavskoder, t ex SEK, EUR, USD   orderid num Numeriskt, max 15 siffror.   return_url url URL dit köparen vidarebefordras efter köp   hash string Integritetsskydd och autentisering.</description>
     </item>
     
   </channel>

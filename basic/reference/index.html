@@ -347,8 +347,8 @@
 <ul>
 <li>
 <ul>
-<li><a href="#butik-certitrade">Butik -&gt; CertiTrade</a></li>
-<li><a href="#certitrade-butik-callback-och-retur">CertiTrade -&gt; Butik (callback och retur)</a></li>
+<li><a href="#butik-certitrade">Butik -&gt; Certitrade</a></li>
+<li><a href="#certitrade-butik-callback-och-retur">Certitrade -&gt; Butik (callback och retur)</a></li>
 </ul></li>
 </ul></li>
 </ul></li>
@@ -383,7 +383,7 @@
 <tr>
 <td>merchantid</td>
 <td>int</td>
-<td>Säljföretagets id i CertiTrades system</td>
+<td>Säljföretagets id i Certitrades system</td>
 </tr>
 
 <tr>
@@ -439,7 +439,7 @@
 <tr>
 <td>callback_url</td>
 <td>url</td>
-<td>URL för callbacksfrån CertiTrade</td>
+<td>URL för callbacksfrån Certitrade</td>
 </tr>
 
 <tr>
@@ -578,13 +578,13 @@
 <tr>
 <td>paymentid</td>
 <td>int</td>
-<td>Betalningens id i CertiTrades system</td>
+<td>Betalningens id i Certitrades system</td>
 </tr>
 
 <tr>
 <td>merchantid</td>
 <td>int</td>
-<td>Säljföretagets id i CertiTrades system</td>
+<td>Säljföretagets id i Certitrades system</td>
 </tr>
 
 <tr>
@@ -673,16 +673,16 @@
 
 <h1 id="autentisering-och-integritetsskydd">Autentisering och integritetsskydd</h1>
 
-<p>Alla meddelanden mellan butik och CertiTrade skyddas med en hashkod som beräknas på en sträng sammansatt av apinyckeln och vissa av parametrarna.</p>
+<p>Alla meddelanden mellan butik och Certitrade skyddas med en hashkod som beräknas på en sträng sammansatt av apinyckeln och vissa av parametrarna.</p>
 
 <p>Strängen konstrueras enligt följande</p>
 
-<h4 id="butik-certitrade">Butik -&gt; CertiTrade</h4>
+<h4 id="butik-certitrade">Butik -&gt; Certitrade</h4>
 
 <pre><code>apikey + merchantid + orderid + amount + currency + return_url + callback_url
 </code></pre>
 
-<h4 id="certitrade-butik-callback-och-retur">CertiTrade -&gt; Butik (callback och retur)</h4>
+<h4 id="certitrade-butik-callback-och-retur">Certitrade -&gt; Butik (callback och retur)</h4>
 
 <pre><code>apikey + paymentid + merchantid + orderid + function + description + timestamp
 </code></pre>
@@ -694,7 +694,7 @@ vilken algoritm som ska användas. Algoritm och hash kombineras i fältet hash p
 sha256:dfde7c03a01acdcef715aea5c36b166bdec399dc5409b2bb5c89855e021fd694
 </code></pre>
 
-<p>Den algoritm som butiken anger kommer också att av CertiTrade i callbacks och retur.<br />
+<p>Den algoritm som butiken anger kommer också att av Certitrade i callbacks och retur.<br />
 Formatet på parametern hash är detsamma.</p>
 
 					

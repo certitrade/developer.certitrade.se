@@ -33,6 +33,11 @@
   </url>
   
   <url>
+    <loc>//developer.certitrade.se/start/welcome/</loc>
+    <lastmod>2019-01-24T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>//developer.certitrade.se/merchant/reference/resources/merchant/</loc>
     <lastmod>2019-02-13T00:00:00+00:00</lastmod>
   </url>
@@ -68,7 +73,7 @@
   </url>
   
   <url>
-    <loc>//developer.certitrade.se/start/welcome/</loc>
+    <loc>//developer.certitrade.se/start/alternatives/</loc>
     <lastmod>2019-01-24T00:00:00+00:00</lastmod>
   </url>
   

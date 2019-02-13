@@ -17,7 +17,7 @@
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/common/webservices/</guid>
-      <description>This document concerns the web services that exist for CertiTrade Merchant API. Note that the authentication information may differ between the various web services.
+      <description>This document concerns the web services that exist for Certitrade Merchant API. Note that the authentication information may differ between the various web services.
 Test API URL The test system is used for integration testing and is accessed via the following URL:
 https://apitest.certitrade.net/ctpsp/ws/2.0  Callback IP The following outgoing IP is used to send callbacks to merchants: 195.178.165.212
 Production API URL The production system is accessed via the following URL:</description>
@@ -29,7 +29,7 @@ Production API URL The production system is accessed via the following URL:</des
       <pubDate>Mon, 28 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/common/test/</guid>
-      <description>This document contains test information for the various payment methods in the CertiTrade Merchant API. These can only be used in the test system and not in a production environment.
+      <description>This document contains test information for the various payment methods in the Certitrade Merchant API. These can only be used in the test system and not in a production environment.
 Card (CARD / RECURRING / ONE_CLICK) The following card numbers can be used:
  To make a successful authorization without 3-D Secure, use 1234 5678 9000
  To make a successful authorization with a 3-D Secure check, use 4444 3333 2222 0000</description>

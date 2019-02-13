@@ -342,7 +342,7 @@
 
 <h1 id="inkludera-biblioteket-i-din-kod">Inkludera biblioteket i din kod</h1>
 
-<p>Kopiera CertiTrade MerchantAPI-biblioteket till en katalog din PHP-applikation kan nå och inkludera det med;</p>
+<p>Kopiera Certitrade MerchantAPI-biblioteket till en katalog din PHP-applikation kan nå och inkludera det med;</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">require_once &#39;./CTServer.php&#39;;</code></pre></div>
 <p>Skapa en fil <code>MerchantCredentials.php</code> i en katalog som din PHP-applikation kan nå, men som ligger utanför web root och skriv in ditt Merchantid och API-nyckel där.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">define(&#39;MERCHANT_ID&#39;, &#34;&lt;<span style="color:#f92672">your_merchant_id</span>&gt;&#34;);
@@ -351,9 +351,9 @@ define(&#39;API_KEY&#39;, &#34;&lt;<span style="color:#f92672">your_api_key</spa
 
 <h1 id="skapa-ett-ctserver-objekt">Skapa ett CTServer-objekt</h1>
 
-<p>För att kunna skapa betalningar behövs först en anslutning till CertiTrade. Detta anslutningsobjekt skapas med;</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$ct_server = new CertiTrade\CTServer(MERCHANT_ID, API_KEY, true);</code></pre></div>
-<p>där det sista argumentet, <code>true</code>, berättar att vi vill skapa anslutningen mot CertiTrades testmiljö.</p>
+<p>För att kunna skapa betalningar behövs först en anslutning till Certitrade. Detta anslutningsobjekt skapas med;</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$ct_server = new Certitrade\CTServer(MERCHANT_ID, API_KEY, true);</code></pre></div>
+<p>där det sista argumentet, <code>true</code>, berättar att vi vill skapa anslutningen mot Certitrades testmiljö.</p>
 
 <h1 id="exempel-skapa-en-payment-resurs-och-anropa-api-et">Exempel: Skapa en Payment-resurs och anropa API:et</h1>
 
@@ -371,9 +371,9 @@ $ct_response = $ct_server-&gt;create_card_payment($request);</code></pre></div>
 
 <h1 id="hantera-api-svaret">Hantera API-svaret</h1>
 
-<p>Anropssvaret i <code>$ct_response</code> kommer att en av tre typer; <code>CertiTrade\Resource</code>, <code>CertiTrade\Collection</code> eller <code>CertiTrade\APIProblem</code>. Beroende på vilket svar man får finns det olika saker man kan göra.</p>
+<p>Anropssvaret i <code>$ct_response</code> kommer att en av tre typer; <code>Certitrade\Resource</code>, <code>Certitrade\Collection</code> eller <code>Certitrade\APIProblem</code>. Beroende på vilket svar man får finns det olika saker man kan göra.</p>
 
-<p>Vid lyckat anrop av <code>create_card_payment()</code> får man ett <code>CertiTrade\Resource</code>-svar som innehåller detaljer om betalningen, bl.a den Payment Window-länk man behöver skicka kunden till för att bekräfta betalning med 3-D Secure (exempelvis MasterCard SecureCode eller Verified by Visa).</p>
+<p>Vid lyckat anrop av <code>create_card_payment()</code> får man ett <code>Certitrade\Resource</code>-svar som innehåller detaljer om betalningen, bl.a den Payment Window-länk man behöver skicka kunden till för att bekräfta betalning med 3-D Secure (exempelvis MasterCard SecureCode eller Verified by Visa).</p>
 
 <p>Den länken får man enklast ut genom att anropa hjälpmetoden <code>getLink()</code>.</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$ct_response-&gt;getLink(&#34;paywin&#34;):</code></pre></div>

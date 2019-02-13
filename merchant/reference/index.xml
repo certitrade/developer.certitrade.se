@@ -18,7 +18,7 @@
       
       <guid>//developer.certitrade.se/merchant/reference/concepts/</guid>
       <description>Actors Definitions of the actors that occur in the document:
-   Actor Description     Merchant The company that is a customer of CertiTrade   Client The merchant’s software that accesses the server via the API   Shop The merchant’s web shop where the client is installed   Server CertiTrade’s system that processes the client’s requests   Customer The person shopping in the merchant’s shop (the buyer)    REST CertiTrade API applies the principles of REST (REpresentational State Transfer) and has been built using what is known as resource-oriented architecture.</description>
+   Actor Description     Merchant The company that is a customer of Certitrade   Client The merchant’s software that accesses the server via the API   Shop The merchant’s web shop where the client is installed   Server Certitrade’s system that processes the client’s requests   Customer The person shopping in the merchant’s shop (the buyer)    REST Certitrade API applies the principles of REST (REpresentational State Transfer) and has been built using what is known as resource-oriented architecture.</description>
     </item>
     
     <item>
@@ -30,8 +30,8 @@
       <description>A payment is usually made via these steps:
  The shop creates a payment resource via the API.
  From the payment representation that is received, the paywin link is retrieved.
- The customer is forwarded using the paywin link, taking them to the payment window at CertiTrade.
- The customer completets the payment and CertiTrade sends a callback to the shop.
+ The customer is forwarded using the paywin link, taking them to the payment window at Certitrade.
+ The customer completets the payment and Certitrade sends a callback to the shop.
  The customer returns to the shop via return_url.</description>
     </item>
     

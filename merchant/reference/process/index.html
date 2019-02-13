@@ -365,8 +365,8 @@
 <ol>
 <li>The shop creates a payment resource via the API.<br /></li>
 <li>From the payment representation that is received, the paywin link is retrieved.<br /></li>
-<li>The customer is forwarded using the paywin link, taking them to the payment window at CertiTrade.<br /></li>
-<li>The customer completets the payment and CertiTrade sends a <code>callback</code> to the shop.<br /></li>
+<li>The customer is forwarded using the paywin link, taking them to the payment window at Certitrade.<br /></li>
+<li>The customer completets the payment and Certitrade sends a <code>callback</code> to the shop.<br /></li>
 <li>The customer returns to the shop via <code>return_url</code>.<br /></li>
 <li>The shop retrieves the customer’s payment and verifies that it has been paid.<br /></li>
 <li>The shop shows a receipt for the payment made.<br />
@@ -555,7 +555,7 @@
 
 <h1 id="invoice-payments">Invoice payments</h1>
 
-<p>Invoice payments can be made via a number of participants. The overall payment process is the same for all invoice payments. When customers arrive at CertiTrade they are first presented with a view in which they can enter their civil/corporate registration number and then a view in which they confirm the purchase.</p>
+<p>Invoice payments can be made via a number of participants. The overall payment process is the same for all invoice payments. When customers arrive at Certitrade they are first presented with a view in which they can enter their civil/corporate registration number and then a view in which they confirm the purchase.</p>
 
 <p>Payments by invoice can only be made by attaching a product list. These are then shown on the invoice.</p>
 
@@ -587,7 +587,7 @@
 
 <h1 id="direct-payex"><code>DIRECT_PAYEX</code></h1>
 
-<p>The payment method <code>DIRECT_PAYEX</code> is used for direct payments via PayEx. When the customer arrives at CertiTrade he/she is redirected to the bank that the shop has chosen and completes the payment.</p>
+<p>The payment method <code>DIRECT_PAYEX</code> is used for direct payments via PayEx. When the customer arrives at Certitrade he/she is redirected to the bank that the shop has chosen and completes the payment.</p>
 
 <p>If the purchase is successful, the payment state is set directly to <code>CAPTURED</code>. If the payment failed, it is set to <code>FAILED</code>. It is not possible to cancel a direct payment.</p>
 

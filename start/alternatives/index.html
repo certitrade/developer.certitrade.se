@@ -3,7 +3,7 @@
 		<meta http-equiv="content-type" content="text/html; charset=utf-8">
 		<meta name="generator" content="Hugo 0.53" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-		<title>Certitrade Developer Documentation &middot; Certitrade Developer</title>
+		<title>Integration Alternatives &middot; Certitrade Developer</title>
 
 		<link rel="stylesheet" href="//developer.certitrade.se/css/reset.css">
 		<link rel="stylesheet" href="//developer.certitrade.se/css/text.css">
@@ -307,9 +307,9 @@
 
 
 
-			<article id="certitrade-developer-documentation" class="mode-full">
+			<article id="integration-alternatives" class="mode-full">
 				<header>
-					<h1>Certitrade Developer Documentation</h1>
+					<h1>Integration Alternatives</h1>
 			<p>
 				<time>2019-01-24</time>
 
@@ -324,16 +324,95 @@
 				</header>
 
 				
-				
+				<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#funktioner-och-api">Funktioner och API</a></li>
+</ul></li>
+</ul>
+</nav>
 				
 
 						
 
 				<main>
 					
-						<p>Here you can find the API documentation for developers that integrate against <a href="https://certitrade.se">Certitrades</a> different APIs.</p>
+						
 
-<p>In order to get started you need to get a test account. Please order one <a href="https://certitrade.se/bestall-test-konto/">here</a>.</p>
+<p>Certitrade har två olika API:er för webshops, anpassade för olika system och krav:</p>
+
+<ul>
+<li><a href="basic">Basic API</a><br /></li>
+<li><a href="merchant">Merchant API</a><br />
+<br /></li>
+</ul>
+
+<p>I tabellen framgår vilken funktionalitet som de erbjuder. Mer information om respektive API finns nedan.</p>
+
+<h2 id="funktioner-och-api">Funktioner och API</h2>
+
+<table>
+<thead>
+<tr>
+<th>Funktion</th>
+<th>Basic API</th>
+<th>Merchant API</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td>Kortbetalning</td>
+<td>ja</td>
+<td>ja</td>
+</tr>
+
+<tr>
+<td>Swish</td>
+<td>ja</td>
+<td>ja</td>
+</tr>
+
+<tr>
+<td>Kortbetalning One-Click</td>
+<td>nej</td>
+<td>ja</td>
+</tr>
+
+<tr>
+<td>Kortbetalning Recurring</td>
+<td>nej</td>
+<td>ja</td>
+</tr>
+
+<tr>
+<td>Faktura</td>
+<td>nej</td>
+<td>ja</td>
+</tr>
+
+<tr>
+<td>Godkänna/avslå betalning</td>
+<td>manuellt</td>
+<td>ja</td>
+</tr>
+
+<tr>
+<td>Återbetala</td>
+<td>manuellt</td>
+<td>ja</td>
+</tr>
+
+<tr>
+<td>Administativa funktioner</td>
+<td>manuellt</td>
+<td>ja</td>
+</tr>
+</tbody>
+</table>
+
+<p>Manuella funktioner tillgängligt via inloggning till Certitrades MCA (Merchant Client Application).</p>
 
 					
 				</main>

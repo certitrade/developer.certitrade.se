@@ -17,7 +17,17 @@
       <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/start/welcome/</guid>
-      <description>CertiTrade har två olika API:er för webshops, anpassade för olika system och krav:
+      <description>Here you can find the API documentation for developers that integrate against Certitrades different APIs.
+In order to get started you need to get a test account. Please order one here.</description>
+    </item>
+    
+    <item>
+      <title>Integration Alternatives</title>
+      <link>//developer.certitrade.se/start/alternatives/</link>
+      <pubDate>Thu, 24 Jan 2019 00:00:00 +0000</pubDate>
+      
+      <guid>//developer.certitrade.se/start/alternatives/</guid>
+      <description>Certitrade har två olika API:er för webshops, anpassade för olika system och krav:
  Basic API
  Merchant API
   I tabellen framgår vilken funktionalitet som de erbjuder. Mer information om respektive API finns nedan.

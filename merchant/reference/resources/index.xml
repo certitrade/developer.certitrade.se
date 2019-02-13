@@ -17,7 +17,7 @@
       <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/merchant/reference/resources/merchant/</guid>
-      <description>Represents a merchant in CertiTrade’s system
+      <description>Represents a merchant in Certitrade’s system
 URL : /merchant/[id]
 Searchable parameters: agent , state, manual_capture
    Variable Attribute Type Description     id A int Resource ID   created A string Date that the merchant was created   state A, U string The merchant’s state. Possible values are “ACTIVE” or “INACTIVE”.   agent A int The agent to which the merchant belongs   company_name C, M, U string Company name.</description>
@@ -29,7 +29,7 @@ Searchable parameters: agent , state, manual_capture
       <pubDate>Wed, 13 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>//developer.certitrade.se/merchant/reference/resources/agent/</guid>
-      <description>Represents an administrator in the system, e.g. a distributor or a CertiTrade administrator.
+      <description>Represents an administrator in the system, e.g. a distributor or a Certitrade administrator.
 URL : /agent/[id]
 Searchable parameters : parent, state
    Variable Attribute Type Description     id A int Resource ID   created A string Date that the agent was created   state A, U string State variable. Possible values are ACTIVE or INACTIVE.   _links A collection Resource-related links   self A string The resource’s unique URL   _embedded A collection None    </description>

@@ -343,7 +343,7 @@
 <h1 id="inkludera-biblioteket-i-din-kod">Inkludera biblioteket i din kod</h1>
 
 <p>Lägg biblioteket på en lämplig plats och se till att det är tillgängligt från projektet och gör det anropbart från din kod.</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> CertiTrade.MerchantAPI</code></pre></div>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-c#" data-lang="c#"><span style="color:#66d9ef">using</span> Certitrade.MerchantAPI</code></pre></div>
 <h1 id="skapa-ett-ctserver-objekt">Skapa ett <code>CTServer</code>-objekt</h1>
 
 <p>Skapa sedan ett nytt <code>CTServer</code>-objekt</p>
@@ -363,7 +363,7 @@ response = ctServer.createCardPayment(
  description: <span style="color:#e6db74">&#34;Glue Corp&#34;</span>);</code></pre></div>
 <h1 id="hantera-api-svaret">Hantera API-svaret</h1>
 
-<p>Svaret från CertiTrades server hamnar i response. Svaret består av fyra delar; <code>respone.Success</code>, <code>response.HTTPStatus</code>, <code>response.HTTPMessage</code> och <code>repsone.HTTPBody</code>. <code>response</code> har även två hjälpfunktioner; <code>response.getId()</code> och <code>response.getLink(&lt;string&gt;)</code> som returnerar betalningsid:t samt en specifiserad länk (exempelvis <code>response.getLink(&quot;paywin&quot;)</code> ger paywin-länken som kunden ska skickas vidare till för att föra in sina betaluppgifter).</p>
+<p>Svaret från Certitrades server hamnar i response. Svaret består av fyra delar; <code>respone.Success</code>, <code>response.HTTPStatus</code>, <code>response.HTTPMessage</code> och <code>repsone.HTTPBody</code>. <code>response</code> har även två hjälpfunktioner; <code>response.getId()</code> och <code>response.getLink(&lt;string&gt;)</code> som returnerar betalningsid:t samt en specifiserad länk (exempelvis <code>response.getLink(&quot;paywin&quot;)</code> ger paywin-länken som kunden ska skickas vidare till för att föra in sina betaluppgifter).</p>
 
 					
 				</main>
